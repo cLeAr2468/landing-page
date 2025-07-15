@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Personnel - PIT Learning Resources Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'primary-hover': '#1d4ed8',
+                        'secondary': '#7c3aed',
+                        'accent': '#06b6d4',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .modern-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .staff-card {
+            transition: all 0.3s ease;
+        }
+
+        .staff-card:hover .staff-image {
+            transform: scale(1.05);
+        }
+
+        .staff-image {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+ <!-- Header Section -->
+ <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-5">
+            <!-- Logo -->
+                            <a href="index.html" class="flex items-center text-2xl font-bold text-primary font-serif">
+                    <i class="fas fa-book-open mr-3"></i>
+                    <span class="hidden sm:block">Learning Resource Center</span>
+                    <span class="sm:hidden">LRC</span>
+                </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8 lg:px-[4%]">
+                                    <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition-colors duration-300">Home</a>
+                
+                <!-- About Dropdown -->
+                <div class="relative group">
+                                            <button class="flex items-center text-primary font-medium transition-colors duration-300">
+                            About
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-2">
+                        <a href="mission-vision.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Mission & Vision</a>
+                        <a href="service-hours.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Service Hours</a>
+                                                    <a href="library-personnel.html" class="block px-3 py-2 text-primary bg-blue-50">Library Personel</a>
+                        <a href="policies-rules.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Policies & Rules</a>
+                        <a href="citizens-charter.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Citizen's Charter</a>
+                        <a href="linkages.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Linkages</a>
+                        <a href="libraries.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Libraries</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                        Services
+                        <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-2">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Book Borrowing</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Digital Resources</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Assistance</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Printing & Copying</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resources Dropdown -->
+                <div class="relative group">
+                    <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                        Resources
+                        <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-2">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Online Catalog</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">E-Books & Audiobooks</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Databases</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Study Rooms</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ask Librarian Dropdown -->
+                <div class="relative group">
+                    <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                        Ask Librarian
+                        <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-2">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Chat with Librarian</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Email Reference</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Help</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Book a Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-primary" id="mobileMenuBtn">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="lg:hidden hidden" id="mobileMenu">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                                    <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary font-medium">Home</a>
+                
+                <!-- Mobile About Dropdown -->
+                <div class="mobile-dropdown">
+                    <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                        About
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+                    <div class="hidden pl-6 mobile-dropdown-content">
+                        <a href="mission-vision.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Mission & Vision</a>
+                        <a href="service-hours.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Service Hours</a>
+                                                    <a href="library-personnel.html" class="block px-3 py-2 text-primary bg-blue-50">Library Personel</a>
+                        <a href="policies-rules.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Policies & Rules</a>
+                        <a href="citizens-charter.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Citizen's Charter</a>
+                        <a href="linkages.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Linkages</a>
+                        <a href="libraries.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Libraries</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Services Dropdown -->
+                <div class="mobile-dropdown">
+                    <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                        Services
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+                    <div class="hidden pl-6 mobile-dropdown-content">
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Book Borrowing</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Digital Resources</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Assistance</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Printing & Copying</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Resources Dropdown -->
+                <div class="mobile-dropdown">
+                    <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                        Online Resources
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+                    <div class="hidden pl-6 mobile-dropdown-content">
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Online Catalog</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">E-Books & Audiobooks</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Databases</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Study Rooms</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Ask Librarian Dropdown -->
+                <div class="mobile-dropdown">
+                    <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                        Ask Librarian
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+                    <div class="hidden pl-6 mobile-dropdown-content">
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Chat with Librarian</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Email Reference</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Help</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Book a Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-serif">Library Personnel</h1>
+                <p class="text-lg sm:text-xl lg:text-2xl text-white mb-10 opacity-90 leading-relaxed">Meet our dedicated team of professionals committed to serving your information needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Management Team Section -->
+    <section class="py-20 lg:py-28" id="management">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Management Team
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our leadership team guiding the library's strategic direction and operations
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Director -->
+                <div class="staff-card modern-card rounded-3xl p-8 hover-lift text-center">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                             alt="Dr. Sarah Johnson" 
+                             class="staff-image w-32 h-32 rounded-full mx-auto object-cover border-4 border-primary">
+                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                            <i class="fas fa-crown text-white text-sm"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-serif text-gray-800">Dr. Sarah Johnson</h3>
+                    <p class="text-primary font-semibold mb-3">Library Director</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Oversees all library operations, strategic planning, and institutional partnerships. 
+                        PhD in Library Science with 15+ years of experience in academic libraries.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="mailto:sarah.johnson@pit.edu" class="text-primary hover:text-secondary transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+15551234567" class="text-primary hover:text-secondary transition-colors">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Assistant Director -->
+                <div class="staff-card modern-card rounded-3xl p-8 hover-lift text-center">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                             alt="Michael Chen" 
+                             class="staff-image w-32 h-32 rounded-full mx-auto object-cover border-4 border-secondary">
+                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center">
+                            <i class="fas fa-star text-white text-sm"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-serif text-gray-800">Michael Chen</h3>
+                    <p class="text-secondary font-semibold mb-3">Assistant Director</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Manages daily operations, staff supervision, and service quality. 
+                        Specializes in digital library systems and user experience design.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="mailto:michael.chen@pit.edu" class="text-secondary hover:text-primary transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+15551234568" class="text-secondary hover:text-primary transition-colors">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Head of Technical Services -->
+                <div class="staff-card modern-card rounded-3xl p-8 hover-lift text-center">
+                    <div class="relative mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                             alt="Emily Rodriguez" 
+                             class="staff-image w-32 h-32 rounded-full mx-auto object-cover border-4 border-accent">
+                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-cog text-white text-sm"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-serif text-gray-800">Emily Rodriguez</h3>
+                    <p class="text-accent font-semibold mb-3">Head of Technical Services</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Manages cataloging, acquisitions, and digital resource management. 
+                        Expert in metadata standards and library automation systems.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="mailto:emily.rodriguez@pit.edu" class="text-accent hover:text-primary transition-colors">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+15551234569" class="text-accent hover:text-primary transition-colors">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reference Librarians Section -->
+    <section class="py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-blue-50" id="reference">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Reference Librarians
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our subject specialists providing expert research assistance and information literacy instruction
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Science & Engineering Librarian -->
+                <div class="staff-card modern-card rounded-3xl p-6 hover-lift text-center">
+                    <div class="relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                             alt="David Kim" 
+                             class="staff-image w-24 h-24 rounded-full mx-auto object-cover border-4 border-green-500">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 font-serif text-gray-800">David Kim</h3>
+                    <p class="text-green-600 font-semibold mb-2 text-sm">Science & Engineering</p>
+                    <p class="text-gray-600 text-xs leading-relaxed mb-3">
+                        Specializes in engineering databases, patent research, and technical documentation.
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <a href="mailto:david.kim@pit.edu" class="text-green-600 hover:text-green-700 transition-colors">
+                            <i class="fas fa-envelope text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Business & Economics Librarian -->
+                <div class="staff-card modern-card rounded-3xl p-6 hover-lift text-center">
+                    <div class="relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                             alt="Lisa Thompson" 
+                             class="staff-image w-24 h-24 rounded-full mx-auto object-cover border-4 border-blue-500">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 font-serif text-gray-800">Lisa Thompson</h3>
+                    <p class="text-blue-600 font-semibold mb-2 text-sm">Business & Economics</p>
+                    <p class="text-gray-600 text-xs leading-relaxed mb-3">
+                        Expert in business databases, market research, and financial information resources.
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <a href="mailto:lisa.thompson@pit.edu" class="text-blue-600 hover:text-blue-700 transition-colors">
+                            <i class="fas fa-envelope text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Humanities & Arts Librarian -->
+                <div class="staff-card modern-card rounded-3xl p-6 hover-lift text-center">
+                    <div class="relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                             alt="Maria Garcia" 
+                             class="staff-image w-24 h-24 rounded-full mx-auto object-cover border-4 border-purple-500">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 font-serif text-gray-800">Maria Garcia</h3>
+                    <p class="text-purple-600 font-semibold mb-2 text-sm">Humanities & Arts</p>
+                    <p class="text-gray-600 text-xs leading-relaxed mb-3">
+                        Specializes in literature, history, and cultural studies resources and research methods.
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <a href="mailto:maria.garcia@pit.edu" class="text-purple-600 hover:text-purple-700 transition-colors">
+                            <i class="fas fa-envelope text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social Sciences Librarian -->
+                <div class="staff-card modern-card rounded-3xl p-6 hover-lift text-center">
+                    <div class="relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                             alt="James Wilson" 
+                             class="staff-image w-24 h-24 rounded-full mx-auto object-cover border-4 border-orange-500">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 font-serif text-gray-800">James Wilson</h3>
+                    <p class="text-orange-600 font-semibold mb-2 text-sm">Social Sciences</p>
+                    <p class="text-gray-600 text-xs leading-relaxed mb-3">
+                        Expert in psychology, sociology, and political science research methodologies.
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <a href="mailto:james.wilson@pit.edu" class="text-orange-600 hover:text-orange-700 transition-colors">
+                            <i class="fas fa-envelope text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Staff Section -->
+    <section class="py-20 lg:py-28" id="support-staff">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Support Staff
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our dedicated support team ensuring smooth operations and excellent user experience
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Circulation Supervisor -->
+                <div class="staff-card modern-card rounded-3xl p-6 hover-lift">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+                             alt="Robert Martinez" 
+                             class="staff-image w-16 h-16 rounded-full object-cover border-2 border-primary mr-4">
+                        <div>
+                            <h3 class="text-lg font-bold font-serif text-gray-800">Robert Martinez</h3>
+                            <p class="text-primary font-semibold text-sm">Circulation Supervisor</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                        Manages book borrowing, returns, and circulation desk operations. 
+                        Handles user accounts and overdue materials.
+                    </p>
+                    <div class="flex space-x-2">
+                        <a href="mailto:robert.martinez@pit.edu" class="text-primary hover:text-secondary transition-colors">
+                            <i class="fas fa-envelope text-sm"></i>
+                        </a>
+                        <span class="text-xs text-gray-500">Ext. 1234</span>
+                    </div>
+                </div>
+
+                <!-- IT Support Specialist -->
+                <div class="staff-card modern-card rounded-3xl p-6 hover-lift">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+                             alt="Jennifer Lee" 
+                             class="staff-image w-16 h-16 rounded-full object-cover border-2 border-secondary mr-4">
+                        <div>
+                            <h3 class="text-lg font-bold font-serif text-gray-800">Jennifer Lee</h3>
+                            <p class="text-secondary font-semibold text-sm">IT Support Specialist</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                        Provides technical support for library computers, printers, and digital resources. 
+                        Manages library website and online systems.
+                    </p>
+                    <div class="flex space-x-2">
+                        <a href="mailto:jennifer.lee@pit.edu" class="text-secondary hover:text-primary transition-colors">
+                            <i class="fas fa-envelope text-sm"></i>
+                        </a>
+                        <span class="text-xs text-gray-500">Ext. 1235</span>
+                    </div>
+                </div>
+
+                <!-- Acquisitions Assistant -->
+                <div class="staff-card modern-card rounded-3xl p-6 hover-lift">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+                             alt="Amanda Foster" 
+                             class="staff-image w-16 h-16 rounded-full object-cover border-2 border-accent mr-4">
+                        <div>
+                            <h3 class="text-lg font-bold font-serif text-gray-800">Amanda Foster</h3>
+                            <p class="text-accent font-semibold text-sm">Acquisitions Assistant</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                        Handles book ordering, vendor relations, and collection development support. 
+                        Processes new materials and maintains acquisition records.
+                    </p>
+                    <div class="flex space-x-2">
+                        <a href="mailto:amanda.foster@pit.edu" class="text-accent hover:text-primary transition-colors">
+                            <i class="fas fa-envelope text-sm"></i>
+                        </a>
+                        <span class="text-xs text-gray-500">Ext. 1236</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-blue-50" id="contact">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Contact Our Team
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Get in touch with our staff for assistance with your information needs
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="modern-card rounded-3xl p-8 hover-lift text-center">
+                    <div class="text-4xl mb-6 text-primary">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">General Inquiries</h3>
+                    <p class="text-gray-600 mb-4">Main library desk</p>
+                    <div class="space-y-2">
+                        <div class="text-lg font-semibold text-primary">(555) 123-4567</div>
+                        <div class="text-sm text-gray-500">Available during operating hours</div>
+                    </div>
+                </div>
+
+                <div class="modern-card rounded-3xl p-8 hover-lift text-center">
+                    <div class="text-4xl mb-6 text-secondary">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Email Support</h3>
+                    <p class="text-gray-600 mb-4">Reference questions</p>
+                    <div class="space-y-2">
+                        <div class="text-lg font-semibold text-secondary">reference@pit.edu</div>
+                        <div class="text-sm text-gray-500">Response within 24 hours</div>
+                    </div>
+                </div>
+
+                <div class="modern-card rounded-3xl p-8 hover-lift text-center">
+                    <div class="text-4xl mb-6 text-accent">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Visit Us</h3>
+                    <p class="text-gray-600 mb-4">Main campus location</p>
+                    <div class="space-y-2">
+                        <div class="text-lg font-semibold text-accent">Building A, 2nd Floor</div>
+                        <div class="text-sm text-gray-500">Room 201-205</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        PIT Library
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">Serving our community with knowledge and resources since 1925.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        Hours & Location
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <p class="text-gray-300 mb-4">123 Reading Avenue<br>Bookville, BK 12345</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-300">Monday - Friday:</span>
+                            <span class="text-white">7:00am - 9:00pm</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        Resources
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Online Catalog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Research Databases</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">E-Books & Audiobooks</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Interlibrary Loan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        Information
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Library Policies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Support the Library</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2023 PIT Learning Resources Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const content = this.parentElement.querySelector('.mobile-dropdown-content');
+                const icon = this.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

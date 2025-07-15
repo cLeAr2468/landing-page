@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policies & Rules - PIT Learning Resources Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'primary-hover': '#1d4ed8',
+                        'secondary': '#7c3aed',
+                        'accent': '#06b6d4',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .modern-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .policy-item {
+            transition: all 0.3s ease;
+        }
+
+        .policy-item:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .policy-item:hover .policy-icon {
+            color: white;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+    <!-- Header Section -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-5">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center text-2xl font-bold text-primary font-serif">
+                    <i class="fas fa-book-open mr-3"></i>
+                    <span class="hidden sm:block">Learning Resource Center</span>
+                    <span class="sm:hidden">LRC</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8 lg:px-[4%]">
+                    <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition-colors duration-300">Home</a>
+                    
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-primary font-medium transition-colors duration-300">
+                            About
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                            <a href="mission-vision.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Mission & Vision</a>
+                            <a href="service-hours.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Service Hours</a>
+                            <a href="library-personnel.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Library Personel</a>
+                            <a href="policies-rules.html" class="block px-3 py-2 text-primary bg-blue-50">Policies & Rules</a>
+                            <a href="citizens-charter.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Citizen's Charter</a>
+                            <a href="linkages.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Linkages</a>
+                            <a href="libraries.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Libraries</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                            Services
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Book Borrowing</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Digital Resources</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Assistance</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Printing & Copying</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resources Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                            Resources
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Online Catalog</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">E-Books & Audiobooks</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Databases</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Study Rooms</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ask Librarian Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                            Ask Librarian
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Chat with Librarian</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Email Reference</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Help</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Book a Consultation</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-gray-700 hover:text-primary" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="lg:hidden hidden" id="mobileMenu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                    <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary font-medium">Home</a>
+                    
+                    <!-- Mobile About Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                            About
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div class="hidden pl-6 mobile-dropdown-content">
+                            <a href="mission-vision.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Mission & Vision</a>
+                            <a href="service-hours.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Service Hours</a>
+                            <a href="library-personnel.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Library Personel</a>
+                            <a href="policies-rules.html" class="block px-3 py-2 text-primary bg-blue-50">Policies & Rules</a>
+                            <a href="citizens-charter.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Citizen's Charter</a>
+                            <a href="linkages.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Linkages</a>
+                            <a href="libraries.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Libraries</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Services Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                            Services
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div class="hidden pl-6 mobile-dropdown-content">
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Book Borrowing</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Digital Resources</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Assistance</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Printing & Copying</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Resources Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                            Online Resources
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div class="hidden pl-6 mobile-dropdown-content">
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Online Catalog</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">E-Books & Audiobooks</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Databases</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Study Rooms</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Ask Librarian Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                            Ask Librarian
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div class="hidden pl-6 mobile-dropdown-content">
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Chat with Librarian</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Email Reference</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Help</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Book a Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-serif">Policies & Rules</h1>
+                <p class="text-lg sm:text-xl lg:text-2xl text-white mb-10 opacity-90 leading-relaxed">Guidelines and regulations that ensure a conducive learning environment for all users.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Borrowing Policies Section -->
+    <section class="py-20 lg:py-28" id="borrowing">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Borrowing Policies
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Guidelines for borrowing materials and managing your library account
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="policy-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-primary policy-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Library Card Requirements</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <p>Valid student ID or staff identification required</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <p>One library card per person</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <p>Non-transferable to other individuals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-secondary policy-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Loan Periods</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between">
+                            <span>Books:</span>
+                            <span class="font-semibold">21 days</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Reserve Materials:</span>
+                            <span class="font-semibold">2 hours</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Reference Books:</span>
+                            <span class="font-semibold">Library use only</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-accent policy-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Renewals & Returns</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <p>Up to 2 renewals if no holds</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <p>Return to any library location</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <p>Online renewal available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conduct & Behavior Section -->
+    <section class="py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-blue-50" id="conduct">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Conduct & Behavior
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Standards of behavior to maintain a respectful and productive learning environment
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="modern-card rounded-3xl p-8 hover-lift">
+                    <h3 class="text-2xl font-bold mb-6 font-serif text-gray-800">Expected Behavior</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Quiet Study Areas</h4>
+                                <p class="text-gray-600 text-sm">Maintain silence in designated quiet zones</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Respect for Others</h4>
+                                <p class="text-gray-600 text-sm">Be considerate of fellow library users</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Clean Environment</h4>
+                                <p class="text-gray-600 text-sm">Keep study areas clean and organized</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modern-card rounded-3xl p-8 hover-lift">
+                    <h3 class="text-2xl font-bold mb-6 font-serif text-gray-800">Prohibited Activities</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-times text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Noise Disturbances</h4>
+                                <p class="text-gray-600 text-sm">Loud conversations, phone calls, or music</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-times text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Food & Drinks</h4>
+                                <p class="text-gray-600 text-sm">Eating or drinking in library areas</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-times text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Damaging Materials</h4>
+                                <p class="text-gray-600 text-sm">Writing in or damaging library materials</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Computer & Technology Section -->
+    <section class="py-20 lg:py-28" id="technology">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Computer & Technology Use
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Guidelines for using library computers, printers, and digital resources
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="policy-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-primary policy-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Computer Access</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between">
+                            <span>Time Limit:</span>
+                            <span class="font-semibold">2 hours per session</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Login Required:</span>
+                            <span class="font-semibold">Student/Staff ID</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Priority:</span>
+                            <span class="font-semibold">Academic work first</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-secondary policy-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Printing Services</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between">
+                            <span>Cost:</span>
+                            <span class="font-semibold">$0.10 per page</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Payment:</span>
+                            <span class="font-semibold">Student account</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Color Printing:</span>
+                            <span class="font-semibold">$0.50 per page</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-accent policy-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Wi-Fi Access</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <p>Free Wi-Fi for students and staff</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <p>Secure network with login</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <p>No time restrictions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fines & Penalties Section -->
+    <section class="py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-blue-50" id="fines">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Fines & Penalties
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Information about overdue fines and account restrictions
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="modern-card rounded-3xl p-8 hover-lift">
+                    <h3 class="text-2xl font-bold mb-6 font-serif text-gray-800">Overdue Fines</h3>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-primary pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">Regular Books</h4>
+                            <p class="text-gray-600 text-sm">$0.25 per day, maximum $10.00 per item</p>
+                        </div>
+                        <div class="border-l-4 border-secondary pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">Reserve Materials</h4>
+                            <p class="text-gray-600 text-sm">$1.00 per hour, maximum $25.00 per item</p>
+                        </div>
+                        <div class="border-l-4 border-accent pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">Lost Materials</h4>
+                            <p class="text-gray-600 text-sm">Replacement cost + $10.00 processing fee</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modern-card rounded-3xl p-8 hover-lift">
+                    <h3 class="text-2xl font-bold mb-6 font-serif text-gray-800">Account Restrictions</h3>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-red-500 pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">Borrowing Suspension</h4>
+                            <p class="text-gray-600 text-sm">Suspended when fines exceed $25.00</p>
+                        </div>
+                        <div class="border-l-4 border-yellow-500 pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">Graduation Holds</h4>
+                            <p class="text-gray-600 text-sm">Outstanding fines must be paid before graduation</p>
+                        </div>
+                        <div class="border-l-4 border-green-500 pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">Payment Methods</h4>
+                            <p class="text-gray-600 text-sm">Cash, check, or student account deduction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Room Policies Section -->
+    <section class="py-20 lg:py-28" id="study-rooms">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Study Room Policies
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Guidelines for reserving and using library study rooms
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="policy-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-primary policy-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Reservation Rules</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between">
+                            <span>Advance Booking:</span>
+                            <span class="font-semibold">Up to 1 week</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Time Limit:</span>
+                            <span class="font-semibold">3 hours max</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Group Size:</span>
+                            <span class="font-semibold">2-6 people</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-secondary policy-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Group Study</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <p>Quiet conversation allowed</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <p>Whiteboards available</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <p>Power outlets provided</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-accent policy-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Late Policy</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-exclamation-triangle text-yellow-500 mt-1 mr-3"></i>
+                            <p>15-minute grace period</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-exclamation-triangle text-yellow-500 mt-1 mr-3"></i>
+                            <p>Reservation forfeited if late</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-exclamation-triangle text-yellow-500 mt-1 mr-3"></i>
+                            <p>Available to walk-ins after grace period</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        PIT Library
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">Serving our community with knowledge and resources since 1925.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        Hours & Location
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <p class="text-gray-300 mb-4">123 Reading Avenue<br>Bookville, BK 12345</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-300">Monday - Friday:</span>
+                            <span class="text-white">7:00am - 9:00pm</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        Resources
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Online Catalog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Research Databases</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">E-Books & Audiobooks</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Interlibrary Loan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        Information
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Library Policies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Support the Library</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2023 PIT Learning Resources Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const content = this.parentElement.querySelector('.mobile-dropdown-content');
+                const icon = this.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission & Vision - PIT Learning Resources Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'primary-hover': '#1d4ed8',
+                        'secondary': '#7c3aed',
+                        'accent': '#06b6d4',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .modern-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .timeline-item {
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #2563eb, #7c3aed);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            background: #2563eb;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #2563eb;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+     <!-- Header Section -->
+     <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-5">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center text-2xl font-bold text-primary font-serif">
+                    <i class="fas fa-book-open mr-3"></i>
+                    <span class="hidden sm:block">Learning Resource Center</span>
+                    <span class="sm:hidden">LRC</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8 lg:px-[4%]">
+                    <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition-colors duration-300">Home</a>
+                    
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-primary font-medium transition-colors duration-300">
+                            About
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                            <a href="mission-vision.html" class="block px-3 py-2 text-primary bg-blue-50">Mission & Vision</a>
+                            <a href="service-hours.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Service Hours</a>
+                            <a href="library-personnel.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Library Personel</a>
+                            <a href="policies-rules.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Policies & Rules</a>
+                            <a href="citizens-charter.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Citizen's Charter</a>
+                            <a href="linkages.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Linkages</a>
+                            <a href="libraries.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Libraries</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                            Services
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Book Borrowing</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Digital Resources</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Assistance</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Printing & Copying</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resources Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                            Resources
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Online Catalog</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">E-Books & Audiobooks</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Databases</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Study Rooms</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ask Librarian Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                            Ask Librarian
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Chat with Librarian</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Email Reference</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Help</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Book a Consultation</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-gray-700 hover:text-primary" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="lg:hidden hidden" id="mobileMenu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                    <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary font-medium">Home</a>
+                    
+                    <!-- Mobile About Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                            About
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div class="hidden pl-6 mobile-dropdown-content">
+                            <a href="mission-vision.html" class="block px-3 py-2 text-primary bg-blue-50">Mission & Vision</a>
+                            <a href="service-hours.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Service Hours</a>
+                            <a href="library-personnel.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Library Personel</a>
+                            <a href="policies-rules.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Policies & Rules</a>
+                            <a href="citizens-charter.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Citizen's Charter</a>
+                            <a href="linkages.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Linkages</a>
+                            <a href="libraries.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Libraries</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Services Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                            Services
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div class="hidden pl-6 mobile-dropdown-content">
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Book Borrowing</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Digital Resources</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Assistance</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Printing & Copying</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Resources Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                            Online Resources
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div class="hidden pl-6 mobile-dropdown-content">
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Online Catalog</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">E-Books & Audiobooks</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Databases</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Study Rooms</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Ask Librarian Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                            Ask Librarian
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div class="hidden pl-6 mobile-dropdown-content">
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Chat with Librarian</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Email Reference</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Help</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Book a Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-serif">Mission & Vision</h1>
+                <p class="text-lg sm:text-xl lg:text-2xl text-white mb-10 opacity-90 leading-relaxed">Guiding principles that shape our commitment to excellence in education and knowledge sharing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 lg:py-28" id="mission">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        <h2 class="text-4xl sm:text-5xl font-bold mb-6 font-serif">Our Mission</h2>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        To provide comprehensive, innovative, and accessible learning resources and services that empower students, faculty, and the community to achieve academic excellence and lifelong learning success.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <p class="text-gray-700">Foster a culture of intellectual curiosity and critical thinking</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <p class="text-gray-700">Provide equitable access to diverse information resources</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <p class="text-gray-700">Support research and innovation across all disciplines</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="relative">
+                        <div class="modern-card rounded-3xl p-8 hover-lift">
+                            <div class="text-6xl text-center mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-center mb-4 font-serif text-gray-800">Mission Statement</h3>
+                            <p class="text-gray-600 text-center leading-relaxed">
+                                "Empowering minds through knowledge, innovation, and community engagement."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-blue-50" id="vision">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-1">
+                    <div class="relative">
+                        <div class="modern-card rounded-3xl p-8 hover-lift">
+                            <div class="text-6xl text-center mb-6 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-center mb-4 font-serif text-gray-800">Vision Statement</h3>
+                            <p class="text-gray-600 text-center leading-relaxed">
+                                "To be the leading center of excellence in information services and digital learning innovation."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-2">
+                    <div class="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+                        <h2 class="text-4xl sm:text-5xl font-bold mb-6 font-serif">Our Vision</h2>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        To be recognized as a premier learning resource center that transforms education through cutting-edge technology, innovative services, and unwavering commitment to academic excellence.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-secondary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-star text-white text-sm"></i>
+                            </div>
+                            <p class="text-gray-700">Lead in digital transformation and technology integration</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-secondary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-star text-white text-sm"></i>
+                            </div>
+                            <p class="text-gray-700">Create inclusive learning environments for all users</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 bg-secondary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-star text-white text-sm"></i>
+                            </div>
+                            <p class="text-gray-700">Foster global partnerships and knowledge exchange</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="py-20 lg:py-28" id="core-values">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Core Values
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    The fundamental principles that guide our actions and decisions
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="modern-card rounded-3xl p-8 hover-lift group text-center">
+                    <div class="text-5xl mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Excellence</h3>
+                    <p class="text-gray-600 leading-relaxed">We strive for the highest standards in all our services and interactions, continuously improving to meet and exceed expectations.</p>
+                </div>
+
+                <div class="modern-card rounded-3xl p-8 hover-lift group text-center">
+                    <div class="text-5xl mb-6 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Inclusivity</h3>
+                    <p class="text-gray-600 leading-relaxed">We welcome and serve all members of our community with respect, dignity, and equal access to resources and opportunities.</p>
+                </div>
+
+                <div class="modern-card rounded-3xl p-8 hover-lift group text-center">
+                    <div class="text-5xl mb-6 bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Innovation</h3>
+                    <p class="text-gray-600 leading-relaxed">We embrace new technologies and creative solutions to enhance learning experiences and improve service delivery.</p>
+                </div>
+
+                <div class="modern-card rounded-3xl p-8 hover-lift group text-center">
+                    <div class="text-5xl mb-6 bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Integrity</h3>
+                    <p class="text-gray-600 leading-relaxed">We maintain the highest ethical standards, ensuring transparency, honesty, and accountability in all our operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Policy Section -->
+    <section class="py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-blue-50" id="quality-policy">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Quality Policy
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our commitment to delivering exceptional service and maintaining high standards
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="modern-card rounded-3xl p-8 hover-lift">
+                    <h3 class="text-2xl font-bold mb-6 font-serif text-gray-800">Quality Commitment</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Continuous Improvement</h4>
+                                <p class="text-gray-600 text-sm">Regular assessment and enhancement of our services and processes</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">User-Centered Design</h4>
+                                <p class="text-gray-600 text-sm">Services and resources designed with user needs and feedback in mind</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Professional Standards</h4>
+                                <p class="text-gray-600 text-sm">Adherence to international library and information science standards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modern-card rounded-3xl p-8 hover-lift">
+                    <h3 class="text-2xl font-bold mb-6 font-serif text-gray-800">Quality Objectives</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-secondary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-target text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Service Excellence</h4>
+                                <p class="text-gray-600 text-sm">Achieve 95% user satisfaction rate through responsive and efficient services</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-secondary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-target text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Resource Accessibility</h4>
+                                <p class="text-gray-600 text-sm">Ensure 99% uptime for digital resources and 24/7 access to online materials</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-secondary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-target text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Professional Development</h4>
+                                <p class="text-gray-600 text-sm">Annual training and certification for all staff members</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brief History Section -->
+    <section class="py-20 lg:py-28" id="history">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Brief History
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our journey from humble beginnings to becoming a modern learning resource center
+                </p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline -->
+                <div class="space-y-12">
+                    <div class="timeline-item pl-8">
+                        <div class="timeline-dot"></div>
+                        <div class="modern-card rounded-3xl p-8 hover-lift">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">1925</span>
+                                <h3 class="text-2xl font-bold ml-4 font-serif text-gray-800">Foundation</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                The PIT Learning Resources Center was established as a small library serving the local community. 
+                                Started with a modest collection of 500 books and a single reading room.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item pl-8">
+                        <div class="timeline-dot"></div>
+                        <div class="modern-card rounded-3xl p-8 hover-lift">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-secondary text-white px-4 py-2 rounded-full text-sm font-semibold">1950</span>
+                                <h3 class="text-2xl font-bold ml-4 font-serif text-gray-800">Expansion Era</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Major expansion project completed, adding specialized collections for engineering, 
+                                technology, and applied sciences. Collection grew to over 10,000 volumes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item pl-8">
+                        <div class="timeline-dot"></div>
+                        <div class="modern-card rounded-3xl p-8 hover-lift">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-accent text-white px-4 py-2 rounded-full text-sm font-semibold">1980</span>
+                                <h3 class="text-2xl font-bold ml-4 font-serif text-gray-800">Digital Transition</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Implemented the first computerized catalog system (OPAC) and began digitizing 
+                                rare collections. Introduced electronic databases and online resources.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item pl-8">
+                        <div class="timeline-dot"></div>
+                        <div class="modern-card rounded-3xl p-8 hover-lift">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">2000</span>
+                                <h3 class="text-2xl font-bold ml-4 font-serif text-gray-800">Modern Era</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Complete digital transformation with online catalog, e-books, and virtual 
+                                reference services. Launched mobile app and 24/7 digital access.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item pl-8">
+                        <div class="timeline-dot"></div>
+                        <div class="modern-card rounded-3xl p-8 hover-lift">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Present</span>
+                                <h3 class="text-2xl font-bold ml-4 font-serif text-gray-800">Innovation Hub</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Today, we serve as a comprehensive learning resource center with over 100,000 
+                                digital and physical resources, advanced research facilities, and innovative 
+                                learning spaces designed for the 21st century.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        PIT Library
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">Serving our community with knowledge and resources since 1925.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        Hours & Location
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <p class="text-gray-300 mb-4">123 Reading Avenue<br>Bookville, BK 12345</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-300">Monday - Friday:</span>
+                            <span class="text-white">8:30am - 5pm</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        Resources
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Online Catalog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Research Databases</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">E-Books & Audiobooks</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Interlibrary Loan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        Information
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Library Policies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Support the Library</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2023 PIT Learning Resources Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const content = this.parentElement.querySelector('.mobile-dropdown-content');
+                const icon = this.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

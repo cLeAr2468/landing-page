@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkages - PIT Learning Resources Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'primary-hover': '#1d4ed8',
+                        'secondary': '#7c3aed',
+                        'accent': '#06b6d4',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .modern-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .link-item {
+            transition: all 0.3s ease;
+        }
+
+        .link-item:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .link-item:hover .link-icon {
+            color: white;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+ <!-- Header Section -->
+ <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-5">
+            <!-- Logo -->
+                            <a href="index.html" class="flex items-center text-2xl font-bold text-primary font-serif">
+                    <i class="fas fa-book-open mr-3"></i>
+                    <span class="hidden sm:block">Learning Resource Center</span>
+                    <span class="sm:hidden">LRC</span>
+                </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8 lg:px-[4%]">
+                                    <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition-colors duration-300">Home</a>
+                
+                <!-- About Dropdown -->
+                <div class="relative group">
+                                            <button class="flex items-center text-primary font-medium transition-colors duration-300">
+                            About
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-2">
+                        <a href="mission-vision.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Mission & Vision</a>
+                        <a href="service-hours.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Service Hours</a>
+                        <a href="library-personnel.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Library Personel</a>
+                        <a href="policies-rules.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Policies & Rules</a>
+                        <a href="citizens-charter.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Citizen's Charter</a>
+                                                    <a href="linkages.html" class="block px-3 py-2 text-primary bg-blue-50">Linkages</a>
+                        <a href="libraries.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Libraries</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                        Services
+                        <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-2">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Book Borrowing</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Digital Resources</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Assistance</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Printing & Copying</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resources Dropdown -->
+                <div class="relative group">
+                    <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                        Resources
+                        <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-2">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Online Catalog</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">E-Books & Audiobooks</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Databases</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Study Rooms</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ask Librarian Dropdown -->
+                <div class="relative group">
+                    <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                        Ask Librarian
+                        <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-2">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Chat with Librarian</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Email Reference</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Help</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Book a Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700 hover:text-primary" id="mobileMenuBtn">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="lg:hidden hidden" id="mobileMenu">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                                    <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary font-medium">Home</a>
+                
+                <!-- Mobile About Dropdown -->
+                <div class="mobile-dropdown">
+                    <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                        About
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+                    <div class="hidden pl-6 mobile-dropdown-content">
+                        <a href="mission-vision.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Mission & Vision</a>
+                        <a href="service-hours.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Service Hours</a>
+                        <a href="library-personnel.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Library Personel</a>
+                        <a href="policies-rules.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Policies & Rules</a>
+                        <a href="citizens-charter.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Citizen's Charter</a>
+                                                    <a href="linkages.html" class="block px-3 py-2 text-primary bg-blue-50">Linkages</a>
+                        <a href="libraries.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Libraries</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Services Dropdown -->
+                <div class="mobile-dropdown">
+                    <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                        Services
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+                    <div class="hidden pl-6 mobile-dropdown-content">
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Book Borrowing</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Digital Resources</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Assistance</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Printing & Copying</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Resources Dropdown -->
+                <div class="mobile-dropdown">
+                    <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                        Online Resources
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+                    <div class="hidden pl-6 mobile-dropdown-content">
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Online Catalog</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">E-Books & Audiobooks</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Databases</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Study Rooms</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Ask Librarian Dropdown -->
+                <div class="mobile-dropdown">
+                    <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                        Ask Librarian
+                        <i class="fas fa-chevron-down text-sm"></i>
+                    </button>
+                    <div class="hidden pl-6 mobile-dropdown-content">
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Chat with Librarian</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Email Reference</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Help</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Book a Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-serif">External Linkages</h1>
+                <p class="text-lg sm:text-xl lg:text-2xl text-white mb-10 opacity-90 leading-relaxed">Connect to valuable external resources and partner institutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Databases Section -->
+    <section class="py-20 lg:py-28" id="academic-databases">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Academic Databases
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Access premium research databases and scholarly resources
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-primary link-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">JSTOR</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Comprehensive digital library of academic journals, books, and primary sources.</p>
+                    <a href="https://www.jstor.org" target="_blank" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
+                        Access JSTOR <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-secondary link-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">ScienceDirect</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Leading platform for peer-reviewed literature in science, technology, and medicine.</p>
+                    <a href="https://www.sciencedirect.com" target="_blank" class="inline-flex items-center text-secondary font-semibold hover:text-primary transition-colors">
+                        Access ScienceDirect <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-accent link-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">ProQuest</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Comprehensive research platform with dissertations, theses, and scholarly content.</p>
+                    <a href="https://www.proquest.com" target="_blank" class="inline-flex items-center text-accent font-semibold hover:text-primary transition-colors">
+                        Access ProQuest <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-green-500 link-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">PubMed</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Free search engine accessing primarily the MEDLINE database of biomedical literature.</p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" class="inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors">
+                        Access PubMed <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-purple-500 link-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">EBSCOhost</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Research platform providing access to thousands of full-text journals and databases.</p>
+                    <a href="https://www.ebsco.com" target="_blank" class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors">
+                        Access EBSCOhost <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-orange-500 link-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">IEEE Xplore</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Digital library providing access to technical literature in engineering and technology.</p>
+                    <a href="https://ieeexplore.ieee.org" target="_blank" class="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition-colors">
+                        Access IEEE Xplore <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Access Resources Section -->
+    <section class="py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-blue-50" id="open-access">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Open Access Resources
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Free scholarly resources and educational materials
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-primary link-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Directory of Open Access Journals</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Comprehensive directory of open access and quality controlled scientific and scholarly journals.</p>
+                    <a href="https://doaj.org" target="_blank" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
+                        Visit DOAJ <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-secondary link-icon">
+                        <i class="fas fa-archive"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">arXiv</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Open access repository of electronic preprints and postprints in physics, mathematics, and computer science.</p>
+                    <a href="https://arxiv.org" target="_blank" class="inline-flex items-center text-secondary font-semibold hover:text-primary transition-colors">
+                        Visit arXiv <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-accent link-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">PLOS ONE</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Open access peer-reviewed scientific journal publishing research from all disciplines.</p>
+                    <a href="https://journals.plos.org/plosone" target="_blank" class="inline-flex items-center text-accent font-semibold hover:text-primary transition-colors">
+                        Visit PLOS ONE <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government & Legal Resources Section -->
+    <section class="py-20 lg:py-28" id="government-resources">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Government & Legal Resources
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Official government documents and legal information sources
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-blue-600 link-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Library of Congress</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Research library that serves as the main research arm of the U.S. Congress.</p>
+                    <a href="https://www.loc.gov" target="_blank" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                        Visit Library of Congress <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-green-600 link-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Supreme Court Database</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Comprehensive database of Supreme Court decisions and legal precedents.</p>
+                    <a href="https://supremecourtdatabase.org" target="_blank" class="inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors">
+                        Visit SCOTUS Database <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-red-600 link-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Legal Information Institute</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Free legal information and resources from Cornell Law School.</p>
+                    <a href="https://www.law.cornell.edu" target="_blank" class="inline-flex items-center text-red-600 font-semibold hover:text-red-700 transition-colors">
+                        Visit LII <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Platforms Section -->
+    <section class="py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-blue-50" id="educational-platforms">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Educational Platforms
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Online learning platforms and educational resources
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-primary link-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Coursera</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Online learning platform offering courses from top universities and organizations.</p>
+                    <a href="https://www.coursera.org" target="_blank" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
+                        Visit Coursera <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-secondary link-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">edX</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Online learning platform founded by Harvard and MIT offering university-level courses.</p>
+                    <a href="https://www.edx.org" target="_blank" class="inline-flex items-center text-secondary font-semibold hover:text-primary transition-colors">
+                        Visit edX <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-accent link-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Khan Academy</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Free online courses, lessons and practice for students and teachers.</p>
+                    <a href="https://www.khanacademy.org" target="_blank" class="inline-flex items-center text-accent font-semibold hover:text-primary transition-colors">
+                        Visit Khan Academy <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Libraries Section -->
+    <section class="py-20 lg:py-28" id="partner-libraries">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Partner Libraries
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Collaborative library networks and interlibrary loan partners
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-primary link-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">WorldCat</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Global library catalog connecting you to collections worldwide.</p>
+                    <a href="https://www.worldcat.org" target="_blank" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
+                        Search WorldCat <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-secondary link-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Digital Public Library of America</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Free digital library providing access to millions of materials from libraries nationwide.</p>
+                    <a href="https://dp.la" target="_blank" class="inline-flex items-center text-secondary font-semibold hover:text-primary transition-colors">
+                        Visit DPLA <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="link-item modern-card rounded-3xl p-8 hover-lift">
+                    <div class="text-4xl mb-6 text-accent link-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">HathiTrust</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Partnership of academic and research institutions preserving and providing access to digital content.</p>
+                    <a href="https://www.hathitrust.org" target="_blank" class="inline-flex items-center text-accent font-semibold hover:text-primary transition-colors">
+                        Visit HathiTrust <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        PIT Library
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">Serving our community with knowledge and resources since 1925.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        Hours & Location
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <p class="text-gray-300 mb-4">123 Reading Avenue<br>Bookville, BK 12345</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-300">Monday - Friday:</span>
+                            <span class="text-white">7:00am - 9:00pm</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        Resources
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Online Catalog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Research Databases</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">E-Books & Audiobooks</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Interlibrary Loan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 font-serif relative">
+                        Information
+                        <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Library Policies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Support the Library</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2023 PIT Learning Resources Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const content = this.parentElement.querySelector('.mobile-dropdown-content');
+                const icon = this.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
