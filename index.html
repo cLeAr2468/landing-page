@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./logo.png">
     <title>PIT Learning Resources Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -63,6 +64,16 @@
         .hover-lift:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+        .fade-in.fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.8s, transform 0.8s;
         }
     </style>
 </head>
@@ -225,7 +236,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24 fade-in" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./bg.jpg');">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="max-w-4xl mx-auto">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-serif">Welcome to PIT Learning resources Center</h1>
@@ -235,10 +246,10 @@
     </section>
 
     <!-- Library Guides Section -->
-    <section class="py-20 lg:py-28" id="services">
+    <section class="py-20 lg:py-28 fade-in" id="services">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-[#084434] bg-clip-text text-transparent">
                     Library Guides
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -294,13 +305,13 @@
     </section>
 
     <!-- Collections Section -->
-    <section class="py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-blue-50" id="collections">
+    <section class="py-20 lg:py-28 bg-[#084434] fade-in" id="collections">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-white bg-clip-text text-transparent">
                     Explore Our Collections
                 </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
                     Discover the diverse range of digital and physical materials available at PIT Library
                 </p>
             </div>
@@ -348,10 +359,10 @@
     </section>
 
     <!-- Announcements Section -->
-    <section class="py-20 lg:py-28" id="announcements">
+    <section class="py-20 lg:py-28 fade-in" id="announcements">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-[#084434] bg-clip-text text-transparent">
                     Latest Announcements
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -538,6 +549,25 @@
                         behavior: 'smooth'
                     });
                 }
+            });
+        });
+
+        // Fade-in on scroll for sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section.fade-in');
+            const options = {
+                threshold: 0.15
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add('fade-in-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            sections.forEach(section => {
+                observer.observe(section);
             });
         });
     </script>
