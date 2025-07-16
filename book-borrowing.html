@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Borrowing - PIT Learning Resources Center</title>
     <link rel="icon" type="image/png" href="./logo.png">
-    <title>PIT Learning Resources Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -21,64 +21,16 @@
                         'secondary': '#7c3aed',
                         'accent': '#06b6d4',
                     },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.6s ease-out',
-                        'float': 'float 3s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(30px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
                 }
             }
         }
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .glass-effect {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .modern-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .hover-lift {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s, transform 0.8s;
-        }
-        .fade-in.fade-in-visible {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.8s, transform 0.8s;
-        }
     </style>
 </head>
 <body class="font-body text-gray-800 bg-gray-50">
-    <!-- Header Section -->
+    <!-- Header Section (copied from mission-vision.html for consistency) -->
     <header class="bg-white shadow-lg fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-5">
@@ -226,211 +178,67 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24 fade-in" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./bg.jpg');">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-serif">Welcome to PIT Learning resources Center</h1>
-                <p class="text-lg sm:text-xl lg:text-2xl text-white mb-10 opacity-90 leading-relaxed">Your gateway to learning, imagination, and community. Explore our digital resources.</p>
+    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-16 lg:pt-40 lg:pb-24" style="background-image: linear-gradient(rgba(37,99,235,0.7), rgba(124,58,237,0.7)), url('./bg.jpg');">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col items-center">
+                <div class="text-6xl mb-4 text-white"><i class="fas fa-book-reader"></i></div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight font-serif">Book Borrowing</h1>
+                <p class="text-lg sm:text-xl lg:text-2xl text-white mb-6 opacity-90 leading-relaxed">Easily borrow books and resources from the PIT Learning Resource Center.</p>
             </div>
         </div>
     </section>
 
-    <!-- Library Guides Section -->
-    <section class="py-20 lg:py-28 fade-in" id="services">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-[#084434] bg-clip-text text-transparent">
-                    Library Guides
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Discover how to make the most of our Learning Resources Center
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                 <div class="modern-card rounded-3xl p-8 hover-lift group">
-                    <div class="text-5xl mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 font-serif text-gray-800">knowledge Concierge</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">Access our comprehensive collection of online resources, databases, and digital materials available 24/7.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
-                        Explore <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+    <!-- Borrowing Process Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-serif text-primary mb-8 text-center">How to Borrow a Book</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center p-6 bg-blue-50 rounded-lg shadow hover-lift">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-id-card"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Step 1: Present ID</h3>
+                    <p class="text-gray-700 text-center">Show your valid school ID at the library entrance and log your name in the attendance sheet.</p>
                 </div>
-
-                <div class="modern-card rounded-3xl p-8 hover-lift group">
-                    <div class="text-5xl mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 font-serif text-gray-800">Open Access Resources</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">Access our comprehensive collection of online resources, databases, and digital materials available 24/7.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
-                        Learn More <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+                <div class="flex flex-col items-center p-6 bg-blue-50 rounded-lg shadow hover-lift">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-search"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Step 2: Find a Book</h3>
+                    <p class="text-gray-700 text-center">Search the library catalog or browse the shelves to find the book you want to borrow.</p>
                 </div>
-                
-                <div class="modern-card rounded-3xl p-8 hover-lift group">
-                    <div class="text-5xl mb-6 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 font-serif text-gray-800">Tutorial Videos</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">Watch our comprehensive tutorial videos to master library systems, research techniques, and digital tools.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
-                        Watch Now <i class="fas fa-play ml-2"></i>
-                    </a>
-                </div>
-                
-                <div class="modern-card rounded-3xl p-8 hover-lift group">
-                    <div class="text-5xl mb-6 bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 font-serif text-gray-800">Library Services Guide</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">Complete guide to all our services including borrowing, research assistance, and study spaces.</p>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
-                        Get Started <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+                <div class="flex flex-col items-center p-6 bg-blue-50 rounded-lg shadow hover-lift">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-book"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Step 3: Borrow</h3>
+                    <p class="text-gray-700 text-center">Present the book and your ID at the circulation desk for check-out. Note the due date on the slip provided.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Collections Section -->
-    <section class="py-20 lg:py-28 bg-[#084434] fade-in" id="collections">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-white bg-clip-text text-transparent">
-                    Explore Our Collections
-                </h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Discover the diverse range of digital and physical materials available at PIT Library
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="relative h-96 rounded-3xl overflow-hidden shadow-2xl group hover-lift">
-                    <img src="https://images.unsplash.com/photo-1524578271613-d550eacf6090?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="OPAC System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
-                        <div class="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 inline-block mb-4">
-                            <i class="fas fa-search mr-2"></i>
-                            <span class="text-sm font-semibold">Search System</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 font-serif">OPAC Catalog</h3>
-                        <p class="text-sm opacity-90 leading-relaxed">Search our comprehensive online catalog to find books, journals, and digital resources.</p>
-                    </div>
+    <!-- FAQ / Info Section -->
+    <section class="py-12 bg-gradient-to-r from-blue-50 to-blue-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold font-serif text-primary mb-6 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="font-semibold text-lg mb-2 text-primary">How many books can I borrow at once?</h3>
+                    <p class="text-gray-700">Students may borrow up to 3 books at a time. Faculty and staff may have different borrowing privileges.</p>
                 </div>
-                
-                <div class="relative h-96 rounded-3xl overflow-hidden shadow-2xl group hover-lift">
-                    <img src="https://images.unsplash.com/photo-1471440671318-55bdbb772f93?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="E-Book Repository" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
-                        <div class="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 inline-block mb-4">
-                            <i class="fas fa-tablet-alt mr-2"></i>
-                            <span class="text-sm font-semibold">Digital Collection</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 font-serif">E-Book Repository</h3>
-                        <p class="text-sm opacity-90 leading-relaxed">Access thousands of e-books, audiobooks, and digital publications from anywhere.</p>
-                    </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="font-semibold text-lg mb-2 text-primary">How long can I keep borrowed books?</h3>
+                    <p class="text-gray-700">The standard loan period is 7 days for students. Renewals may be possible if the book is not reserved by another user.</p>
                 </div>
-                
-                <div class="relative h-96 rounded-3xl overflow-hidden shadow-2xl group hover-lift">
-                    <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Research Databases" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
-                        <div class="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 inline-block mb-4">
-                            <i class="fas fa-database mr-2"></i>
-                            <span class="text-sm font-semibold">Academic Resources</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 font-serif">Research Databases</h3>
-                        <p class="text-sm opacity-90 leading-relaxed">Access premium academic databases and scholarly resources for your research needs.</p>
-                    </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="font-semibold text-lg mb-2 text-primary">What if I lose or damage a book?</h3>
+                    <p class="text-gray-700">Please report lost or damaged books to the librarian immediately. Fines and replacement policies apply as stated in the library rules.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="font-semibold text-lg mb-2 text-primary">Can I return books after hours?</h3>
+                    <p class="text-gray-700">Yes, you may use the Book Drop located at the library entrance. Books returned after hours will be checked in the next business day.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Announcements Section -->
-    <section class="py-20 lg:py-28 fade-in" id="announcements">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-[#084434] bg-clip-text text-transparent">
-                    Latest Announcements
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Stay updated with the latest news, updates, and important information from PIT Library
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="modern-card rounded-3xl overflow-hidden hover-lift group">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="New Digital Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                                <i class="fas fa-bullhorn mr-2"></i>New Update
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <span>December 15, 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 font-serif text-gray-800">New Digital Learning Platform Launched</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">We're excited to announce the launch of our new digital learning platform with enhanced features and improved user experience.</p>
-                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
-                            Read More <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="modern-card rounded-3xl overflow-hidden hover-lift group">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Extended Hours" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                                <i class="fas fa-clock mr-2"></i>Important
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <span>December 10, 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 font-serif text-gray-800">Extended Library Hours During Finals</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">Starting December 16th, the library will extend operating hours to support students during the final examination period.</p>
-                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
-                            View Schedule <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="modern-card rounded-3xl overflow-hidden hover-lift group">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="New Collection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                                <i class="fas fa-star mr-2"></i>Featured
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <span>December 5, 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 font-serif text-gray-800">New Research Database Collection</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">We've added 15 new premium research databases covering engineering, technology, and applied sciences to our collection.</p>
-                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
-                            Explore Now <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-16">
+    <!-- Footer (copied for consistency) -->
+    <footer class="bg-gray-800 text-white py-16 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <div>
@@ -494,24 +302,24 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 pt-8 text-center">
-                <p class="text-gray-400 text-sm">&copy; 2023 Athena Library. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">&copy; 2023 PIT Learning Resources Center. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
         // Mobile menu toggle
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenuBtn').addEventListener('click', function () {
             const mobileMenu = document.getElementById('mobileMenu');
             mobileMenu.classList.toggle('hidden');
         });
 
         // Mobile dropdown functionality
         document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 const content = this.parentElement.querySelector('.mobile-dropdown-content');
                 const icon = this.querySelector('i');
-                
+
                 content.classList.toggle('hidden');
                 icon.classList.toggle('fa-chevron-down');
                 icon.classList.toggle('fa-chevron-up');
@@ -520,46 +328,10 @@
 
         // Close mobile menu when clicking on links
         document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 document.getElementById('mobileMenu').classList.add('hidden');
-            });
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    e.preventDefault();
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Fade-in on scroll for sections
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('section.fade-in');
-            const options = {
-                threshold: 0.15
-            };
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting){
-                        entry.target.classList.add('fade-in-visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, options);
-            sections.forEach(section => {
-                observer.observe(section);
             });
         });
     </script>
 </body>
-</html>
+</html> 
