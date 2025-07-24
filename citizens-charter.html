@@ -79,6 +79,16 @@
         .service-item:hover .service-icon {
             color: white;
         }
+        .dropdown-link, .mobile-dropdown-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            margin-bottom: 0.25rem;
+            border-radius: 0.375rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .dropdown-link:last-child, .mobile-dropdown-link:last-child {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 
@@ -96,67 +106,67 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex items-center space-x-8 lg:px-[4%]">
-                    <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition-colors duration-300">Home</a>
+                    <a href="index.html" class="nav-link">Home</a>
                     <!-- About Dropdown -->
                     <div class="relative group">
-                        <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                        <button class="flex items-center nav-link">
                             About
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
                         <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
-                                <a href="mission-vision.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Mission & Vision</a>
-                                <a href="service-hours.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Service Hours</a>
-                                <a href="library-personnel.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Library Personel</a>
-                                <a href="policies-rules.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Policies & Rules</a>
-                                <a href="citizens-charter.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Citizen's Charter</a>
-                                <a href="linkages.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Linkages</a>
-                                <a href="libraries.html" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary">Libraries</a>
+                                <a href="mission-vision.html" class="dropdown-link">Mission & Vision</a>
+                                <a href="service-hours.html" class="dropdown-link">Service Hours</a>
+                                <a href="library-personnel.html" class="dropdown-link">Library Personel</a>
+                                <a href="policies-rules.html" class="dropdown-link">Policies & Rules</a>
+                                <a href="citizens-charter.html" class="dropdown-link">Citizen's Charter</a>
+                                <a href="linkages.html" class="dropdown-link">Linkages</a>
+                                <a href="libraries.html" class="dropdown-link">Libraries</a>
                             </div>
                         </div>
                     </div>
                     <!-- Services Dropdown -->
                     <div class="relative group">
-                        <button class="flex items-center text-primary font-medium transition-colors duration-300">
+                        <button class="flex items-center nav-link">
                             Services
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
                         <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
-                                <a href="book-borrowing.html" class="block px-4 py-2 text-primary bg-blue-50">Book Borrowing</a>
-                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Digital Resources</a>
-                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Assistance</a>
-                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Printing & Copying</a>
+                                <a href="book-borrowing.html" class="dropdown-link" data-service="book-borrowing">Book Borrowing</a>
+                                <a href="#" class="dropdown-link" data-service="digital-resources">Digital Resources</a>
+                                <a href="#" class="dropdown-link" data-service="research-assistance">Research Assistance</a>
+                                <a href="#" class="dropdown-link" data-service="printing-copying">Printing & Copying</a>
                             </div>
                         </div>
                     </div>
                     <!-- Resources Dropdown -->
                     <div class="relative group">
-                        <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                        <button class="flex items-center nav-link">
                             Resources
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
                         <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
-                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Online Catalog</a>
-                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">E-Books & Audiobooks</a>
-                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Databases</a>
-                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Study Rooms</a>
+                                <a href="#" class="dropdown-link">Online Catalog</a>
+                                <a href="#" class="dropdown-link">E-Books & Audiobooks</a>
+                                <a href="#" class="dropdown-link">Research Databases</a>
+                                <a href="#" class="dropdown-link">Study Rooms</a>
                             </div>
                         </div>
                     </div>
                     <!-- Ask Librarian Dropdown -->
                     <div class="relative group">
-                        <button class="flex items-center text-gray-700 hover:text-primary font-medium transition-colors duration-300">
+                        <button class="flex items-center nav-link">
                             Ask Librarian
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
                         <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
-                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Chat with Librarian</a>
-                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Email Reference</a>
-                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Research Help</a>
-                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors">Book a Consultation</a>
+                                <a href="#" class="dropdown-link">Chat with Librarian</a>
+                                <a href="#" class="dropdown-link">Email Reference</a>
+                                <a href="#" class="dropdown-link">Research Help</a>
+                                <a href="#" class="dropdown-link">Book a Consultation</a>
                             </div>
                         </div>
                     </div>
@@ -169,60 +179,60 @@
             <!-- Mobile Navigation -->
             <div class="lg:hidden hidden" id="mobileMenu">
                 <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-                    <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary font-medium">Home</a>
+                    <a href="index.html" class="mobile-nav-link">Home</a>
                     <!-- Mobile About Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             About
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="mission-vision.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Mission & Vision</a>
-                            <a href="service-hours.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Service Hours</a>
-                            <a href="library-personnel.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Library Personel</a>
-                            <a href="policies-rules.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Policies & Rules</a>
-                            <a href="citizens-charter.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Citizen's Charter</a>
-                            <a href="linkages.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Linkages</a>
-                            <a href="libraries.html" class="block px-3 py-2 text-gray-600 hover:text-primary">Libraries</a>
+                            <a href="mission-vision.html" class="mobile-dropdown-link">Mission & Vision</a>
+                            <a href="service-hours.html" class="mobile-dropdown-link">Service Hours</a>
+                            <a href="library-personnel.html" class="mobile-dropdown-link">Library Personel</a>
+                            <a href="policies-rules.html" class="mobile-dropdown-link">Policies & Rules</a>
+                            <a href="citizens-charter.html" class="mobile-dropdown-link">Citizen's Charter</a>
+                            <a href="linkages.html" class="mobile-dropdown-link">Linkages</a>
+                            <a href="libraries.html" class="mobile-dropdown-link">Libraries</a>
                         </div>
                     </div>
                     <!-- Mobile Services Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full px-3 py-2 text-primary font-medium mobile-dropdown-btn">
+                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             Services
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="book-borrowing.html" class="block px-3 py-2 text-primary bg-blue-50">Book Borrowing</a>
-                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Digital Resources</a>
-                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Assistance</a>
-                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Printing & Copying</a>
+                            <a href="book-borrowing.html" class="mobile-dropdown-link" data-service="book-borrowing">Book Borrowing</a>
+                            <a href="#" class="mobile-dropdown-link" data-service="digital-resources">Digital Resources</a>
+                            <a href="#" class="mobile-dropdown-link" data-service="research-assistance">Research Assistance</a>
+                            <a href="#" class="mobile-dropdown-link" data-service="printing-copying">Printing & Copying</a>
                         </div>
                     </div>
                     <!-- Mobile Resources Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             Online Resources
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Online Catalog</a>
-                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">E-Books & Audiobooks</a>
-                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Databases</a>
-                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Study Rooms</a>
+                            <a href="#" class="mobile-dropdown-link">Online Catalog</a>
+                            <a href="#" class="mobile-dropdown-link">E-Books & Audiobooks</a>
+                            <a href="#" class="mobile-dropdown-link">Research Databases</a>
+                            <a href="#" class="mobile-dropdown-link">Study Rooms</a>
                         </div>
                     </div>
                     <!-- Mobile Ask Librarian Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-primary font-medium mobile-dropdown-btn">
+                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             Ask Librarian
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Chat with Librarian</a>
-                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Email Reference</a>
-                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Research Help</a>
-                            <a href="#" class="block px-3 py-2 text-gray-600 hover:text-primary">Book a Consultation</a>
+                            <a href="#" class="mobile-dropdown-link">Chat with Librarian</a>
+                            <a href="#" class="mobile-dropdown-link">Email Reference</a>
+                            <a href="#" class="mobile-dropdown-link">Research Help</a>
+                            <a href="#" class="mobile-dropdown-link">Book a Consultation</a>
                         </div>
                     </div>
                 </div>
@@ -753,6 +763,45 @@
                 }
             });
         });
+
+        // Highlight nav and dropdown based on current page
+        (function() {
+            const path = window.location.pathname.split('/').pop();
+            // Desktop
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if(link.getAttribute('href') === path) {
+                    link.classList.add('text-primary', 'font-bold');
+                }
+            });
+            document.querySelectorAll('.dropdown-link').forEach(link => {
+                if(link.getAttribute('href') === path) {
+                    link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
+                    // Also highlight parent dropdown button
+                    let parent = link.closest('.group');
+                    if(parent) {
+                        let btn = parent.querySelector('button');
+                        btn.classList.add('text-primary', 'font-bold');
+                    }
+                }
+            });
+            // Mobile
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                if(link.getAttribute('href') === path) {
+                    link.classList.add('text-primary', 'font-bold');
+                }
+            });
+            document.querySelectorAll('.mobile-dropdown-link').forEach(link => {
+                if(link.getAttribute('href') === path) {
+                    link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
+                    // Also highlight parent dropdown button
+                    let parent = link.closest('.mobile-dropdown');
+                    if(parent) {
+                        let btn = parent.querySelector('button');
+                        btn.classList.add('text-primary', 'font-bold');
+                    }
+                }
+            });
+        })();
     </script>
 </body>
 
