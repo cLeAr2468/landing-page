@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mission & Vision - PIT Learning Resources Center</title>
+    <title>Digital Resources - PIT Learning Resources Center</title>
     <link rel="icon" type="image/png" href="./logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,76 +21,12 @@
                         'secondary': '#7c3aed',
                         'accent': '#06b6d4',
                     },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.6s ease-out',
-                        'float': 'float 3s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(30px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
                 }
             }
         }
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
-
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .glass-effect {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .modern-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .hover-lift {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .hover-lift:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-
-        .timeline-item {
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, #2563eb, #7c3aed);
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: -6px;
-            top: 0;
-            width: 14px;
-            height: 14px;
-            background: #2563eb;
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 0 3px #2563eb;
-        }
         .dropdown-link, .mobile-dropdown-link {
             display: block;
             padding: 0.5rem 1rem;
@@ -104,9 +39,8 @@
         }
     </style>
 </head>
-
 <body class="font-body text-gray-800 bg-gray-50">
-    <!-- Header Section -->
+    <!-- Header Section (copied for consistency) -->
     <header class="bg-white shadow-lg fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-5">
@@ -126,8 +60,7 @@
                             About
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
-                        <div
-                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
                                 <a href="mission-vision.html" class="dropdown-link">Mission & Vision</a>
                                 <a href="library-personnel.html" class="dropdown-link">Library Personel</a>
@@ -140,13 +73,11 @@
                     </div>
                     <!-- Services Dropdown -->
                     <div class="relative group">
-                        <button
-                            class="flex items-center nav-link">
+                        <button class="flex items-center nav-link">
                             Services
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
-                        <div
-                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
                                 <a href="book-borrowing.html" class="dropdown-link" data-service="book-borrowing">Book Borrowing</a>
                                 <a href="service-hours.html" class="dropdown-link">Service Hours</a>
@@ -174,13 +105,11 @@
                     </div>
                     <!-- Ask Librarian Dropdown -->
                     <div class="relative group">
-                        <button
-                            class="flex items-center nav-link">
+                        <button class="flex items-center nav-link">
                             Ask Librarian
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
-                        <div
-                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
                                 <a href="#" class="dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
                                 <a href="#" class="dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
@@ -189,22 +118,18 @@
                         </div>
                     </div>
                 </nav>
-
                 <!-- Mobile Menu Button -->
                 <button class="lg:hidden text-gray-700 hover:text-primary" id="mobileMenuBtn">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
-
             <!-- Mobile Navigation -->
             <div class="lg:hidden hidden" id="mobileMenu">
                 <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
                     <a href="index.html" class="mobile-nav-link">Home</a>
-
                     <!-- Mobile About Dropdown -->
                     <div class="mobile-dropdown">
-                        <button
-                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             About
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
@@ -217,27 +142,23 @@
                             <a href="libraries.html" class="mobile-dropdown-link">Libraries</a>
                         </div>
                     </div>
-
                     <!-- Mobile Services Dropdown -->
                     <div class="mobile-dropdown">
-                        <button
-                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             Services
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
                             <a href="book-borrowing.html" class="mobile-dropdown-link" data-service="book-borrowing">Book Borrowing</a>
-                            <a href="service-hours.html" class="mobile-dropdown-link">Service Hours</a>
+                            <a href="service-hours.html" class="dropdown-link">Service Hours</a>
                             <a href="digital-resources.html" class="mobile-dropdown-link" data-service="digital-resources">Digital Resources</a>
                             <a href="#" class="mobile-dropdown-link" data-service="research-assistance">Research Assistance</a>
                             <a href="#" class="mobile-dropdown-link" data-service="printing-copying">Printing & Copying</a>
                         </div>
                     </div>
-
                     <!-- Mobile Online Resources Dropdown -->
                     <div class="mobile-dropdown">
-                        <button
-                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             Online Resources
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
@@ -249,11 +170,9 @@
                             <a href="#" class="mobile-dropdown-link">Faculty Assistance</a>
                         </div>
                     </div>
-
                     <!-- Mobile Ask Librarian Dropdown -->
                     <div class="mobile-dropdown">
-                        <button
-                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             Ask Librarian
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
@@ -263,53 +182,79 @@
                             <a href="#" class="mobile-dropdown-link"><i class="fas fa-question-circle mr-2"></i>Help Guide/Tools</a>
                         </div>
                     </div>
+                    <a href="digital-resources.html" class="mobile-nav-link">Digital Resources</a>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24"
-        style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./bg.jpg');">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24 fade-in" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./bg.jpg');">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex flex-col items-center">
-                <img src="logo.png" alt="PIT Logo" class="w-24 h-24 mb-4 rounded-full shadow-lg border-4 border-white">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight font-serif">PIT Vision, Mission & LRC Goals</h1>
-                <p class="text-lg sm:text-xl lg:text-2xl text-white mb-6 opacity-90 leading-relaxed">Guiding principles and objectives of the Polytechnic State University and its Learning Resource Center.</p>
+                <div class="text-6xl mb-4 text-white"><i class="fas fa-laptop-code"></i></div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight font-serif">Digital Resources</h1>
+                <p class="text-lg sm:text-xl lg:text-2xl text-white mb-6 opacity-90 leading-relaxed">Access online resources, research assistance, and printing services at PIT LRC.</p>
             </div>
         </div>
     </section>
 
-    <!-- Vision & Mission Section -->
-    <section class="py-16 lg:py-24 bg-white" id="vision-mission">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="flex flex-col items-center text-center md:text-left md:items-start">
-                <div class="text-6xl mb-4 text-primary"><i class="fas fa-eye"></i></div>
-                <h2 class="text-3xl font-bold font-serif mb-2 text-primary">VISION</h2>
-                <p class="text-lg text-gray-700 mb-6">A premier polytechnic state university.</p>
-                <div class="text-6xl mb-4 text-secondary"><i class="fas fa-bullseye"></i></div>
-                <h2 class="text-3xl font-bold font-serif mb-2 text-secondary">MISSION</h2>
-                <p class="text-lg text-gray-700">To strengthen its capacity of producing highly-skilled, competent, and world-class human resources, responsible to fulfill stakeholder needs, goals of national development and ASEAN integration for the attainment of a good quality of life with the guidance and providence of God.</p>
+    <!-- Digital Resources Content Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div>
+                <h2 class="text-3xl font-bold font-serif text-primary mb-4">Open Access Ebook Repository</h2>
+                <p class="text-lg text-gray-800">Explore a wide range of open access eBooks and digital materials through our repository. Please visit the library or contact the librarian for more information about available digital collections.</p>
             </div>
-            <div class="flex flex-col items-center text-center md:text-left md:items-start">
-                <div class="text-6xl mb-4 text-accent"><i class="fas fa-book-reader"></i></div>
-                <h2 class="text-3xl font-bold font-serif mb-2 text-accent">PIT LRC GOAL</h2>
-                <p class="text-lg text-gray-700 mb-6">To provide appropriate and timely information with maximum service through the use of the materials in the learning resource center, thereby providing for the fulfillment of the clientele’s educational, cultural, professional, aesthetical, recreational research needs in support to PIT’s vision and mission.</p>
-                <h3 class="text-2xl font-bold font-serif mb-2 text-primary">OBJECTIVES</h3>
-                <ol class="list-decimal list-inside text-gray-700 space-y-2 text-left">
-                    <li>Provide a wide variety of information resources that support, enrich and satisfy the curricula and research needs of the College.</li>
-                    <li>Upgrade and strengthen the resources and existing facilities and equipment to meet the research needs of the clientele.</li>
-                    <li>Develop student’s awareness of the value of the resources in the Learning Resource Center as a means for lifelong education and provide bibliographic tool to the contents of the collection.</li>
-                    <li>Encourage faculty members in promoting the effective use of the resources by the students and for them to utilize more fully for their professional growth and for the improvement of the institute.</li>
-                    <li>Update operations and services in the Learning Resource Center and investigate the changing educational needs and to provide access to information, programs and services.</li>
-                    <li>Establish linkages with local, national and international institutions to enhance library facilities and resources.</li>
-                </ol>
+
+            <div>
+                <h2 class="text-3xl font-bold font-serif text-primary mb-4">Online Research Assistance</h2>
+                <p class="text-lg text-gray-800 mb-2">This type of service serves as a virtual bridge wherein students can send their request for research assistance such as document delivery and book borrowing.</p>
+                <a href="https://bit.ly/PIT-ORA" target="_blank" class="inline-block mt-2 px-5 py-2 bg-primary text-white rounded-lg font-semibold shadow hover:bg-primary-hover transition">Request Assistance Online</a>
+            </div>
+
+            <div>
+                <h2 class="text-3xl font-bold font-serif text-primary mb-4">Printing & Photocopying</h2>
+                <p class="text-lg text-gray-800 mb-4">A photocopier is available in the library. The following is the schedule of fees:</p>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200 mb-4">
+                        <thead>
+                            <tr class="bg-blue-50">
+                                <th class="py-2 px-4 border-b text-left">Type</th>
+                                <th class="py-2 px-4 border-b text-left">Fee (Student/Non-Student)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-4 border-b">Short bond paper</td>
+                                <td class="py-2 px-4 border-b">P 1.50 (2.00)</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">Long bond paper</td>
+                                <td class="py-2 px-4 border-b">P 2.00 (2.50)</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">Enlarged copy (short / long)</td>
+                                <td class="py-2 px-4 border-b">P 4.00</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">Graphics / picture (short / long)</td>
+                                <td class="py-2 px-4 border-b">P 3.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul class="list-disc list-inside text-gray-800 text-lg space-y-2">
+                    <li>Students have the option to photocopy the Filipiniana, reference or reserved books either in the library or outside of the library.</li>
+                    <li>Books from the General Reference Section are strictly photocopied only in the library to avoid any losses from its set.</li>
+                    <li>Photocopying outside the library should be done in not more than fifteen (15) minutes only.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-16">
+    <!-- Footer (copied for consistency) -->
+    <footer class="bg-gray-800 text-white py-16 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <div>
@@ -317,23 +262,18 @@
                         PIT Library
                         <span class="absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
                     </h3>
-                    <p class="text-gray-300 mb-6 leading-relaxed">Serving our community with knowledge and resources
-                        since 1925.</p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">Serving our community with knowledge and resources since 1925.</p>
                     <div class="flex space-x-4">
-                        <a href="#"
-                            class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#"
-                            class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#"
-                            class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#"
-                            class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -358,12 +298,9 @@
                     </h3>
                     <ul class="space-y-3">
                         <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Online Catalog</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Research Databases</a>
-                        </li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">E-Books &
-                                Audiobooks</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Interlibrary Loan</a>
-                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Research Databases</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">E-Books & Audiobooks</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Interlibrary Loan</a></li>
                     </ul>
                 </div>
                 <div>
@@ -373,10 +310,8 @@
                     </h3>
                     <ul class="space-y-3">
                         <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Library Policies</a>
-                        </li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Support the Library</a>
-                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Library Policies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Support the Library</a></li>
                         <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Careers</a></li>
                         <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
                     </ul>
@@ -411,23 +346,6 @@
         document.querySelectorAll('#mobileMenu a').forEach(link => {
             link.addEventListener('click', function () {
                 document.getElementById('mobileMenu').classList.add('hidden');
-            });
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    e.preventDefault();
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
             });
         });
 
@@ -471,5 +389,4 @@
         })();
     </script>
 </body>
-
-</html>
+</html> 
