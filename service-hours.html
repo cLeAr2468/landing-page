@@ -133,8 +133,6 @@
                             <a href="book-borrowing.html" class="dropdown-link" data-service="book-borrowing">Book Borrowing</a>
                             <a href="service-hours.html" class="dropdown-link">Service Hours</a>
                             <a href="digital-resources.html" class="dropdown-link" data-service="digital-resources">Digital Resources</a>
-                            <a href="#" class="dropdown-link" data-service="research-assistance">Research Assistance</a>
-                            <a href="#" class="dropdown-link" data-service="printing-copying">Printing & Copying</a>
                         </div>
                     </div>
                 </div>
@@ -203,8 +201,6 @@
                         <a href="book-borrowing.html" class="mobile-dropdown-link" data-service="book-borrowing">Book Borrowing</a>
                         <a href="service-hours.html" class="mobile-dropdown-link">Service Hours</a>
                         <a href="digital-resources.html" class="mobile-dropdown-link" data-service="digital-resources">Digital Resources</a>
-                        <a href="#" class="mobile-dropdown-link" data-service="research-assistance">Research Assistance</a>
-                        <a href="#" class="mobile-dropdown-link" data-service="printing-copying">Printing & Copying</a>
                     </div>
                 </div>
                 <!-- Mobile Online Resources Dropdown -->
@@ -239,279 +235,22 @@
 </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-serif">Service Hours</h1>
-                <p class="text-lg sm:text-xl lg:text-2xl text-white mb-10 opacity-90 leading-relaxed">Plan your visit with our comprehensive schedule and special hours information.</p>
+    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24 fade-in" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./bg.jpg');">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col items-center">
+                <div class="text-6xl mb-4 text-white"><i class="fas fa-clock"></i></div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight font-serif">Service Hours</h1>
+                <p class="text-lg sm:text-xl lg:text-2xl text-white mb-6 opacity-90 leading-relaxed">Library operating hours for your convenience.</p>
             </div>
         </div>
     </section>
 
-    <!-- Regular Hours Section -->
-    <section class="py-20 lg:py-28" id="regular-hours">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    Regular Operating Hours
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Our standard operating schedule throughout the academic year
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Monday - Friday -->
-                <div class="time-slot modern-card rounded-3xl p-8 hover-lift">
-                    <div class="text-4xl mb-6 text-primary">
-                        <i class="fas fa-clock time-icon"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 font-serif text-gray-800">Monday - Friday</h3>
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-600">Opening:</span>
-                            <span class="font-semibold text-gray-800">7:00 AM</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-600">Closing:</span>
-                            <span class="font-semibold text-gray-800">9:00 PM</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-600">Total Hours:</span>
-                            <span class="font-semibold text-primary">14 Hours</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Saturday -->
-                <div class="time-slot modern-card rounded-3xl p-8 hover-lift">
-                    <div class="text-4xl mb-6 text-secondary">
-                        <i class="fas fa-calendar-day time-icon"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 font-serif text-gray-800">Saturday</h3>
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-600">Opening:</span>
-                            <span class="font-semibold text-gray-800">8:00 AM</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-600">Closing:</span>
-                            <span class="font-semibold text-gray-800">6:00 PM</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-600">Total Hours:</span>
-                            <span class="font-semibold text-secondary">10 Hours</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sunday -->
-                <div class="time-slot modern-card rounded-3xl p-8 hover-lift">
-                    <div class="text-4xl mb-6 text-accent">
-                        <i class="fas fa-sun time-icon"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 font-serif text-gray-800">Sunday</h3>
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-600">Opening:</span>
-                            <span class="font-semibold text-gray-800">9:00 AM</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-600">Closing:</span>
-                            <span class="font-semibold text-gray-800">5:00 PM</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-600">Total Hours:</span>
-                            <span class="font-semibold text-accent">8 Hours</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Special Hours Section -->
-    <section class="py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-blue-50" id="special-hours">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    Special Hours & Events
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Modified schedules for holidays, exam periods, and special events
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Exam Period Hours -->
-                <div class="modern-card rounded-3xl p-8 hover-lift">
-                    <div class="flex items-center mb-6">
-                        <div class="text-3xl text-primary mr-4">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold font-serif text-gray-800">Exam Period Hours</h3>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="border-l-4 border-primary pl-4">
-                            <h4 class="font-semibold text-gray-800 mb-2">Midterm & Final Exams</h4>
-                            <p class="text-gray-600 text-sm">Extended hours during examination periods</p>
-                            <div class="mt-2 text-sm">
-                                <span class="font-semibold text-primary">Monday - Sunday:</span>
-                                <span class="text-gray-700">7:00 AM - 11:00 PM</span>
-                            </div>
-                        </div>
-                        <div class="border-l-4 border-secondary pl-4">
-                            <h4 class="font-semibold text-gray-800 mb-2">Study Rooms</h4>
-                            <p class="text-gray-600 text-sm">24/7 access to study rooms during exam periods</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Holiday Hours -->
-                <div class="modern-card rounded-3xl p-8 hover-lift">
-                    <div class="flex items-center mb-6">
-                        <div class="text-3xl text-secondary mr-4">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold font-serif text-gray-800">Holiday Schedule</h3>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="border-l-4 border-green-500 pl-4">
-                            <h4 class="font-semibold text-gray-800 mb-2">Major Holidays</h4>
-                            <p class="text-gray-600 text-sm">Closed on major holidays</p>
-                            <ul class="text-sm text-gray-600 mt-2 space-y-1">
-                                <li>• New Year's Day</li>
-                                <li>• Independence Day</li>
-                                <li>• Christmas Day</li>
-                            </ul>
-                        </div>
-                        <div class="border-l-4 border-yellow-500 pl-4">
-                            <h4 class="font-semibold text-gray-800 mb-2">Reduced Hours</h4>
-                            <p class="text-gray-600 text-sm">Modified hours on certain holidays</p>
-                            <div class="mt-2 text-sm">
-                                <span class="font-semibold text-yellow-600">Hours:</span>
-                                <span class="text-gray-700">10:00 AM - 4:00 PM</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service Availability Section -->
-    <section class="py-20 lg:py-28" id="service-availability">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    Service Availability
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Different services have varying availability throughout the day
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="modern-card rounded-3xl p-6 hover-lift text-center">
-                    <div class="text-4xl mb-4 text-primary">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-3 font-serif text-gray-800">Book Borrowing</h3>
-                    <p class="text-sm text-gray-600 mb-4">Physical book checkout and return services</p>
-                    <div class="text-xs text-gray-500">
-                        <div class="font-semibold text-primary">Available:</div>
-                        <div>All Operating Hours</div>
-                    </div>
-                </div>
-
-                <div class="modern-card rounded-3xl p-6 hover-lift text-center">
-                    <div class="text-4xl mb-4 text-secondary">
-                        <i class="fas fa-laptop"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-3 font-serif text-gray-800">Computer Access</h3>
-                    <p class="text-sm text-gray-600 mb-4">Public computers and internet access</p>
-                    <div class="text-xs text-gray-500">
-                        <div class="font-semibold text-secondary">Available:</div>
-                        <div>All Operating Hours</div>
-                    </div>
-                </div>
-
-                <div class="modern-card rounded-3xl p-6 hover-lift text-center">
-                    <div class="text-4xl mb-4 text-accent">
-                        <i class="fas fa-print"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-3 font-serif text-gray-800">Printing Services</h3>
-                    <p class="text-sm text-gray-600 mb-4">Print, copy, and scan services</p>
-                    <div class="text-xs text-gray-500">
-                        <div class="font-semibold text-accent">Available:</div>
-                        <div>8:00 AM - 8:00 PM</div>
-                    </div>
-                </div>
-
-                <div class="modern-card rounded-3xl p-6 hover-lift text-center">
-                    <div class="text-4xl mb-4 text-green-500">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-3 font-serif text-gray-800">Reference Desk</h3>
-                    <p class="text-sm text-gray-600 mb-4">Librarian assistance and research help</p>
-                    <div class="text-xs text-gray-500">
-                        <div class="font-semibold text-green-500">Available:</div>
-                        <div>9:00 AM - 7:00 PM</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Information Section -->
-    <section class="py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-blue-50" id="contact">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    Contact Information
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Get in touch with us for questions about our hours and services
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="modern-card rounded-3xl p-8 hover-lift text-center">
-                    <div class="text-4xl mb-6 text-primary">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Phone</h3>
-                    <p class="text-gray-600 mb-4">Main Library Desk</p>
-                    <div class="space-y-2">
-                        <div class="text-lg font-semibold text-primary">(555) 123-4567</div>
-                        <div class="text-sm text-gray-500">Available during operating hours</div>
-                    </div>
-                </div>
-
-                <div class="modern-card rounded-3xl p-8 hover-lift text-center">
-                    <div class="text-4xl mb-6 text-secondary">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Email</h3>
-                    <p class="text-gray-600 mb-4">General Inquiries</p>
-                    <div class="space-y-2">
-                        <div class="text-lg font-semibold text-secondary">library@pit.edu</div>
-                        <div class="text-sm text-gray-500">Response within 24 hours</div>
-                    </div>
-                </div>
-
-                <div class="modern-card rounded-3xl p-8 hover-lift text-center">
-                    <div class="text-4xl mb-6 text-accent">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 font-serif text-gray-800">Location</h3>
-                    <p class="text-gray-600 mb-4">Main Campus</p>
-                    <div class="space-y-2">
-                        <div class="text-lg font-semibold text-accent">Building A, 2nd Floor</div>
-                        <div class="text-sm text-gray-500">Room 201-205</div>
-                    </div>
-                </div>
-            </div>
+    <!-- Service Hours Content Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold font-serif text-primary mb-6">Service Hours</h2>
+            <div class="text-xl text-gray-800 font-semibold mb-2">Monday - Friday</div>
+            <div class="text-2xl text-gray-900 font-bold mb-4">7:30 AM - 6:00 P.M. <span class="block text-base font-normal text-gray-600">(No Noon Break)</span></div>
         </div>
     </section>
 
