@@ -78,10 +78,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-5">
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center text-2xl font-bold text-primary font-serif">
-                    <i class="fas fa-book-open mr-3"></i>
-                    <span class="hidden sm:block">Learning Resource Center</span>
-                    <span class="sm:hidden">LRC</span>
+                <a href="index.html" class="flex items-center">
+                    <img src="logo.png" alt="PIT LRC Logo" class="h-12 w-12 mr-3">
+                    <div class="hidden sm:block">
+                        <div class="text-xl font-bold text-[#084434]">Palompon Institute of Technology</div>
+                        <div class="text-xl font-bold text-[#084434]">Learning Resource Center</div>
+                    </div>
+                    <div class="sm:hidden">
+                        <div class="text-xl font-extrabold text-[#084434]">PIT-LRC</div>
+                    </div>
                 </a>
                 <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex items-center space-x-8 lg:px-[4%]">
@@ -212,82 +217,177 @@
     </header>
     <main class="pt-32 pb-12 min-h-screen bg-gray-50">
         <div class="max-w-3xl mx-auto px-4">
-            <h1 class="text-3xl sm:text-4xl font-bold font-serif text-primary mb-8 text-center">New Book Alert</h1>
+            <h1 class="text-3xl sm:text-4xl font-bold font-serif text-primary mb-8 text-center">New Books Alert</h1>
             <ul class="space-y-6">
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Engineering Fundamentals</span>
+                                 <!-- BS Industrial Technology Dropdown -->
+                <li class="bg-white rounded-xl shadow p-5 hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer" onclick="toggleIndustrialTechDropdown()">
+                        <span class="font-semibold text-lg">BS in Industrial Technology (BSInt)</span>
+                        <div class="mt-2 sm:mt-0 text-blue-600 hover:text-blue-800 transition-colors">
+                            <i class="fas fa-chevron-down" id="industrialTechChevron"></i>
+                        </div>
+                    </div>
+                    <div class="hidden mt-4 space-y-3" id="industrialTechDropdown">
+                        <a href="https://drive.google.com/drive/folders/1ZDhHvHh6t_vDrUvpG475eAw1S7cPZTXm?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">Drafting Technology</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1Th_WylpRCLRgPCfWpsLV8VudNEACaphR?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">Food & Beverage Preparation & Service Management</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1mnrtkb9Y7YpgN1xP18wf21LMcNALAMXA?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">Welding & Fabrication Technology</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1FbdDD9-iRzgRRSwzazGgYO9JhJ76lrhB?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">Fashion & Apparel Technology</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                    </div>
                 </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Data Science Essentials</span>
+                
+                <!-- BS Computer Science Dropdown -->
+                <li class="bg-white rounded-xl shadow p-5 hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer" onclick="toggleComputerScienceDropdown()">
+                        <span class="font-semibold text-lg">Engineering Courses</span>
+                        <div class="mt-2 sm:mt-0 text-blue-600 hover:text-blue-800 transition-colors">
+                            <i class="fas fa-chevron-down" id="computerScienceChevron"></i>
+                        </div>
+                    </div>
+                    <div class="hidden mt-4 space-y-3" id="computerScienceDropdown">
+                        <a href="https://drive.google.com/drive/folders/1w-Lvfdl9SyqdxWRtRMJ_82UyTPnxRMnb?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">BS in Electrical Engineering</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1nTRaZVxShpcotht6avFbeu1UDC79u7Hp?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">BS in Industrial Engineering (BSIE)</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1ji-FQ7lu94XNIRsRa2uqSrPWgeyWIwf9?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">BS in Mechanical Engineering</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1Ydzui6H8CNiWLO8rdPePtACrEKFb9fTt?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">BS in Marine Engineering</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                    </div>
                 </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Artificial Intelligence</span>
+                
+                <!-- Bachelor of Industrial Technology Dropdown -->
+                <li class="bg-white rounded-xl shadow p-5 hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer" onclick="toggleIndustrialTechBachelorDropdown()">
+                        <span class="font-semibold text-lg">Bachelor of Industrial Technology (BInd Tech)</span>
+                        <div class="mt-2 sm:mt-0 text-blue-600 hover:text-blue-800 transition-colors">
+                            <i class="fas fa-chevron-down" id="industrialTechBachelorChevron"></i>
+                        </div>
+                    </div>
+                    <div class="hidden mt-4 space-y-3" id="industrialTechBachelorDropdown">
+                        <a href="https://drive.google.com/drive/folders/1Cat5FY2XF8X3_O4usXFQ0CVEDB8_nmDC?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">BInd-Tech - Culinary Technology</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                    </div>
                 </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Sustainable Technology</span>
+                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='https://drive.google.com/drive/folders/1CCpESTX42G8e5U8dHNP1fwSWAsFgU_s7?usp=drive_link '">
+                    <span class="font-semibold text-lg">BS in Hospitality Management (BSHM)</span>
                 </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Cybersecurity Fundamentals</span>
+                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.open('https://drive.google.com/drive/folders/1WcCyMjxYzven8t73MOe6T4uI_g6IBZSF?usp=drive_link', '_blank')">
+                    <span class="font-semibold text-lg">Bachelor of Science in Business Administration</span>
                 </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Machine Learning</span>
+                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.open('https://drive.google.com/drive/folders/1rwuL0EUQ5oTjXlfU4-MMgYgvveyLexQA?usp=sharing', '_blank')">
+                    <span class="font-semibold text-lg">Bachelor of Arts in Communication</span>
                 </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Digital Transformation</span>
+                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.open('https://drive.google.com/drive/folders/1Qsauouh8__9grqV2e14mCwDx4V85hlUW?usp=drive_link', '_blank')">
+                    <span class="font-semibold text-lg">Bachelor of Science in Information Technology</span>
                 </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Cloud Computing</span>
+                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.open('https://drive.google.com/drive/folders/1M_H9rAc843tzKsArtjZ1UXJdEwbqTDWN?usp=drive_link', '_blank')">
+                    <span class="font-semibold text-lg">General Education Curriculum (GEC)</span>
                 </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Internet of Things</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Blockchain Technology</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Web Development</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Mobile App Development</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Database Systems</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Software Engineering</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Network Security</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Cloud Architecture</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Big Data Analytics</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">UI/UX Design</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Project Management</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Ethical Hacking</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Business Intelligence</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Computer Vision</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Natural Language Processing</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Quantum Computing</span>
-                </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='#'">
-                    <span class="font-semibold text-lg">Augmented Reality</span>
+                <!-- Education Dropdown -->
+                <li class="bg-white rounded-xl shadow p-5 hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer" onclick="toggleEducationDropdown()">
+                        <span class="font-semibold text-lg">Education Courses</span>
+                        <div class="mt-2 sm:mt-0 text-blue-600 hover:text-blue-800 transition-colors">
+                            <i class="fas fa-chevron-down" id="educationChevron"></i>
+                        </div>
+                    </div>
+                    <div class="hidden mt-4 space-y-3" id="educationDropdown">
+                        <a href="https://drive.google.com/drive/folders/1rT45Tg13_l9PA7xDI72upoilyz8l5v7X?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in English</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1BE8QylFI4ZaTP6I9zh0s-4Y8PRtirNqM?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in Math</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1kjT0k9BPPyIPQqB6srRDXa5vq0ZYeWvs?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in Science</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1YibgXPHoIkWmfxvdliNQja7kAqrSNegr?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in Social Studies</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1dPDNw28uM-SAU9h91eHuvHbVGGZUnCzC?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in Filipino</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1FYGobnmt3iYDJFioT4IqgAuHamw5jejt?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">BT-Vocational Teacher Education (Garments, Fashion and Design)
+                                </span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1r4h4i0e5NrLVNyo8ilk_OiDXrVnsrfm-?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">BT-Vocational Teacher Education (Food and Service Management)</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1fQNFbzOURv999kbv-EOIAQUhLs2Xr--J?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">Bachelor of Physical Education</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1_nZLsCjtvUnWwnQbV41nNMUntI305w8B?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-gray-800">Bachelor in Elementary Education</span>
+                                <i class="fas fa-external-link-alt text-blue-600"></i>
+                            </div>
+                        </a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -379,6 +479,70 @@
                 }
             });
         });
+        // Industrial Technology dropdown toggle function
+        function toggleIndustrialTechDropdown() {
+            const dropdown = document.getElementById('industrialTechDropdown');
+            const chevron = document.getElementById('industrialTechChevron');
+            
+            if (dropdown.classList.contains('hidden')) {
+                dropdown.classList.remove('hidden');
+                chevron.classList.remove('fa-chevron-down');
+                chevron.classList.add('fa-chevron-up');
+            } else {
+                dropdown.classList.add('hidden');
+                chevron.classList.remove('fa-chevron-up');
+                chevron.classList.add('fa-chevron-down');
+            }
+        }
+        
+        // Computer Science dropdown toggle function
+        function toggleComputerScienceDropdown() {
+            const dropdown = document.getElementById('computerScienceDropdown');
+            const chevron = document.getElementById('computerScienceChevron');
+            
+            if (dropdown.classList.contains('hidden')) {
+                dropdown.classList.remove('hidden');
+                chevron.classList.remove('fa-chevron-down');
+                chevron.classList.add('fa-chevron-up');
+            } else {
+                dropdown.classList.add('hidden');
+                chevron.classList.remove('fa-chevron-up');
+                chevron.classList.add('fa-chevron-down');
+            }
+        }
+        
+        // Bachelor of Industrial Technology dropdown toggle function
+        function toggleIndustrialTechBachelorDropdown() {
+            const dropdown = document.getElementById('industrialTechBachelorDropdown');
+            const chevron = document.getElementById('industrialTechBachelorChevron');
+            
+            if (dropdown.classList.contains('hidden')) {
+                dropdown.classList.remove('hidden');
+                chevron.classList.remove('fa-chevron-down');
+                chevron.classList.add('fa-chevron-up');
+            } else {
+                dropdown.classList.add('hidden');
+                chevron.classList.remove('fa-chevron-up');
+                chevron.classList.add('fa-chevron-down');
+            }
+        }
+        
+        // Education dropdown toggle function
+        function toggleEducationDropdown() {
+            const dropdown = document.getElementById('educationDropdown');
+            const chevron = document.getElementById('educationChevron');
+            
+            if (dropdown.classList.contains('hidden')) {
+                dropdown.classList.remove('hidden');
+                chevron.classList.remove('fa-chevron-down');
+                chevron.classList.add('fa-chevron-up');
+            } else {
+                dropdown.classList.add('hidden');
+                chevron.classList.remove('fa-chevron-up');
+                chevron.classList.add('fa-chevron-down');
+            }
+        }
+        
         // Highlight nav and dropdown based on current page
         (function() {
             const path = window.location.pathname.split('/').pop();
