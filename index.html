@@ -137,8 +137,9 @@
                         </button>
                         <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
-                                <a href="book-borrowing.html" class="dropdown-link" data-service="book-borrowing">Book Borrowing</a>
-                                <a href="digital-resources.html" class="dropdown-link" data-service="digital-resources">Digital Resources</a>
+                                <a href="book-borrowing.html" class="dropdown-link" data-service="book-borrowing">Book Borrowing & Returning</a>
+                                <a href="https://bit.ly/PIT-ORA" target="_blank" class="dropdown-link" data-service="digital-resources">Online Knowledge Concierge</a>
+                                <a href="digital-resources.html" class="dropdown-link" data-service="digital-resources">Printing & Photocopying</a>
                             </div>
                         </div>
                     </div>
@@ -166,7 +167,6 @@
                             <div class="py-2">
                                 <a href="https://www.facebook.com/pitlrcregion8" target="_blank" class="dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
                                 <a href="mailto:lrc@pit.edu.ph" class="dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
-                                <a href="#" class="dropdown-link"><i class="fas fa-question-circle mr-2"></i>Help Guide/Tools</a>
                             </div>
                         </div>
                     </div>
@@ -203,9 +203,9 @@
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="book-borrowing.html" class="mobile-dropdown-link" data-service="book-borrowing">Book Borrowing</a>
-                            <a href="service-hours.html" class="mobile-dropdown-link">Service Hours</a>
-                            <a href="digital-resources.html" class="mobile-dropdown-link" data-service="digital-resources">Digital Resources</a>
+                            <a href="book-borrowing.html" class="mobile-dropdown-link" data-service="book-borrowing">Book Borrowing & Returning</a>
+                            <a href="https://bit.ly/PIT-ORA" target="_blank" class="mobile-dropdown-link" data-service="digital-resources">Online Knowledge Concierge</a>
+                            <a href="digital-resources.html" class="mobile-dropdown-link" data-service="digital-resources">Printing & Photocopying</a>
                         </div>
                     </div>
                     <!-- Mobile Online Resources Dropdown -->
@@ -229,7 +229,6 @@
                         <div class="hidden pl-6 mobile-dropdown-content">
                             <a href="https://www.facebook.com/pitlrcregion8" target="_blank" class="mobile-dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
                             <a href="mailto:lrc@pit.edu.ph" class="mobile-dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
-                            <a href="#" class="mobile-dropdown-link"><i class="fas fa-question-circle mr-2"></i>Help Guide/Tools</a>
                         </div>
                     </div>
                 </div>
@@ -269,96 +268,101 @@
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
                 <!-- Online Public Access Catalog (OPAC) -->
-                <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-102 hover:-translate-y-1 digital-service-card border border-gray-100 h-full flex flex-col">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="relative z-10 text-center flex flex-col h-full">
-                        <!-- Follett Destiny Library Manager Logo -->
-                        <div class="mb-4 sm:mb-5 lg:mb-6 flex justify-center flex-shrink-0">
-                            <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                                <img src="./Fellet.jpg" alt="Follett Destiny Library Manager" class="h-12 sm:h-14 lg:h-16 w-auto object-contain filter brightness-110">
+                <a href="https://lms.pit.edu.ph/" target="_blank" rel="noopener noreferrer" class="block">
+                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-102 hover:-translate-y-1 digital-service-card border border-gray-100 h-full flex flex-col">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center flex flex-col h-full">
+                            <!-- Follett Destiny Library Manager Logo -->
+                            <div class="mb-4 sm:mb-5 lg:mb-6 flex justify-center flex-shrink-0">
+                                <div class="bg-gradient-to-br from-blue-500 to-blue-600 p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                                    <img src="./Fellet.jpg" alt="Follett Destiny Library Manager" class="h-12 sm:h-14 lg:h-16 w-auto object-contain filter brightness-110">
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors duration-300 leading-tight">Online Public Access<br>Catalog (OPAC)</h3>
-                                <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 leading-relaxed">Search and discover our extensive collection of books, journals, and digital resources.</p>
-                            </div>
-                            <div class="inline-flex items-center justify-center text-blue-600 font-semibold text-xs sm:text-sm group-hover:text-blue-700 transition-colors duration-300">
-                                <span>Explore OPAC</span>
-                                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                            <div class="flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors duration-300 leading-tight">Online Public Access<br>Catalog (OPAC)</h3>
+                                    <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 leading-relaxed">Search and discover our extensive collection of books, journals, and digital resources.</p>
+                                </div>
+                                <div class="inline-flex items-center justify-center text-blue-600 font-semibold text-xs sm:text-sm group-hover:text-blue-700 transition-colors duration-300">
+                                    <span>Explore OPAC</span>
+                                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
+                </a>
                 <!-- Online Knowledge Concierge -->
-                <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-102 hover:-translate-y-1 digital-service-card border border-gray-100 h-full flex flex-col">
-                    <div class="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="relative z-10 text-center flex flex-col h-full">
-                        <!-- Document Icon -->
-                        <div class="mb-4 sm:mb-5 lg:mb-6 flex justify-center flex-shrink-0">
-                            <div class="bg-gradient-to-br from-green-500 to-green-600 p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                                <img src="./docs.png" alt="Document Icon" class="h-12 sm:h-14 lg:h-16 w-auto object-contain filter brightness-110">
+                <a href="https://bit.ly/PIT-ORA" target="_blank" rel="noopener noreferrer" class="block">
+                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-102 hover:-translate-y-1 digital-service-card border border-gray-100 h-full flex flex-col">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center flex flex-col h-full">
+                            <!-- Document Icon -->
+                            <div class="mb-4 sm:mb-5 lg:mb-6 flex justify-center flex-shrink-0">
+                                <div class="bg-gradient-to-br from-green-500 to-green-600 p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                                    <img src="./docs.png" alt="Document Icon" class="h-12 sm:h-14 lg:h-16 w-auto object-contain filter brightness-110">
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-green-600 transition-colors duration-300 leading-tight">Online Knowledge<br>Concierge</h3>
-                                <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 leading-relaxed">Get personalized assistance and guidance for your research and learning needs.</p>
-                            </div>
-                            <div class="inline-flex items-center justify-center text-green-600 font-semibold text-xs sm:text-sm group-hover:text-green-700 transition-colors duration-300">
-                                <span>Get Help</span>
-                                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                            <div class="flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-green-600 transition-colors duration-300 leading-tight">Online Knowledge<br>Concierge</h3>
+                                    <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 leading-relaxed">Get personalized assistance and guidance for your research and learning needs.</p>
+                                </div>
+                                <div class="inline-flex items-center justify-center text-green-600 font-semibold text-xs sm:text-sm group-hover:text-green-700 transition-colors duration-300">
+                                    <span>Get Help</span>
+                                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
+                </a>
                 <!-- Ebook Repository -->
-                <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-102 hover:-translate-y-1 digital-service-card border border-gray-100 h-full flex flex-col">
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-50 to-transparent rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="relative z-10 text-center flex flex-col h-full">
-                        <!-- Google Drive Logo -->
-                        <div class="mb-4 sm:mb-5 lg:mb-6 flex justify-center flex-shrink-0">
-                            <div class="bg-gradient-to-br from-purple-500 to-purple-600 p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                                <img src="./gdrive.png" alt="Google Drive" class="h-12 sm:h-14 lg:h-16 w-auto object-contain filter brightness-110">
+                <a href="" target="_blank" rel="noopener noreferrer" class="block">
+                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-102 hover:-translate-y-1 digital-service-card border border-gray-100 h-full flex flex-col">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-50 to-transparent rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center flex flex-col h-full">
+                            <!-- Google Drive Logo -->
+                            <div class="mb-4 sm:mb-5 lg:mb-6 flex justify-center flex-shrink-0">
+                                <div class="bg-gradient-to-br from-purple-500 to-purple-600 p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                                    <img src="./gdrive.png" alt="Google Drive" class="h-12 sm:h-14 lg:h-16 w-auto object-contain filter brightness-110">
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-purple-600 transition-colors duration-300 leading-tight">Ebook<br>Repository</h3>
-                                <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 leading-relaxed">Access our collection of digital books and electronic resources anytime, anywhere.</p>
-                            </div>
-                            <div class="inline-flex items-center justify-center text-purple-600 font-semibold text-xs sm:text-sm group-hover:text-purple-700 transition-colors duration-300">
-                                <span>Browse Ebooks</span>
-                                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                            <div class="flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-purple-600 transition-colors duration-300 leading-tight">Ebook<br>Repository</h3>
+                                    <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 leading-relaxed">Access our collection of digital books and electronic resources anytime, anywhere.</p>
+                                </div>
+                                <div class="inline-flex items-center justify-center text-purple-600 font-semibold text-xs sm:text-sm group-hover:text-purple-700 transition-colors duration-300">
+                                    <span>Browse Ebooks</span>
+                                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
+                </a>
                 <!-- Research Databases -->
-                <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-102 hover:-translate-y-1 digital-service-card border border-gray-100 h-full flex flex-col">
-                    <div class="absolute inset-0 bg-gradient-to-br from-orange-50 to-transparent rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="relative z-10 text-center flex flex-col h-full">
-                        <!-- Database Icon -->
-                        <div class="mb-4 sm:mb-5 lg:mb-6 flex justify-center flex-shrink-0">
-                            <div class="bg-gradient-to-br from-orange-500 to-orange-600 p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                                <img src="./dbs.png" alt="Database Icon" class="h-12 sm:h-14 lg:h-16 w-auto object-contain filter brightness-110">
+                <a href="database.html"rel="noopener noreferrer" class="block">
+                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-102 hover:-translate-y-1 digital-service-card border border-gray-100 h-full flex flex-col">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-50 to-transparent rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center flex flex-col h-full">
+                            <!-- Database Icon -->
+                            <div class="mb-4 sm:mb-5 lg:mb-6 flex justify-center flex-shrink-0">
+                                <div class="bg-gradient-to-br from-orange-500 to-orange-600 p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                                    <img src="./dbs.png" alt="Database Icon" class="h-12 sm:h-14 lg:h-16 w-auto object-contain filter brightness-110">
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-orange-600 transition-colors duration-300 leading-tight">Research<br>Databases</h3>
-                                <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 leading-relaxed">Access premium research databases and academic journals for your studies.</p>
-                            </div>
-                            <div class="inline-flex items-center justify-center text-orange-600 font-semibold text-xs sm:text-sm group-hover:text-orange-700 transition-colors duration-300">
-                                <span>Search Databases</span>
-                                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                            <div class="flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3 group-hover:text-orange-600 transition-colors duration-300 leading-tight">Research<br>Databases</h3>
+                                    <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 leading-relaxed">Access premium research databases and academic journals for your studies.</p>
+                                </div>
+                                <div class="inline-flex items-center justify-center text-orange-600 font-semibold text-xs sm:text-sm group-hover:text-orange-700 transition-colors duration-300">
+                                    <span>Search Databases</span>
+                                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
