@@ -28,7 +28,7 @@
                     keyframes: {
                         fadeInUp: {
                             '0%': { opacity: '0', transform: 'translateY(30px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                            '100%': { opacity: '0.', transform: 'translateY(0)' },
                         },
                         float: {
                             '0%, 100%': { transform: 'translateY(0px)' },
@@ -351,86 +351,263 @@
         </div>
     </section>
 
-    <!-- Announcements Section -->
-    <section class="py-20 lg:py-28 fade-in" id="announcements">
+    <!-- Book Alerts Section -->
+    <section class="py-20 lg:py-28 fade-in" id="book-alerts">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
+            <div class="text-center mb-12">
                 <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif bg-[#084434] bg-clip-text text-transparent">
-                    Latest Announcements
+                     New Book Alert
                 </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Stay updated with the latest news, updates, and important information from PIT Library
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Stay updated with the latest book alerts and arrivals in our library
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="modern-card rounded-3xl overflow-hidden hover-lift group">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="New Digital Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                                <i class="fas fa-bullhorn mr-2"></i>New Update
-                            </span>
+            <!-- Marquee Book Alert -->
+            <div class="relative overflow-x-hidden">
+                <div id="bookMarquee" class="flex items-center space-x-6 animate-marquee will-change-transform py-8">
+                    <!-- Book 1 -->
+                    <a href="courses.html?book=engineering-fundamentals" class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex-shrink-0 w-40 sm:w-52 h-80 sm:h-96 flex flex-col group cursor-pointer">
+                        <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
+                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Engineering Fundamentals" class="w-28 sm:w-36 h-44 sm:h-56 object-cover rounded-lg border-2 border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-white border border-green-600 text-green-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm">
+                                    <i class="fas fa-bell mr-1"></i>Alert
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <span>December 15, 2024</span>
+                        <div class="flex-1 flex flex-col justify-between p-3 sm:p-4">
+                            <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Engineering Fundamentals</h3>
+                            <p class="text-xs text-gray-700 mb-2 line-clamp-2">Advanced concepts in modern engineering</p>
+                            <div class="flex items-center text-xs text-gray-500 mt-auto">
+                                <i class="fas fa-user mr-1"></i>
+                                <span class="truncate">Dr. Sarah Johnson</span>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 font-serif text-gray-800">New Digital Learning Platform Launched</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">We're excited to announce the launch of our new digital learning platform with enhanced features and improved user experience.</p>
-                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
-                            Read More <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
+                    </a>
+                    <!-- Book 2 -->
+                    <a href="courses.html?book=data-science-essentials" class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex-shrink-0 w-40 sm:w-52 h-80 sm:h-96 flex flex-col group cursor-pointer">
+                        <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
+                            <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Data Science Essentials" class="w-28 sm:w-36 h-44 sm:h-56 object-cover rounded-lg border-2 border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-white border border-blue-600 text-blue-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm">
+                                    <i class="fas fa-bell mr-1"></i>Alert
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between p-3 sm:p-4">
+                            <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Data Science Essentials</h3>
+                            <p class="text-xs text-gray-700 mb-2 line-clamp-2">Comprehensive guide to data analysis</p>
+                            <div class="flex items-center text-xs text-gray-500 mt-auto">
+                                <i class="fas fa-user mr-1"></i>
+                                <span class="truncate">Prof. Michael Chen</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Book 3 -->
+                    <a href="courses.html?book=artificial-intelligence" class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex-shrink-0 w-40 sm:w-52 h-80 sm:h-96 flex flex-col group cursor-pointer">
+                        <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
+                            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Artificial Intelligence" class="w-28 sm:w-36 h-44 sm:h-56 object-cover rounded-lg border-2 border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-white border border-pink-600 text-pink-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm">
+                                    <i class="fas fa-bell mr-1"></i>Alert
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between p-3 sm:p-4">
+                            <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Artificial Intelligence</h3>
+                            <p class="text-xs text-gray-700 mb-2 line-clamp-2">Modern approaches to AI development</p>
+                            <div class="flex items-center text-xs text-gray-500 mt-auto">
+                                <i class="fas fa-user mr-1"></i>
+                                <span class="truncate">Dr. Emily Rodriguez</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Book 4 -->
+                    <a href="courses.html?book=sustainable-technology" class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex-shrink-0 w-40 sm:w-52 h-80 sm:h-96 flex flex-col group cursor-pointer">
+                        <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Sustainable Technology" class="w-28 sm:w-36 h-44 sm:h-56 object-cover rounded-lg border-2 border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-white border border-green-700 text-green-800 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm">
+                                    <i class="fas fa-bell mr-1"></i>Alert
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between p-3 sm:p-4">
+                            <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Sustainable Technology</h3>
+                            <p class="text-xs text-gray-700 mb-2 line-clamp-2">Green solutions for tomorrow</p>
+                            <div class="flex items-center text-xs text-gray-500 mt-auto">
+                                <i class="fas fa-user mr-1"></i>
+                                <span class="truncate">Prof. David Kim</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Book 5 -->
+                    <a href="courses.html?book=cybersecurity-fundamentals" class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex-shrink-0 w-40 sm:w-52 h-80 sm:h-96 flex flex-col group cursor-pointer">
+                        <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Cybersecurity Fundamentals" class="w-28 sm:w-36 h-44 sm:h-56 object-cover rounded-lg border-2 border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-white border border-red-700 text-red-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm">
+                                    <i class="fas fa-bell mr-1"></i>Alert
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between p-3 sm:p-4">
+                            <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Cybersecurity Fundamentals</h3>
+                            <p class="text-xs text-gray-700 mb-2 line-clamp-2">Protecting digital assets</p>
+                            <div class="flex items-center text-xs text-gray-500 mt-auto">
+                                <i class="fas fa-user mr-1"></i>
+                                <span class="truncate">Dr. Lisa Thompson</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Book 6 -->
+                    <a href="courses.html?book=machine-learning" class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex-shrink-0 w-40 sm:w-52 h-80 sm:h-96 flex flex-col group cursor-pointer">
+                        <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Machine Learning" class="w-28 sm:w-36 h-44 sm:h-56 object-cover rounded-lg border-2 border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-white border border-indigo-700 text-indigo-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm">
+                                    <i class="fas fa-bell mr-1"></i>Alert
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between p-3 sm:p-4">
+                            <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Machine Learning</h3>
+                            <p class="text-xs text-gray-700 mb-2 line-clamp-2">Algorithms and applications</p>
+                            <div class="flex items-center text-xs text-gray-500 mt-auto">
+                                <i class="fas fa-user mr-1"></i>
+                                <span class="truncate">Prof. James Wilson</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Book 7 -->
+                    <a href="courses.html?book=digital-transformation" class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex-shrink-0 w-40 sm:w-52 h-80 sm:h-96 flex flex-col group cursor-pointer">
+                        <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
+                            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Digital Transformation" class="w-28 sm:w-36 h-44 sm:h-56 object-cover rounded-lg border-2 border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-white border border-teal-700 text-teal-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm">
+                                    <i class="fas fa-bell mr-1"></i>Alert
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between p-3 sm:p-4">
+                            <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Digital Transformation</h3>
+                            <p class="text-xs text-gray-700 mb-2 line-clamp-2">Modernizing business processes</p>
+                            <div class="flex items-center text-xs text-gray-500 mt-auto">
+                                <i class="fas fa-user mr-1"></i>
+                                <span class="truncate">Dr. Maria Garcia</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Book 8 -->
+                    <a href="courses.html?book=cloud-computing" class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex-shrink-0 w-40 sm:w-52 h-80 sm:h-96 flex flex-col group cursor-pointer">
+                        <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Cloud Computing" class="w-28 sm:w-36 h-44 sm:h-56 object-cover rounded-lg border-2 border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-white border border-yellow-600 text-yellow-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm">
+                                    <i class="fas fa-bell mr-1"></i>Alert
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between p-3 sm:p-4">
+                            <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Cloud Computing</h3>
+                            <p class="text-xs text-gray-700 mb-2 line-clamp-2">Infrastructure and services</p>
+                            <div class="flex items-center text-xs text-gray-500 mt-auto">
+                                <i class="fas fa-user mr-1"></i>
+                                <span class="truncate">Prof. Robert Lee</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Book 9 -->
+                    <a href="courses.html?book=internet-of-things" class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex-shrink-0 w-40 sm:w-52 h-80 sm:h-96 flex flex-col group cursor-pointer">
+                        <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Internet of Things" class="w-28 sm:w-36 h-44 sm:h-56 object-cover rounded-lg border-2 border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-white border border-rose-700 text-rose-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm">
+                                    <i class="fas fa-bell mr-1"></i>Alert
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between p-3 sm:p-4">
+                            <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Internet of Things</h3>
+                            <p class="text-xs text-gray-700 mb-2 line-clamp-2">Connected devices and systems</p>
+                            <div class="flex items-center text-xs text-gray-500 mt-auto">
+                                <i class="fas fa-user mr-1"></i>
+                                <span class="truncate">Dr. Amanda Park</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Book 10 -->
+                    <a href="courses.html?book=blockchain-technology" class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex-shrink-0 w-40 sm:w-52 h-80 sm:h-96 flex flex-col group cursor-pointer">
+                        <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
+                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Blockchain Technology" class="w-28 sm:w-36 h-44 sm:h-56 object-cover rounded-lg border-2 border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-white border border-purple-700 text-purple-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm">
+                                    <i class="fas fa-bell mr-1"></i>Alert
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between p-3 sm:p-4">
+                            <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Blockchain Technology</h3>
+                            <p class="text-xs text-gray-700 mb-2 line-clamp-2">Decentralized systems and applications</p>
+                            <div class="flex items-center text-xs text-gray-500 mt-auto">
+                                <i class="fas fa-user mr-1"></i>
+                                <span class="truncate">Prof. Carlos Martinez</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Repeat for seamless marquee -->
+                    <a href="courses.html?book=engineering-fundamentals" class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex-shrink-0 w-40 sm:w-52 h-80 sm:h-96 flex flex-col group cursor-pointer">
+                        <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
+                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Engineering Fundamentals" class="w-28 sm:w-36 h-44 sm:h-56 object-cover rounded-lg border-2 border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-2 left-2">
+                                <span class="bg-white border border-green-600 text-green-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm">
+                                    <i class="fas fa-bell mr-1"></i>Alert
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between p-3 sm:p-4">
+                            <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Engineering Fundamentals</h3>
+                            <p class="text-xs text-gray-700 mb-2 line-clamp-2">Advanced concepts in modern engineering</p>
+                            <div class="flex items-center text-xs text-gray-500 mt-auto">
+                                <i class="fas fa-user mr-1"></i>
+                                <span class="truncate">Dr. Sarah Johnson</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-
-                <div class="modern-card rounded-3xl overflow-hidden hover-lift group">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Extended Hours" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                                <i class="fas fa-clock mr-2"></i>Important
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <span>December 10, 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 font-serif text-gray-800">Extended Library Hours During Finals</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">Starting December 16th, the library will extend operating hours to support students during the final examination period.</p>
-                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
-                            View Schedule <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="modern-card rounded-3xl overflow-hidden hover-lift group">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="New Collection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute top-4 left-4">
-                            <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                                <i class="fas fa-star mr-2"></i>Featured
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center text-sm text-gray-500 mb-4">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <span>December 5, 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 font-serif text-gray-800">New Research Database Collection</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">We've added 15 new premium research databases covering engineering, technology, and applied sciences to our collection.</p>
-                        <a href="#" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
-                            Explore Now <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
+                <!-- Marquee overlay for fade effect -->
+                <div class="pointer-events-none absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-gray-50 via-gray-50/80 to-transparent"></div>
+                <div class="pointer-events-none absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-gray-50 via-gray-50/80 to-transparent"></div>
             </div>
         </div>
     </section>
+
+    <style>
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+        animation: marquee 20s linear infinite;
+    }
+    @media (max-width: 640px) {
+        #bookMarquee > div {
+            width: 9.5rem !important;
+            height: 13.5rem !important;
+            padding: 0.5rem !important;
+        }
+        #bookMarquee img {
+            width: 6.5rem !important;
+            height: 8.5rem !important;
+        }
+        #bookMarquee h3 {
+            font-size: 0.95rem !important;
+        }
+        #bookMarquee p, #bookMarquee span, #bookMarquee .fa-user {
+            font-size: 0.8rem !important;
+        }
+    }
+    </style>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-16">
@@ -580,6 +757,120 @@
                         let btn = parent.querySelector('button');
                         btn.classList.add('text-primary', 'font-bold');
                     }
+                }
+            });
+        })();
+
+        // Book Carousel Functionality
+        (function() {
+            const track = document.getElementById('carouselTrack');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dots = document.querySelectorAll('.dot-indicator');
+            
+            if (!track || !prevBtn || !nextBtn) return;
+            
+            let currentIndex = 0;
+            const itemWidth = 288; // w-64 (256px) + mx-4 (32px)
+            const itemsPerView = Math.floor(track.parentElement.offsetWidth / itemWidth);
+            const maxIndex = Math.max(0, track.children.length - itemsPerView);
+            
+            function updateCarousel() {
+                const translateX = -currentIndex * itemWidth;
+                track.style.transform = `translateX(${translateX}px)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    if (index === Math.floor(currentIndex / itemsPerView)) {
+                        dot.classList.add('bg-primary');
+                        dot.classList.remove('bg-gray-300');
+                    } else {
+                        dot.classList.remove('bg-primary');
+                        dot.classList.add('bg-gray-300');
+                    }
+                });
+                
+                // Update button states
+                prevBtn.disabled = currentIndex === 0;
+                nextBtn.disabled = currentIndex >= maxIndex;
+                
+                prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+                nextBtn.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
+            }
+            
+            function nextSlide() {
+                if (currentIndex < maxIndex) {
+                    currentIndex += itemsPerView;
+                    currentIndex = Math.min(currentIndex, maxIndex);
+                    updateCarousel();
+                }
+            }
+            
+            function prevSlide() {
+                if (currentIndex > 0) {
+                    currentIndex -= itemsPerView;
+                    currentIndex = Math.max(currentIndex, 0);
+                    updateCarousel();
+                }
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index * itemsPerView;
+                    currentIndex = Math.min(currentIndex, maxIndex);
+                    updateCarousel();
+                });
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                } else if (e.key === 'ArrowRight') {
+                    nextSlide();
+                }
+            });
+            
+            // Auto-play functionality
+            let autoPlayInterval;
+            
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(() => {
+                    if (currentIndex >= maxIndex) {
+                        currentIndex = 0;
+                    } else {
+                        currentIndex += itemsPerView;
+                        currentIndex = Math.min(currentIndex, maxIndex);
+                    }
+                    updateCarousel();
+                }, 5000);
+            }
+            
+            function stopAutoPlay() {
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                }
+            }
+            
+            // Pause auto-play on hover
+            track.addEventListener('mouseenter', stopAutoPlay);
+            track.addEventListener('mouseleave', startAutoPlay);
+            
+            // Initialize carousel
+            updateCarousel();
+            startAutoPlay();
+            
+            // Responsive handling
+            window.addEventListener('resize', () => {
+                const newItemsPerView = Math.floor(track.parentElement.offsetWidth / itemWidth);
+                if (newItemsPerView !== itemsPerView) {
+                    currentIndex = 0;
+                    updateCarousel();
                 }
             });
         })();
