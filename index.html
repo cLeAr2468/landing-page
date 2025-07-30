@@ -383,353 +383,13 @@
                 <!-- Desktop Marquee -->
                 <div class="hidden sm:block">
                     <div id="bookMarqueeDesktop" class="flex items-center space-x-6 animate-marquee will-change-transform py-6">
-                        <!-- Book Card Example (repeat for each book) -->
-                        <a href="courses.html?book=engineering-fundamentals" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-48 h-72 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
-                                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Engineering Fundamentals" class="w-32 h-40 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-green-600 text-green-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-3">
-                                <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Engineering Fundamentals</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Advanced concepts in modern engineering</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Dr. Sarah Johnson</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Repeat the above <a> for each book, changing the content accordingly -->
-                        <!-- Book 2 -->
-                        <a href="courses.html?book=data-science-essentials" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-48 h-72 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
-                                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Data Science Essentials" class="w-32 h-40 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-blue-600 text-blue-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-3">
-                                <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Data Science Essentials</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Comprehensive guide to data analysis</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Prof. Michael Chen</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 3 -->
-                        <a href="courses.html?book=artificial-intelligence" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-48 h-72 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
-                                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Artificial Intelligence" class="w-32 h-40 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-pink-600 text-pink-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-3">
-                                <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Artificial Intelligence</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Modern approaches to AI development</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Dr. Emily Rodriguez</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 4 -->
-                        <a href="courses.html?book=sustainable-technology" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-48 h-72 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
-                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Sustainable Technology" class="w-32 h-40 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-green-700 text-green-800 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-3">
-                                <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Sustainable Technology</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Green solutions for tomorrow</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Prof. David Kim</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 5 -->
-                        <a href="courses.html?book=cybersecurity-fundamentals" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-48 h-72 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
-                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Cybersecurity Fundamentals" class="w-32 h-40 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-red-700 text-red-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-3">
-                                <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Cybersecurity Fundamentals</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Protecting digital assets</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Dr. Lisa Thompson</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 6 -->
-                        <a href="courses.html?book=machine-learning" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-48 h-72 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Machine Learning" class="w-32 h-40 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-indigo-700 text-indigo-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-3">
-                                <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Machine Learning</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Algorithms and applications</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Prof. James Wilson</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 7 -->
-                        <a href="courses.html?book=digital-transformation" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-48 h-72 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
-                                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Digital Transformation" class="w-32 h-40 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-teal-700 text-teal-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-3">
-                                <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Digital Transformation</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Modernizing business processes</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Dr. Maria Garcia</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 8 -->
-                        <a href="courses.html?book=cloud-computing" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-48 h-72 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
-                                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Cloud Computing" class="w-32 h-40 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-yellow-600 text-yellow-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-3">
-                                <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Cloud Computing</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Infrastructure and services</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Prof. Robert Lee</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 9 -->
-                        <a href="courses.html?book=internet-of-things" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-48 h-72 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
-                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Internet of Things" class="w-32 h-40 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-rose-700 text-rose-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-3">
-                                <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Internet of Things</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Connected devices and systems</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Dr. Amanda Park</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 10 -->
-                        <a href="courses.html?book=blockchain-technology" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-48 h-72 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-4">
-                                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Blockchain Technology" class="w-32 h-40 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-purple-700 text-purple-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-3">
-                                <h3 class="text-base font-bold font-serif text-gray-900 mb-1 truncate">Blockchain Technology</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Decentralized systems and applications</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Prof. Carlos Martinez</span>
-                                </div>
-                            </div>
-                        </a>
+                        <!-- Book cards will be dynamically generated here -->
                     </div>
                 </div>
                 <!-- Mobile Marquee -->
                 <div class="sm:hidden">
                     <div id="bookMarqueeMobile" class="flex items-center space-x-4 animate-marquee-mobile will-change-transform py-4">
-                        <!-- Book Card Example (repeat for each book) -->
-                        <a href="courses.html?book=engineering-fundamentals" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-40 h-60 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-3">
-                                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Engineering Fundamentals" class="w-24 h-28 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-green-600 text-green-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-2">
-                                <h3 class="text-sm font-bold font-serif text-gray-900 mb-1 truncate">Engineering Fundamentals</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Advanced concepts in modern engineering</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Dr. Sarah Johnson</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Repeat for each book, using the same structure as above -->
-                        <!-- Book 2 -->
-                        <a href="courses.html?book=data-science-essentials" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-40 h-60 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-3">
-                                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Data Science Essentials" class="w-24 h-28 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-blue-600 text-blue-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-2">
-                                <h3 class="text-sm font-bold font-serif text-gray-900 mb-1 truncate">Data Science Essentials</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Comprehensive guide to data analysis</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Prof. Michael Chen</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 3 -->
-                        <a href="courses.html?book=artificial-intelligence" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-40 h-60 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-3">
-                                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Artificial Intelligence" class="w-24 h-28 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-pink-600 text-pink-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-2">
-                                <h3 class="text-sm font-bold font-serif text-gray-900 mb-1 truncate">Artificial Intelligence</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Modern approaches to AI development</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Dr. Emily Rodriguez</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 4 -->
-                        <a href="courses.html?book=sustainable-technology" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-40 h-60 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-3">
-                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Sustainable Technology" class="w-24 h-28 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-green-700 text-green-800 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-2">
-                                <h3 class="text-sm font-bold font-serif text-gray-900 mb-1 truncate">Sustainable Technology</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Green solutions for tomorrow</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Prof. David Kim</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 5 -->
-                        <a href="courses.html?book=cybersecurity-fundamentals" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-40 h-60 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-3">
-                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Cybersecurity Fundamentals" class="w-24 h-28 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-red-700 text-red-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-2">
-                                <h3 class="text-sm font-bold font-serif text-gray-900 mb-1 truncate">Cybersecurity Fundamentals</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Protecting digital assets</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Dr. Lisa Thompson</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 6 -->
-                        <a href="courses.html?book=machine-learning" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-40 h-60 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-3">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Machine Learning" class="w-24 h-28 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-indigo-700 text-indigo-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-2">
-                                <h3 class="text-sm font-bold font-serif text-gray-900 mb-1 truncate">Machine Learning</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Algorithms and applications</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Prof. James Wilson</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 7 -->
-                        <a href="courses.html?book=digital-transformation" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-40 h-60 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-3">
-                                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Digital Transformation" class="w-24 h-28 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-teal-700 text-teal-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-2">
-                                <h3 class="text-sm font-bold font-serif text-gray-900 mb-1 truncate">Digital Transformation</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Modernizing business processes</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Dr. Maria Garcia</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 8 -->
-                        <a href="courses.html?book=cloud-computing" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-40 h-60 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-3">
-                                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Cloud Computing" class="w-24 h-28 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-yellow-600 text-yellow-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-2">
-                                <h3 class="text-sm font-bold font-serif text-gray-900 mb-1 truncate">Cloud Computing</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Infrastructure and services</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Prof. Robert Lee</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 9 -->
-                        <a href="courses.html?book=internet-of-things" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-40 h-60 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-3">
-                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Internet of Things" class="w-24 h-28 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-rose-700 text-rose-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-2">
-                                <h3 class="text-sm font-bold font-serif text-gray-900 mb-1 truncate">Internet of Things</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Connected devices and systems</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Dr. Amanda Park</span>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- Book 10 -->
-                        <a href="courses.html?book=blockchain-technology" class="relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-40 h-60 flex flex-col group cursor-pointer">
-                            <div class="relative flex-shrink-0 flex justify-center items-center pt-3">
-                                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Blockchain Technology" class="w-24 h-28 object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                                <span class="absolute top-2 left-2 bg-white border border-purple-700 text-purple-700 font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                                    <i class="fas fa-bell mr-1"></i>Alert
-                                </span>
-                            </div>
-                            <div class="flex-1 flex flex-col justify-between p-2">
-                                <h3 class="text-sm font-bold font-serif text-gray-900 mb-1 truncate">Blockchain Technology</h3>
-                                <p class="text-xs text-gray-700 mb-2 line-clamp-2">Decentralized systems and applications</p>
-                                <div class="flex items-center text-xs text-gray-500 mt-auto">
-                                    <i class="fas fa-user mr-1"></i>
-                                    <span class="truncate">Prof. Carlos Martinez</span>
-                                </div>
-                            </div>
-                        </a>
+                        <!-- Book cards will be dynamically generated here -->
                     </div>
                 </div>
                 <!-- Marquee overlay for fade effect -->
@@ -738,6 +398,157 @@
             </div>
         </div>
     </section>
+
+    <script>
+        // Book data based on image filenames with specific roles
+        const books = [
+            {
+                image: "./Energy and Development.PNG",
+                title: "Energy and Development",
+                person: "Dr. Sarah Johnson",
+                role: "Author",
+                description: "Comprehensive guide to sustainable energy solutions",
+                category: "Engineering"
+            },
+            {
+                image: "./Essentials of Biotechnology.PNG",
+                title: "Essentials of Biotechnology",
+                person: "Prof. Michael Chen",
+                role: "Editor",
+                description: "Fundamental principles of biotech applications",
+                category: "Biology"
+            },
+            {
+                image: "./Gender & Society we are all equal.PNG",
+                title: "Gender & Society: We Are All Equal",
+                person: "Dr. Maria Rodriguez",
+                role: "Author",
+                description: "Exploring equality in modern society",
+                category: "Sociology"
+            },
+            {
+                image: "./Modular Approach to Art Appreciation.PNG",
+                title: "Modular Approach to Art Appreciation",
+                person: "Prof. David Kim",
+                role: "Contributor",
+                description: "Systematic methods for understanding art",
+                category: "Arts"
+            },
+            {
+                image: "./General Biology 2.PNG",
+                title: "General Biology 2",
+                person: "Dr. Lisa Thompson",
+                role: "Author",
+                description: "Advanced concepts in biological sciences",
+                category: "Biology"
+            },
+            {
+                image: "./Philippine Electrical Code Part 2.PNG",
+                title: "Philippine Electrical Code Part 2",
+                person: "Engr. Carlos Martinez",
+                role: "Technical Reviewer",
+                description: "Updated electrical standards and regulations",
+                category: "Engineering"
+            },
+            {
+                image: "./Safety Management.PNG",
+                title: "Safety Management",
+                person: "Prof. Robert Lee",
+                role: "Author",
+                description: "Comprehensive workplace safety protocols",
+                category: "Management"
+            },
+            {
+                image: "./the infographic guide to grammar.PNG",
+                title: "The Infographic Guide to Grammar",
+                person: "Dr. Amanda Park",
+                role: "Illustrator",
+                description: "Visual approach to mastering grammar",
+                category: "Language"
+            },
+            {
+                image: "./The teacher and the school curriculum.PNG",
+                title: "The Teacher and the School Curriculum",
+                person: "Prof. James Wilson",
+                role: "Author",
+                description: "Educational curriculum development strategies",
+                category: "Education"
+            },
+            {
+                image: "./Thermodynamics.PNG",
+                title: "Thermodynamics",
+                person: "Dr. Patricia Santos",
+                role: "Author",
+                description: "Principles of heat and energy transfer",
+                category: "Physics"
+            }
+        ];
+
+        // Color schemes for alert badges
+        const alertColors = [
+            { border: 'border-green-600', text: 'text-green-700' },
+            { border: 'border-blue-600', text: 'text-blue-700' },
+            { border: 'border-pink-600', text: 'text-pink-700' },
+            { border: 'border-green-700', text: 'text-green-800' },
+            { border: 'border-red-700', text: 'text-red-700' },
+            { border: 'border-indigo-700', text: 'text-indigo-700' },
+            { border: 'border-teal-700', text: 'text-teal-700' },
+            { border: 'border-yellow-600', text: 'text-yellow-700' },
+            { border: 'border-rose-700', text: 'text-rose-700' },
+            { border: 'border-purple-700', text: 'text-purple-700' }
+        ];
+
+        // Function to generate book card HTML
+        function generateBookCard(book, index, isMobile = false) {
+            const color = alertColors[index % alertColors.length];
+            const cardClass = isMobile 
+                ? "relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-40 h-60 flex flex-col group cursor-pointer"
+                : "relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-48 h-72 flex flex-col group cursor-pointer";
+            
+            const imageClass = isMobile ? "w-24 h-28" : "w-32 h-40";
+            const paddingClass = isMobile ? "pt-3" : "pt-4";
+            const contentPadding = isMobile ? "p-2" : "p-3";
+            const titleClass = isMobile ? "text-sm font-bold font-serif text-gray-900 mb-1 truncate" : "text-base font-bold font-serif text-gray-900 mb-1 truncate";
+            const descriptionClass = isMobile ? "text-xs text-gray-700 mb-2 line-clamp-2" : "text-xs text-gray-700 mb-2 line-clamp-2";
+            const personClass = isMobile ? "text-xs text-gray-500 mt-auto" : "text-xs text-gray-500 mt-auto";
+
+            return `
+                <a href="courses.html?book=${book.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}" class="${cardClass}">
+                    <div class="relative flex-shrink-0 flex justify-center items-center ${paddingClass}">
+                        <img src="${book.image}" alt="${book.title}" class="${imageClass} object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 left-2 bg-white border ${color.border} ${color.text} font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                            <i class="fas fa-bell mr-1"></i>Alert
+                        </span>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between ${contentPadding}">
+                        <h3 class="${titleClass}">${book.title}</h3>
+                        <p class="${descriptionClass}">${book.description}</p>
+                        <div class="flex items-center ${personClass}">
+                            <i class="fas fa-user mr-1"></i>
+                            <span class="truncate">${book.person} - ${book.role}</span>
+                        </div>
+                    </div>
+                </a>
+            `;
+        }
+
+        // Function to populate marquee
+        function populateMarquee() {
+            const desktopMarquee = document.getElementById('bookMarqueeDesktop');
+            const mobileMarquee = document.getElementById('bookMarqueeMobile');
+            
+            if (desktopMarquee) {
+                desktopMarquee.innerHTML = books.map((book, index) => generateBookCard(book, index, false)).join('');
+            }
+            
+            if (mobileMarquee) {
+                mobileMarquee.innerHTML = books.map((book, index) => generateBookCard(book, index, true)).join('');
+            }
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', populateMarquee);
+    </script>
     <style>
     @keyframes marquee {
         0% { transform: translateX(0); }
