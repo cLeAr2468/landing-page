@@ -1,8 +1,10 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /landing%20page/
-    
+
     # Custom URL Mappings - What you see in address bar
+    RewriteRule ^$ index.html [L]
+    RewriteRule ^home/?$ index.html [L]
     RewriteRule ^mission-vision/?$ mission-vision.html [NC,L]
     RewriteRule ^service-hours/?$ service-hours.html [NC,L]
     RewriteRule ^personnel/?$ library-personnel.html [NC,L]
