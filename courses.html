@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,50 +42,62 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
+
         .glass-effect {
             backdrop-filter: blur(10px);
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+
         .modern-card {
             background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+
         .hover-lift {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .hover-lift:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
+
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.8s, transform 0.8s;
         }
+
         .fade-in.fade-in-visible {
             opacity: 1;
             transform: translateY(0);
             transition: opacity 0.8s, transform 0.8s;
         }
-        .dropdown-link, .mobile-dropdown-link {
+
+        .dropdown-link,
+        .mobile-dropdown-link {
             display: block;
             padding: 0.5rem 1rem;
             margin-bottom: 0.25rem;
             border-radius: 0.375rem;
             transition: background 0.2s, color 0.2s;
         }
-        .dropdown-link:last-child, .mobile-dropdown-link:last-child {
+
+        .dropdown-link:last-child,
+        .mobile-dropdown-link:last-child {
             margin-bottom: 0;
         }
-        
+
         /* Nested dropdown styles */
         .nested-dropdown {
             position: relative;
         }
+
         .nested-dropdown-content {
             position: absolute;
             left: 100%;
@@ -99,11 +112,13 @@
             transition: all 0.3s ease;
             z-index: 60;
         }
+
         .nested-dropdown:hover .nested-dropdown-content {
             opacity: 1;
             visibility: visible;
             transform: translateX(0);
         }
+
         .nested-dropdown-link {
             display: block;
             padding: 0.5rem 1rem;
@@ -113,14 +128,17 @@
             border-radius: 0.375rem;
             margin: 0.125rem;
         }
+
         .nested-dropdown-link:hover {
             background: #f3f4f6;
             color: #2563eb;
         }
-        .nested-dropdown > .dropdown-link {
+
+        .nested-dropdown>.dropdown-link {
             position: relative;
         }
-        .nested-dropdown > .dropdown-link::after {
+
+        .nested-dropdown>.dropdown-link::after {
             content: '▶';
             position: absolute;
             right: 0.75rem;
@@ -129,25 +147,30 @@
             font-size: 0.75rem;
             color: #9ca3af;
         }
-        .dropdown-link, .mobile-dropdown-link {
+
+        .dropdown-link,
+        .mobile-dropdown-link {
             display: block;
             padding: 0.5rem 1rem;
             margin-bottom: 0.25rem;
             border-radius: 0.375rem;
             transition: background 0.2s, color 0.2s;
         }
-        .dropdown-link:last-child, .mobile-dropdown-link:last-child {
+
+        .dropdown-link:last-child,
+        .mobile-dropdown-link:last-child {
             margin-bottom: 0;
         }
     </style>
 </head>
+
 <body class="font-body text-gray-800 bg-gray-50">
     <!-- Header Section -->
     <header class="bg-white shadow-lg fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-5">
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center">
+                <a href="home" class="flex items-center">
                     <img src="images/logo.png" alt="PIT LRC Logo" class="h-12 w-12 mr-3">
                     <div class="hidden sm:block">
                         <div class="text-xl font-bold text-[#084434]">Palompon Institute of Technology</div>
@@ -157,29 +180,31 @@
                         <div class="text-xl font-extrabold text-[#084434]">PIT-LRC</div>
                     </div>
                 </a>
+
                 <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex items-center space-x-8 lg:px-[4%]">
-                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="home" class="nav-link">Home</a>
                     <!-- About Dropdown -->
                     <div class="relative group">
                         <button class="flex items-center nav-link">
                             About
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div
+                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
-                                <a href="mission-vision.html" class="dropdown-link">Mission & Vision</a>
-                                <a href="service-hours.html" class="dropdown-link">Service Hours</a>
-                                <a href="library-personnel.html" class="dropdown-link">Library Personel</a>
-                                <a href="policies-rules.html" class="dropdown-link">Policies & Rules</a>
-                                <a href="citizens-charter.html" class="dropdown-link">Citizen's Charter</a>
-                                <a href="linkages.html" class="dropdown-link">Linkages</a>
+                                <a href="mission-vision" class="dropdown-link">Mission & Vision</a>
+                                <a href="service-hours" class="dropdown-link">Service Hours</a>
+                                <a href="library-personnel" class="dropdown-link">Library Personel</a>
+                                <a href="policies-rules" class="dropdown-link">Policies & Rules</a>
+                                <a href="citizens-charter" class="dropdown-link">Citizen's Charter</a>
+                                <a href="linkages" class="dropdown-link">Linkages</a>
                                 <div class="nested-dropdown">
                                     <span class="dropdown-link">Libraries</span>
                                     <div class="nested-dropdown-content">
                                         <div class="py-1">
-                                            <a href="libraries.html#main-library" class="nested-dropdown-link">Main Campus Library</a>
-                                            <a href="tabango-campus-library.html" class="nested-dropdown-link">Tabango Campus Library</a>
+                                            <a href="main" class="nested-dropdown-link">Main Campus Library</a>
+                                            <a href="tabango" class="nested-dropdown-link">Tabango Campus Library</a>
                                         </div>
                                     </div>
                                 </div>
@@ -192,11 +217,15 @@
                             Services
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div
+                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
-                                <a href="book-borrowing.html" class="dropdown-link" data-service="book-borrowing">Book Borrowing & Returning</a>
-                                <a href="https://bit.ly/PIT-ORA" target="_blank" class="dropdown-link" data-service="digital-resources">Online Knowledge Concierge</a>
-                                <a href="digital-resources.html" class="dropdown-link" data-service="digital-resources">Printing & Photocopying</a>
+                                <a href="book-borrowing" class="dropdown-link" data-service="book-borrowing">Book
+                                    Borrowing & Returning</a>
+                                <a href="https://bit.ly/PIT-ORA" target="_blank" class="dropdown-link"
+                                    data-service="digital-resources">Online Knowledge Concierge</a>
+                                <a href="digital-resources" class="dropdown-link"
+                                    data-service="digital-resources">Printing & Photocopying</a>
                             </div>
                         </div>
                     </div>
@@ -206,9 +235,10 @@
                             Online Resources
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div
+                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
-                                <a href="https://lms.pit.edu.ph/" class="dropdown-link">OPAC</a>
+                                <a href="https://lms.pit.edu.ph/ " class="dropdown-link">OPAC</a>
                                 <a href="database.html" class="dropdown-link">Research Database</a>
                                 <a href="#" class="dropdown-link">E-book Repository</a>
                             </div>
@@ -220,10 +250,13 @@
                             Ask Librarian
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div
+                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
-                                <a href="https://www.facebook.com/pitlrcregion8" target="_blank" class="dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
-                                <a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website" class="dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
+                                <a href="https://www.facebook.com/pitlrcregion8" target="_blank"
+                                    class="dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
+                                <a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website"
+                                    class="dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
                             </div>
                         </div>
                     </div>
@@ -236,65 +269,75 @@
             <!-- Mobile Navigation -->
             <div class="lg:hidden hidden" id="mobileMenu">
                 <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-                    <a href="index.html" class="mobile-nav-link">Home</a>
+                    <a href="home" class="mobile-nav-link">Home</a>
                     <!-- Mobile About Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                        <button
+                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             About
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="mission-vision.html" class="mobile-dropdown-link">Mission & Vision</a>
-                            <a href="service-hours.html" class="mobile-dropdown-link">Service Hours</a>
-                            <a href="library-personnel.html" class="mobile-dropdown-link">Library Personel</a>
-                            <a href="policies-rules.html" class="mobile-dropdown-link">Policies & Rules</a>
-                            <a href="citizens-charter.html" class="mobile-dropdown-link">Citizen's Charter</a>
-                            <a href="linkages.html" class="mobile-dropdown-link">Linkages</a>
+                            <a href="mission-vision" class="mobile-dropdown-link">Mission & Vision</a>
+                            <a href="service-hours" class="mobile-dropdown-link">Service Hours</a>
+                            <a href="library-personnel" class="mobile-dropdown-link">Library Personel</a>
+                            <a href="policies-rules" class="mobile-dropdown-link">Policies & Rules</a>
+                            <a href="citizens-charter" class="mobile-dropdown-link">Citizen's Charter</a>
+                            <a href="linkages" class="mobile-dropdown-link">Linkages</a>
                             <div class="mobile-dropdown">
-                                <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                                <button
+                                    class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                                     Libraries
                                     <i class="fas fa-chevron-down text-sm"></i>
                                 </button>
                                 <div class="hidden pl-6 mobile-dropdown-content">
-                                    <a href="libraries.html#main-library" class="mobile-dropdown-link">Main Campus Library</a>
-                                    <a href="libraries.html#specialized-libraries" class="mobile-dropdown-link">Tabango Campus Library</a>
+                                    <a href="main" class="mobile-dropdown-link">Main Campus Library</a>
+                                    <a href="tabango" class="mobile-dropdown-link">Tabango Campus Library</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Mobile Services Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                        <button
+                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             Services
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="book-borrowing.html" class="mobile-dropdown-link" data-service="book-borrowing">Book Borrowing & Returning</a>
-                            <a href="https://bit.ly/PIT-ORA" target="_blank" class="mobile-dropdown-link" data-service="digital-resources">Online Knowledge Concierge</a>
-                            <a href="digital-resources.html" class="mobile-dropdown-link" data-service="digital-resources">Printing & Photocopying</a>
+                            <a href="book-borrowing" class="mobile-dropdown-link" data-service="book-borrowing">Book
+                                Borrowing & Returning</a>
+                            <a href="https://bit.ly/PIT-ORA" target="_blank" class="mobile-dropdown-link"
+                                data-service="digital-resources">Online Knowledge Concierge</a>
+                            <a href="digital-resources" class="mobile-dropdown-link"
+                                data-service="digital-resources">Printing & Photocopying</a>
                         </div>
                     </div>
                     <!-- Mobile Online Resources Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                        <button
+                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             Online Resources
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
                             <a href="https://lms.pit.edu.ph/" class="mobile-dropdown-link">OPAC</a>
-                            <a href="database.html" class="mobile-dropdown-link">Research Database</a>
+                            <a href="database" class="mobile-dropdown-link">Research Database</a>
                             <a href="#" class="mobile-dropdown-link">E-book Repository</a>
                         </div>
                     </div>
                     <!-- Mobile Ask Librarian Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                        <button
+                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             Ask Librarian
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="https://www.facebook.com/pitlrcregion8" target="_blank" class="mobile-dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
-                            <a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website" class="mobile-dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
+                            <a href="https://www.facebook.com/pitlrcregion8" target="_blank"
+                                class="mobile-dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
+                            <a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website"
+                                class="mobile-dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
                         </div>
                     </div>
                 </div>
@@ -305,34 +348,40 @@
         <div class="max-w-3xl mx-auto px-4">
             <h1 class="text-3xl sm:text-4xl font-bold font-serif text-primary mb-8 text-center">New Books Alert</h1>
             <ul class="space-y-6">
-                                 <!-- BS Industrial Technology Dropdown -->
+                <!-- BS Industrial Technology Dropdown -->
                 <li class="bg-white rounded-xl shadow p-5 hover:shadow-lg transition-shadow duration-300">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer" onclick="toggleIndustrialTechDropdown()">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer"
+                        onclick="toggleIndustrialTechDropdown()">
                         <span class="font-semibold text-lg">BS in Industrial Technology (BSInt)</span>
                         <div class="mt-2 sm:mt-0 text-blue-600 hover:text-blue-800 transition-colors">
                             <i class="fas fa-chevron-down" id="industrialTechChevron"></i>
                         </div>
                     </div>
                     <div class="hidden mt-4 space-y-3" id="industrialTechDropdown">
-                        <a href="https://drive.google.com/drive/folders/1ZDhHvHh6t_vDrUvpG475eAw1S7cPZTXm?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1ZDhHvHh6t_vDrUvpG475eAw1S7cPZTXm?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
                                 <span class="font-medium text-gray-800">Drafting Technology</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1Th_WylpRCLRgPCfWpsLV8VudNEACaphR?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1Th_WylpRCLRgPCfWpsLV8VudNEACaphR?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
-                                <span class="font-medium text-gray-800">Food & Beverage Preparation & Service Management</span>
+                                <span class="font-medium text-gray-800">Food & Beverage Preparation & Service
+                                    Management</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1mnrtkb9Y7YpgN1xP18wf21LMcNALAMXA?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1mnrtkb9Y7YpgN1xP18wf21LMcNALAMXA?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
                                 <span class="font-medium text-gray-800">Welding & Fabrication Technology</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1FbdDD9-iRzgRRSwzazGgYO9JhJ76lrhB?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1FbdDD9-iRzgRRSwzazGgYO9JhJ76lrhB?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
                                 <span class="font-medium text-gray-800">Fashion & Apparel Technology</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
@@ -340,35 +389,40 @@
                         </a>
                     </div>
                 </li>
-                
+
                 <!-- BS Computer Science Dropdown -->
                 <li class="bg-white rounded-xl shadow p-5 hover:shadow-lg transition-shadow duration-300">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer" onclick="toggleComputerScienceDropdown()">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer"
+                        onclick="toggleComputerScienceDropdown()">
                         <span class="font-semibold text-lg">Engineering Courses</span>
                         <div class="mt-2 sm:mt-0 text-blue-600 hover:text-blue-800 transition-colors">
                             <i class="fas fa-chevron-down" id="computerScienceChevron"></i>
                         </div>
                     </div>
                     <div class="hidden mt-4 space-y-3" id="computerScienceDropdown">
-                        <a href="https://drive.google.com/drive/folders/1w-Lvfdl9SyqdxWRtRMJ_82UyTPnxRMnb?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1w-Lvfdl9SyqdxWRtRMJ_82UyTPnxRMnb?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
                                 <span class="font-medium text-gray-800">BS in Electrical Engineering</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1nTRaZVxShpcotht6avFbeu1UDC79u7Hp?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1nTRaZVxShpcotht6avFbeu1UDC79u7Hp?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
                                 <span class="font-medium text-gray-800">BS in Industrial Engineering (BSIE)</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1ji-FQ7lu94XNIRsRa2uqSrPWgeyWIwf9?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1ji-FQ7lu94XNIRsRa2uqSrPWgeyWIwf9?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
                                 <span class="font-medium text-gray-800">BS in Mechanical Engineering</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1Ydzui6H8CNiWLO8rdPePtACrEKFb9fTt?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1Ydzui6H8CNiWLO8rdPePtACrEKFb9fTt?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
                                 <span class="font-medium text-gray-800">BS in Marine Engineering</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
@@ -376,17 +430,19 @@
                         </a>
                     </div>
                 </li>
-                
+
                 <!-- Bachelor of Industrial Technology Dropdown -->
                 <li class="bg-white rounded-xl shadow p-5 hover:shadow-lg transition-shadow duration-300">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer" onclick="toggleIndustrialTechBachelorDropdown()">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer"
+                        onclick="toggleIndustrialTechBachelorDropdown()">
                         <span class="font-semibold text-lg">Bachelor of Industrial Technology (BInd Tech)</span>
                         <div class="mt-2 sm:mt-0 text-blue-600 hover:text-blue-800 transition-colors">
                             <i class="fas fa-chevron-down" id="industrialTechBachelorChevron"></i>
                         </div>
                     </div>
                     <div class="hidden mt-4 space-y-3" id="industrialTechBachelorDropdown">
-                        <a href="https://drive.google.com/drive/folders/1Cat5FY2XF8X3_O4usXFQ0CVEDB8_nmDC?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1Cat5FY2XF8X3_O4usXFQ0CVEDB8_nmDC?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
                                 <span class="font-medium text-gray-800">BInd-Tech - Culinary Technology</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
@@ -394,80 +450,102 @@
                         </a>
                     </div>
                 </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.location.href='https://drive.google.com/drive/folders/1CCpESTX42G8e5U8dHNP1fwSWAsFgU_s7?usp=drive_link '">
+                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300"
+                    onclick="window.location.href='https://drive.google.com/drive/folders/1CCpESTX42G8e5U8dHNP1fwSWAsFgU_s7?usp=drive_link '">
                     <span class="font-semibold text-lg">BS in Hospitality Management (BSHM)</span>
                 </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.open('https://drive.google.com/drive/folders/1WcCyMjxYzven8t73MOe6T4uI_g6IBZSF?usp=drive_link', '_blank')">
+                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300"
+                    onclick="window.open('https://drive.google.com/drive/folders/1WcCyMjxYzven8t73MOe6T4uI_g6IBZSF?usp=drive_link', '_blank')">
                     <span class="font-semibold text-lg">Bachelor of Science in Business Administration</span>
                 </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.open('https://drive.google.com/drive/folders/1rwuL0EUQ5oTjXlfU4-MMgYgvveyLexQA?usp=sharing', '_blank')">
+                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300"
+                    onclick="window.open('https://drive.google.com/drive/folders/1rwuL0EUQ5oTjXlfU4-MMgYgvveyLexQA?usp=sharing', '_blank')">
                     <span class="font-semibold text-lg">Bachelor of Arts in Communication</span>
                 </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.open('https://drive.google.com/drive/folders/1Qsauouh8__9grqV2e14mCwDx4V85hlUW?usp=drive_link', '_blank')">
+                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300"
+                    onclick="window.open('https://drive.google.com/drive/folders/1Qsauouh8__9grqV2e14mCwDx4V85hlUW?usp=drive_link', '_blank')">
                     <span class="font-semibold text-lg">Bachelor of Science in Information Technology</span>
                 </li>
-                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300" onclick="window.open('https://drive.google.com/drive/folders/1M_H9rAc843tzKsArtjZ1UXJdEwbqTDWN?usp=drive_link', '_blank')">
+                <li class="bg-white rounded-xl shadow p-5 flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer hover:shadow-lg transition-shadow duration-300"
+                    onclick="window.open('https://drive.google.com/drive/folders/1M_H9rAc843tzKsArtjZ1UXJdEwbqTDWN?usp=drive_link', '_blank')">
                     <span class="font-semibold text-lg">General Education Curriculum (GEC)</span>
                 </li>
                 <!-- Education Dropdown -->
                 <li class="bg-white rounded-xl shadow p-5 hover:shadow-lg transition-shadow duration-300">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer" onclick="toggleEducationDropdown()">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between cursor-pointer"
+                        onclick="toggleEducationDropdown()">
                         <span class="font-semibold text-lg">Education Courses</span>
                         <div class="mt-2 sm:mt-0 text-blue-600 hover:text-blue-800 transition-colors">
                             <i class="fas fa-chevron-down" id="educationChevron"></i>
                         </div>
                     </div>
                     <div class="hidden mt-4 space-y-3" id="educationDropdown">
-                        <a href="https://drive.google.com/drive/folders/1rT45Tg13_l9PA7xDI72upoilyz8l5v7X?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1rT45Tg13_l9PA7xDI72upoilyz8l5v7X?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
-                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in English</span>
+                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in
+                                    English</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1BE8QylFI4ZaTP6I9zh0s-4Y8PRtirNqM?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1BE8QylFI4ZaTP6I9zh0s-4Y8PRtirNqM?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
-                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in Math</span>
+                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in
+                                    Math</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1kjT0k9BPPyIPQqB6srRDXa5vq0ZYeWvs?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1kjT0k9BPPyIPQqB6srRDXa5vq0ZYeWvs?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
-                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in Science</span>
+                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in
+                                    Science</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1YibgXPHoIkWmfxvdliNQja7kAqrSNegr?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1YibgXPHoIkWmfxvdliNQja7kAqrSNegr?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
-                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in Social Studies</span>
+                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in Social
+                                    Studies</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1dPDNw28uM-SAU9h91eHuvHbVGGZUnCzC?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1dPDNw28uM-SAU9h91eHuvHbVGGZUnCzC?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
-                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in Filipino</span>
+                                <span class="font-medium text-gray-800">Bachelor of Secondary Education major in
+                                    Filipino</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1FYGobnmt3iYDJFioT4IqgAuHamw5jejt?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1FYGobnmt3iYDJFioT4IqgAuHamw5jejt?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
-                                <span class="font-medium text-gray-800">BT-Vocational Teacher Education (Garments, Fashion and Design)
+                                <span class="font-medium text-gray-800">BT-Vocational Teacher Education (Garments,
+                                    Fashion and Design)
                                 </span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1r4h4i0e5NrLVNyo8ilk_OiDXrVnsrfm-?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1r4h4i0e5NrLVNyo8ilk_OiDXrVnsrfm-?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
-                                <span class="font-medium text-gray-800">BT-Vocational Teacher Education (Food and Service Management)</span>
+                                <span class="font-medium text-gray-800">BT-Vocational Teacher Education (Food and
+                                    Service Management)</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1fQNFbzOURv999kbv-EOIAQUhLs2Xr--J?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1fQNFbzOURv999kbv-EOIAQUhLs2Xr--J?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
                                 <span class="font-medium text-gray-800">Bachelor of Physical Education</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
                             </div>
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1_nZLsCjtvUnWwnQbV41nNMUntI305w8B?usp=drive_link" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="https://drive.google.com/drive/folders/1_nZLsCjtvUnWwnQbV41nNMUntI305w8B?usp=drive_link"
+                            target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                             <div class="flex items-center justify-between">
                                 <span class="font-medium text-gray-800">Bachelor in Elementary Education</span>
                                 <i class="fas fa-external-link-alt text-blue-600"></i>
@@ -478,7 +556,7 @@
             </ul>
         </div>
     </main>
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -486,17 +564,21 @@
                     <h3 class="text-xl font-bold mb-6 font-serif">
                         PIT LRC
                     </h3>
-                    <p class="text-gray-300 mb-6 leading-relaxed">Serving the community with appropriate, updated, and timely information.</p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">Serving the community with appropriate, updated, and
+                        timely information.</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-6 font-serif">
                         Hours & Location
                     </h3>
-                    <p class="text-gray-300 mb-4"><i class="fas fa-map-marker-alt mr-2"></i>Main Campus : Evangelista Street, Brgy. Guiwan II, Palompon, Leyte.</p>
-                     <p class="text-gray-300 mb-4"><i class="fas fa-map-marker-alt mr-2"></i>Tabango Campus : Tabango, Leyte.</p>
+                    <p class="text-gray-300 mb-4"><i class="fas fa-map-marker-alt mr-2"></i>Main Campus : Evangelista
+                        Street, Brgy. Guiwan II, Palompon, Leyte.</p>
+                    <p class="text-gray-300 mb-4"><i class="fas fa-map-marker-alt mr-2"></i>Tabango Campus : Tabango,
+                        Leyte.</p>
                     <div class="space-y-2 text-sm">
                         <div class="flex justify-between">
-                            <p class="text-white"><i class="fas fa-clock mr-2 text-gray-300"></i> Monday to Friday (7:30-6:00 PM)</p>
+                            <p class="text-white"><i class="fas fa-clock mr-2 text-gray-300"></i> Monday to Friday
+                                (7:30-6:00 PM)</p>
                         </div>
                     </div>
                 </div>
@@ -505,9 +587,13 @@
                         Resources
                     </h3>
                     <ul class="space-y-3">
-                        <li><a href="https://lms.pit.edu.ph/" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-book mr-2"></i>OPAC</a></li>
-                        <li><a href="database.html" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-database mr-2"></i>Research Database</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-file-alt mr-2"></i>E-book Repository</a></li>
+                        <li><a href="https://lms.pit.edu.ph/"
+                                class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fas fa-book mr-2"></i>OPAC</a></li>
+                        <li><a href="database.html" class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fas fa-database mr-2"></i>Research Database</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fas fa-file-alt mr-2"></i>E-book Repository</a></li>
                     </ul>
                 </div>
                 <div>
@@ -515,32 +601,36 @@
                         Information
                     </h3>
                     <ul class="space-y-3">
-                        <li><a href="policies-rules.html" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-book mr-2"></i>Library Policies</a></li>
-                        <li><a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-envelope mr-2"></i>Email</a></li>
+                        <li><a href="policies-rules.html" class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fas fa-book mr-2"></i>Library Policies</a></li>
+                        <li><a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website"
+                                class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fas fa-envelope mr-2"></i>Email</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-700 pt-8 text-center">
-                <p class="text-gray-400 text-sm">&copy; <span id="copyright-year"></span> PIT LRC. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">&copy; <span id="copyright-year"></span> PIT LRC. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
     <script>
         // Mobile menu toggle
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenuBtn').addEventListener('click', function () {
             const mobileMenu = document.getElementById('mobileMenu');
             mobileMenu.classList.toggle('hidden');
         });
 
         // Fade-in on scroll for sections
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('section.fade-in');
             const options = {
                 threshold: 0.15
             };
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
-                    if(entry.isIntersecting){
+                    if (entry.isIntersecting) {
                         entry.target.classList.add('fade-in-visible');
                         observer.unobserve(entry.target);
                     }
@@ -552,7 +642,7 @@
         });
         // Mobile dropdown functionality
         document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 const content = this.parentElement.querySelector('.mobile-dropdown-content');
                 const icon = this.querySelector('i');
                 content.classList.toggle('hidden');
@@ -562,13 +652,13 @@
         });
         // Close mobile menu when clicking on links
         document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 document.getElementById('mobileMenu').classList.add('hidden');
             });
         });
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
                 const targetElement = document.querySelector(targetId);
@@ -585,7 +675,7 @@
         function toggleIndustrialTechDropdown() {
             const dropdown = document.getElementById('industrialTechDropdown');
             const chevron = document.getElementById('industrialTechChevron');
-            
+
             if (dropdown.classList.contains('hidden')) {
                 dropdown.classList.remove('hidden');
                 chevron.classList.remove('fa-chevron-down');
@@ -596,12 +686,12 @@
                 chevron.classList.add('fa-chevron-down');
             }
         }
-        
+
         // Computer Science dropdown toggle function
         function toggleComputerScienceDropdown() {
             const dropdown = document.getElementById('computerScienceDropdown');
             const chevron = document.getElementById('computerScienceChevron');
-            
+
             if (dropdown.classList.contains('hidden')) {
                 dropdown.classList.remove('hidden');
                 chevron.classList.remove('fa-chevron-down');
@@ -612,12 +702,12 @@
                 chevron.classList.add('fa-chevron-down');
             }
         }
-        
+
         // Bachelor of Industrial Technology dropdown toggle function
         function toggleIndustrialTechBachelorDropdown() {
             const dropdown = document.getElementById('industrialTechBachelorDropdown');
             const chevron = document.getElementById('industrialTechBachelorChevron');
-            
+
             if (dropdown.classList.contains('hidden')) {
                 dropdown.classList.remove('hidden');
                 chevron.classList.remove('fa-chevron-down');
@@ -628,12 +718,12 @@
                 chevron.classList.add('fa-chevron-down');
             }
         }
-        
+
         // Education dropdown toggle function
         function toggleEducationDropdown() {
             const dropdown = document.getElementById('educationDropdown');
             const chevron = document.getElementById('educationChevron');
-            
+
             if (dropdown.classList.contains('hidden')) {
                 dropdown.classList.remove('hidden');
                 chevron.classList.remove('fa-chevron-down');
@@ -644,39 +734,61 @@
                 chevron.classList.add('fa-chevron-down');
             }
         }
-        
+
+        // Replace the "Highlight nav and dropdown based on current page" section
+
         // Highlight nav and dropdown based on current page
-        (function() {
+        (function () {
             const path = window.location.pathname.split('/').pop();
+
             // Desktop
             document.querySelectorAll('.nav-link').forEach(link => {
-                if(link.getAttribute('href') === path) {
+                if (link.getAttribute('href') === path) {
                     link.classList.add('text-primary', 'font-bold');
                 }
             });
+
             document.querySelectorAll('.dropdown-link').forEach(link => {
-                if(link.getAttribute('href') === path) {
+                if (link.getAttribute('href') === path) {
                     link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
-                    // Also highlight parent dropdown button
+                    // Highlight parent dropdown button
                     let parent = link.closest('.group');
-                    if(parent) {
+                    if (parent) {
                         let btn = parent.querySelector('button');
                         btn.classList.add('text-primary', 'font-bold');
                     }
                 }
             });
+
+            // Desktop - Nested dropdown links
+            document.querySelectorAll('.nested-dropdown-link').forEach(link => {
+                if (link.getAttribute('href') === path) {
+                    link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
+                    // Highlight parent About button
+                    let nestedParent = link.closest('.nested-dropdown');
+                    if (nestedParent) {
+                        let dropdownParent = nestedParent.closest('.group');
+                        if (dropdownParent) {
+                            let btn = dropdownParent.querySelector('button');
+                            btn.classList.add('text-primary', 'font-bold');
+                        }
+                    }
+                }
+            });
+
             // Mobile
             document.querySelectorAll('.mobile-nav-link').forEach(link => {
-                if(link.getAttribute('href') === path) {
+                if (link.getAttribute('href') === path) {
                     link.classList.add('text-primary', 'font-bold');
                 }
             });
+
             document.querySelectorAll('.mobile-dropdown-link').forEach(link => {
-                if(link.getAttribute('href') === path) {
+                if (link.getAttribute('href') === path) {
                     link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
-                    // Also highlight parent dropdown button
+                    // Highlight parent dropdown button
                     let parent = link.closest('.mobile-dropdown');
-                    if(parent) {
+                    if (parent) {
                         let btn = parent.querySelector('button');
                         btn.classList.add('text-primary', 'font-bold');
                     }
@@ -686,4 +798,5 @@
     </script>
     <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
 </body>
-</html> 
+
+</html>

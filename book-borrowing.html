@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,31 +28,38 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
-        .dropdown-link, .mobile-dropdown-link {
+
+        .dropdown-link,
+        .mobile-dropdown-link {
             display: block;
             padding: 0.5rem 1rem;
             margin-bottom: 0.25rem;
             border-radius: 0.375rem;
             transition: background 0.2s, color 0.2s;
         }
-        .dropdown-link:last-child, .mobile-dropdown-link:last-child {
+
+        .dropdown-link:last-child,
+        .mobile-dropdown-link:last-child {
             margin-bottom: 0;
         }
+
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.8s, transform 0.8s;
         }
+
         .fade-in.fade-in-visible {
             opacity: 1;
             transform: translateY(0);
             transition: opacity 0.8s, transform 0.8s;
         }
-        
+
         /* Nested dropdown styles */
         .nested-dropdown {
             position: relative;
         }
+
         .nested-dropdown-content {
             position: absolute;
             left: 100%;
@@ -66,11 +74,13 @@
             transition: all 0.3s ease;
             z-index: 60;
         }
+
         .nested-dropdown:hover .nested-dropdown-content {
             opacity: 1;
             visibility: visible;
             transform: translateX(0);
         }
+
         .nested-dropdown-link {
             display: block;
             padding: 0.5rem 1rem;
@@ -80,14 +90,17 @@
             border-radius: 0.375rem;
             margin: 0.125rem;
         }
+
         .nested-dropdown-link:hover {
             background: #f3f4f6;
             color: #2563eb;
         }
-        .nested-dropdown > .dropdown-link {
+
+        .nested-dropdown>.dropdown-link {
             position: relative;
         }
-        .nested-dropdown > .dropdown-link::after {
+
+        .nested-dropdown>.dropdown-link::after {
             content: '▶';
             position: absolute;
             right: 0.75rem;
@@ -98,13 +111,14 @@
         }
     </style>
 </head>
+
 <body class="font-body text-gray-800 bg-gray-50">
-    <!-- Header Section (copied from mission-vision.html for consistency) -->
+    <!-- Header Section -->
     <header class="bg-white shadow-lg fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-5">
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center">
+                <a href="home" class="flex items-center">
                     <img src="images/logo.png" alt="PIT LRC Logo" class="h-12 w-12 mr-3">
                     <div class="hidden sm:block">
                         <div class="text-xl font-bold text-[#084434]">Palompon Institute of Technology</div>
@@ -117,27 +131,28 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex items-center space-x-8 lg:px-[4%]">
-                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="home" class="nav-link">Home</a>
                     <!-- About Dropdown -->
                     <div class="relative group">
                         <button class="flex items-center nav-link">
                             About
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div
+                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
-                                <a href="mission-vision.html" class="dropdown-link">Mission & Vision</a>
-                                <a href="service-hours.html" class="dropdown-link">Service Hours</a>
-                                <a href="library-personnel.html" class="dropdown-link">Library Personel</a>
-                                <a href="policies-rules.html" class="dropdown-link">Policies & Rules</a>
-                                <a href="citizens-charter.html" class="dropdown-link">Citizen's Charter</a>
-                                <a href="linkages.html" class="dropdown-link">Linkages</a>
+                                <a href="mission-vision" class="dropdown-link">Mission & Vision</a>
+                                <a href="service-hours" class="dropdown-link">Service Hours</a>
+                                <a href="library-personnel" class="dropdown-link">Library Personel</a>
+                                <a href="policies-rules" class="dropdown-link">Policies & Rules</a>
+                                <a href="citizens-charter" class="dropdown-link">Citizen's Charter</a>
+                                <a href="linkages" class="dropdown-link">Linkages</a>
                                 <div class="nested-dropdown">
                                     <span class="dropdown-link">Libraries</span>
                                     <div class="nested-dropdown-content">
                                         <div class="py-1">
-                                            <a href="libraries.html#main-library" class="nested-dropdown-link">Main Campus Library</a>
-                                            <a href="tabango-campus-library.html" class="nested-dropdown-link">Tabango Campus Library</a>
+                                            <a href="main" class="nested-dropdown-link">Main Campus Library</a>
+                                            <a href="tabango" class="nested-dropdown-link">Tabango Campus Library</a>
                                         </div>
                                     </div>
                                 </div>
@@ -150,11 +165,15 @@
                             Services
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div
+                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
-                                <a href="book-borrowing.html" class="dropdown-link" data-service="book-borrowing">Book Borrowing & Returning</a>
-                                <a href="https://bit.ly/PIT-ORA" target="_blank" class="dropdown-link" data-service="digital-resources">Online Knowledge Concierge</a>
-                                <a href="digital-resources.html" class="dropdown-link" data-service="digital-resources">Printing & Photocopying</a>
+                                <a href="book-borrowing" class="dropdown-link" data-service="book-borrowing">Book
+                                    Borrowing & Returning</a>
+                                <a href="https://bit.ly/PIT-ORA" target="_blank" class="dropdown-link"
+                                    data-service="digital-resources">Online Knowledge Concierge</a>
+                                <a href="digital-resources" class="dropdown-link"
+                                    data-service="digital-resources">Printing & Photocopying</a>
                             </div>
                         </div>
                     </div>
@@ -164,9 +183,10 @@
                             Online Resources
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div
+                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
-                                <a href="https://lms.pit.edu.ph/" class="dropdown-link">OPAC</a>
+                                <a href="https://lms.pit.edu.ph/ " class="dropdown-link">OPAC</a>
                                 <a href="database.html" class="dropdown-link">Research Database</a>
                                 <a href="#" class="dropdown-link">E-book Repository</a>
                             </div>
@@ -178,10 +198,13 @@
                             Ask Librarian
                             <i class="fas fa-chevron-down ml-1 text-sm"></i>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div
+                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="py-2">
-                                <a href="https://www.facebook.com/pitlrcregion8" target="_blank" class="dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
-                                <a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website" class="dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
+                                <a href="https://www.facebook.com/pitlrcregion8" target="_blank"
+                                    class="dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
+                                <a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website"
+                                    class="dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
                             </div>
                         </div>
                     </div>
@@ -194,65 +217,75 @@
             <!-- Mobile Navigation -->
             <div class="lg:hidden hidden" id="mobileMenu">
                 <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-                    <a href="index.html" class="mobile-nav-link">Home</a>
+                    <a href="home" class="mobile-nav-link">Home</a>
                     <!-- Mobile About Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                        <button
+                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             About
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="mission-vision.html" class="mobile-dropdown-link">Mission & Vision</a>
-                            <a href="service-hours.html" class="mobile-dropdown-link">Service Hours</a>
-                            <a href="library-personnel.html" class="mobile-dropdown-link">Library Personel</a>
-                            <a href="policies-rules.html" class="mobile-dropdown-link">Policies & Rules</a>
-                            <a href="citizens-charter.html" class="mobile-dropdown-link">Citizen's Charter</a>
-                            <a href="linkages.html" class="mobile-dropdown-link">Linkages</a>
+                            <a href="mission-vision" class="mobile-dropdown-link">Mission & Vision</a>
+                            <a href="service-hours" class="mobile-dropdown-link">Service Hours</a>
+                            <a href="library-personnel" class="mobile-dropdown-link">Library Personel</a>
+                            <a href="policies-rules" class="mobile-dropdown-link">Policies & Rules</a>
+                            <a href="citizens-charter" class="mobile-dropdown-link">Citizen's Charter</a>
+                            <a href="linkages" class="mobile-dropdown-link">Linkages</a>
                             <div class="mobile-dropdown">
-                                <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                                <button
+                                    class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                                     Libraries
                                     <i class="fas fa-chevron-down text-sm"></i>
                                 </button>
                                 <div class="hidden pl-6 mobile-dropdown-content">
-                                    <a href="libraries.html#main-library" class="mobile-dropdown-link">Main Campus Library</a>
-                                    <a href="libraries.html#specialized-libraries" class="mobile-dropdown-link">Tabango Campus Library</a>
+                                    <a href="main" class="mobile-dropdown-link">Main Campus Library</a>
+                                    <a href="tabango" class="mobile-dropdown-link">Tabango Campus Library</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Mobile Services Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                        <button
+                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             Services
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="book-borrowing.html" class="mobile-dropdown-link" data-service="book-borrowing">Book Borrowing & Returning</a>
-                            <a href="https://bit.ly/PIT-ORA" target="_blank" class="mobile-dropdown-link" data-service="digital-resources">Online Knowledge Concierge</a>
-                            <a href="digital-resources.html" class="mobile-dropdown-link" data-service="digital-resources">Printing & Photocopying</a>
+                            <a href="book-borrowing" class="mobile-dropdown-link" data-service="book-borrowing">Book
+                                Borrowing & Returning</a>
+                            <a href="https://bit.ly/PIT-ORA" target="_blank" class="mobile-dropdown-link"
+                                data-service="digital-resources">Online Knowledge Concierge</a>
+                            <a href="digital-resources" class="mobile-dropdown-link"
+                                data-service="digital-resources">Printing & Photocopying</a>
                         </div>
                     </div>
                     <!-- Mobile Online Resources Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                        <button
+                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             Online Resources
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
                             <a href="https://lms.pit.edu.ph/" class="mobile-dropdown-link">OPAC</a>
-                            <a href="database.html" class="mobile-dropdown-link">Research Database</a>
+                            <a href="database" class="mobile-dropdown-link">Research Database</a>
                             <a href="#" class="mobile-dropdown-link">E-book Repository</a>
                         </div>
                     </div>
                     <!-- Mobile Ask Librarian Dropdown -->
                     <div class="mobile-dropdown">
-                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                        <button
+                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
                             Ask Librarian
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="https://www.facebook.com/pitlrcregion8" target="_blank" class="mobile-dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
-                            <a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website" class="mobile-dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
+                            <a href="https://www.facebook.com/pitlrcregion8" target="_blank"
+                                class="mobile-dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
+                            <a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website"
+                                class="mobile-dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
                         </div>
                     </div>
                 </div>
@@ -261,12 +294,15 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24 fade-in" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/bg.jpg');">
+    <section class="relative bg-cover bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24 fade-in"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/bg.jpg');">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex flex-col items-center">
                 <div class="text-6xl mb-4 text-white"><i class="fas fa-book-reader"></i></div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight font-serif">Book Borrowing & Returning</h1>
-                <p class="text-lg sm:text-xl lg:text-2xl text-white mb-6 opacity-90 leading-relaxed">Easily borrow and return books from the PIT Learning Resource Center.</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight font-serif">Book
+                    Borrowing & Returning</h1>
+                <p class="text-lg sm:text-xl lg:text-2xl text-white mb-6 opacity-90 leading-relaxed">Easily borrow and
+                    return books from the PIT Learning Resource Center.</p>
             </div>
         </div>
     </section>
@@ -278,17 +314,23 @@
             <div class="mb-10">
                 <h3 class="text-2xl font-semibold text-secondary mb-4">For Onsite</h3>
                 <ul class="list-disc list-inside space-y-2 text-gray-800 text-lg">
-                    <li>Every student must deposit his/her School ID upon borrowing book(s) for home use or for photocopying outside the library. Only three (3) books of different titles (2 references and 1 Fillipiniana) are allowed to be borrowed for overnight/home use.</li>
-                    <li>Borrowing of books starts in the afternoon, but if the need arises and the book is essentially needed, it can be borrowed anytime they want.</li>
+                    <li>Every student must deposit his/her School ID upon borrowing book(s) for home use or for
+                        photocopying outside the library. Only three (3) books of different titles (2 references and 1
+                        Fillipiniana) are allowed to be borrowed for overnight/home use.</li>
+                    <li>Borrowing of books starts in the afternoon, but if the need arises and the book is essentially
+                        needed, it can be borrowed anytime they want.</li>
                 </ul>
                 <div class="mt-2 p-3 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded">
-                    <p class="italic">Note: No borrowing of books is allowed 1 week before the schedule of exam (midterm/finals). This is to lessen the chances of books not being returned in-time.</p>
+                    <p class="italic">Note: No borrowing of books is allowed 1 week before the schedule of exam
+                        (midterm/finals). This is to lessen the chances of books not being returned in-time.</p>
                 </div>
                 <ul class="list-disc list-inside space-y-2 text-gray-800 text-lg mt-4">
-                    <li>Photocopying outside the library should be done in not more than 15 minutes. Exceeding the given time is allowed on a case-to-case basis.</li>
+                    <li>Photocopying outside the library should be done in not more than 15 minutes. Exceeding the given
+                        time is allowed on a case-to-case basis.</li>
                 </ul>
                 <div class="mt-4">
-                    <p class="font-semibold mb-2">The following types of library materials are to be read only in the library:</p>
+                    <p class="font-semibold mb-2">The following types of library materials are to be read only in the
+                        library:</p>
                     <ul class="list-disc list-inside ml-6 text-gray-700">
                         <li>General References: encyclopedias, dictionaries, atlases, and yearbooks.</li>
                         <li>Periodicals: magazines, journals and newspapers.</li>
@@ -302,30 +344,39 @@
                 <h3 class="text-2xl font-semibold text-secondary mb-4">Online Borrowing and Checking –In</h3>
                 <h4 class="text-xl font-semibold mb-2">Online Borrowing</h4>
                 <ul class="list-disc list-inside space-y-2 text-gray-800 text-lg">
-                    <li>Students and faculty members may loan out library materials by following the circulation guidelines;</li>
+                    <li>Students and faculty members may loan out library materials by following the circulation
+                        guidelines;</li>
                     <li>Select the title of books available using the PIT-LRC Destiny Library Manager:<br>
-                        <span class="ml-6 block text-blue-700 underline"><a href="http://lms.pit.edu.ph" target="_blank">http://lms.pit.edu.ph</a></span>
+                        <span class="ml-6 block text-blue-700 underline"><a href="http://lms.pit.edu.ph"
+                                target="_blank">http://lms.pit.edu.ph</a></span>
                     </li>
-                    <li>Note: If assistance is needed, leave a message on the PIT-Learning Resource Center FB page or through Messenger.</li>
-                    <li>Visit to PIT-LRC Facebook Page and type the title, author, and copyright date of the book(s) you want to borrow.</li>
+                    <li>Note: If assistance is needed, leave a message on the PIT-Learning Resource Center FB page or
+                        through Messenger.</li>
+                    <li>Visit to PIT-LRC Facebook Page and type the title, author, and copyright date of the book(s) you
+                        want to borrow.</li>
                     <li>Wait for a notification from the librarian or personnel in charge</li>
                     <li>Messages will be entertained from 8:00 AM-5:00 PM Mondays to Fridays.</li>
                 </ul>
                 <ul class="list-disc list-inside space-y-2 text-gray-800 text-lg mt-4">
-                    <li>Borrower will be notified via text message, or call when the materials are ready for pick-up.</li>
+                    <li>Borrower will be notified via text message, or call when the materials are ready for pick-up.
+                    </li>
                     <li>Present PIT ID or Official Enrollment Sheet upon picking up the materials.</li>
                     <li>Pick-up time is from 8:00 AM – 5:00 PM Monday – Friday.</li>
-                    <li>A representative is allowed to pick up the book(s) upon presenting an authorization letter with ID from the borrower.</li>
+                    <li>A representative is allowed to pick up the book(s) upon presenting an authorization letter with
+                        ID from the borrower.</li>
                     <li>Fill out the book card and leave it to the Library in charge.</li>
                     <li>Patrons are allowed to borrow two (2) books for a period of one (1) week.</li>
-                    <li>All borrowed materials can be renewed for another one (1) week provided that there will be no prior request from another patron. This can be done online through e-mail, text, or FB messenger.</li>
+                    <li>All borrowed materials can be renewed for another one (1) week provided that there will be no
+                        prior request from another patron. This can be done online through e-mail, text, or FB
+                        messenger.</li>
                 </ul>
             </div>
 
             <div class="mb-10">
                 <h4 class="text-xl font-semibold mb-2">Checking In of Library Materials</h4>
                 <ul class="list-disc list-inside space-y-2 text-gray-800 text-lg">
-                    <li>Patron shall drop the book(s) at the BOOK DROP BOX located at the Public Assistance Center, near the Guard House.</li>
+                    <li>Patron shall drop the book(s) at the BOOK DROP BOX located at the Public Assistance Center, near
+                        the Guard House.</li>
                     <li>Acknowledgement messages will be sent to the patron via e-mail, text, or FB messenger.</li>
                 </ul>
             </div>
@@ -333,15 +384,18 @@
             <div class="mb-10">
                 <h4 class="text-xl font-semibold mb-2">Request for Reservation of Library Materials</h4>
                 <ul class="list-disc list-inside space-y-2 text-gray-800 text-lg">
-                    <li>A patron who wants to borrow library materials that are currently borrowed by another patron may request for reservation through the PIT-LRC Facebook Page or messenger.</li>
-                    <li>Requested materials will be ready within two (2) working days after the approval of the request.</li>
-                    <li>Failure to pick up the materials after two (2) days given period will mean forfeiture of the request. Books will be returned to its shelves.</li>
+                    <li>A patron who wants to borrow library materials that are currently borrowed by another patron may
+                        request for reservation through the PIT-LRC Facebook Page or messenger.</li>
+                    <li>Requested materials will be ready within two (2) working days after the approval of the request.
+                    </li>
+                    <li>Failure to pick up the materials after two (2) days given period will mean forfeiture of the
+                        request. Books will be returned to its shelves.</li>
                 </ul>
             </div>
         </div>
     </section>
 
- <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -349,17 +403,21 @@
                     <h3 class="text-xl font-bold mb-6 font-serif">
                         PIT LRC
                     </h3>
-                    <p class="text-gray-300 mb-6 leading-relaxed">Serving the community with appropriate, updated, and timely information.</p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">Serving the community with appropriate, updated, and
+                        timely information.</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-6 font-serif">
                         Hours & Location
                     </h3>
-                    <p class="text-gray-300 mb-4"><i class="fas fa-map-marker-alt mr-2"></i>Main Campus : Evangelista Street, Brgy. Guiwan II, Palompon, Leyte.</p>
-                     <p class="text-gray-300 mb-4"><i class="fas fa-map-marker-alt mr-2"></i>Tabango Campus : Tabango, Leyte.</p>
+                    <p class="text-gray-300 mb-4"><i class="fas fa-map-marker-alt mr-2"></i>Main Campus : Evangelista
+                        Street, Brgy. Guiwan II, Palompon, Leyte.</p>
+                    <p class="text-gray-300 mb-4"><i class="fas fa-map-marker-alt mr-2"></i>Tabango Campus : Tabango,
+                        Leyte.</p>
                     <div class="space-y-2 text-sm">
                         <div class="flex justify-between">
-                            <p class="text-white"><i class="fas fa-clock mr-2 text-gray-300"></i> Monday to Friday (7:30-6:00 PM)</p>
+                            <p class="text-white"><i class="fas fa-clock mr-2 text-gray-300"></i> Monday to Friday
+                                (7:30-6:00 PM)</p>
                         </div>
                     </div>
                 </div>
@@ -368,9 +426,13 @@
                         Resources
                     </h3>
                     <ul class="space-y-3">
-                        <li><a href="https://lms.pit.edu.ph/" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-book mr-2"></i>OPAC</a></li>
-                        <li><a href="database.html" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-database mr-2"></i>Research Database</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-file-alt mr-2"></i>E-book Repository</a></li>
+                        <li><a href="https://lms.pit.edu.ph/"
+                                class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fas fa-book mr-2"></i>OPAC</a></li>
+                        <li><a href="database.html" class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fas fa-database mr-2"></i>Research Database</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fas fa-file-alt mr-2"></i>E-book Repository</a></li>
                     </ul>
                 </div>
                 <div>
@@ -378,13 +440,17 @@
                         Information
                     </h3>
                     <ul class="space-y-3">
-                        <li><a href="policies-rules.html" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-book mr-2"></i>Library Policies</a></li>
-                        <li><a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website" class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-envelope mr-2"></i>Email</a></li>
+                        <li><a href="policies-rules.html" class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fas fa-book mr-2"></i>Library Policies</a></li>
+                        <li><a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website"
+                                class="text-gray-300 hover:text-white transition-colors"><i
+                                    class="fas fa-envelope mr-2"></i>Email</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-700 pt-8 text-center">
-                <p class="text-gray-400 text-sm">&copy; <span id="copyright-year"></span> PIT LRC. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">&copy; <span id="copyright-year"></span> PIT LRC. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
@@ -397,14 +463,14 @@
         });
 
         // Fade-in on scroll for sections
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('section.fade-in');
             const options = {
                 threshold: 0.15
             };
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
-                    if(entry.isIntersecting){
+                    if (entry.isIntersecting) {
                         entry.target.classList.add('fade-in-visible');
                         observer.unobserve(entry.target);
                     }
@@ -434,38 +500,60 @@
             });
         });
 
+        // Replace the "Highlight nav and dropdown based on current page" section
+
         // Highlight nav and dropdown based on current page
-        (function() {
+        (function () {
             const path = window.location.pathname.split('/').pop();
+
             // Desktop
             document.querySelectorAll('.nav-link').forEach(link => {
-                if(link.getAttribute('href') === path) {
+                if (link.getAttribute('href') === path) {
                     link.classList.add('text-primary', 'font-bold');
                 }
             });
+
             document.querySelectorAll('.dropdown-link').forEach(link => {
-                if(link.getAttribute('href') === path) {
+                if (link.getAttribute('href') === path) {
                     link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
-                    // Also highlight parent dropdown button
+                    // Highlight parent dropdown button
                     let parent = link.closest('.group');
-                    if(parent) {
+                    if (parent) {
                         let btn = parent.querySelector('button');
                         btn.classList.add('text-primary', 'font-bold');
                     }
                 }
             });
+
+            // Desktop - Nested dropdown links
+            document.querySelectorAll('.nested-dropdown-link').forEach(link => {
+                if (link.getAttribute('href') === path) {
+                    link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
+                    // Highlight parent About button
+                    let nestedParent = link.closest('.nested-dropdown');
+                    if (nestedParent) {
+                        let dropdownParent = nestedParent.closest('.group');
+                        if (dropdownParent) {
+                            let btn = dropdownParent.querySelector('button');
+                            btn.classList.add('text-primary', 'font-bold');
+                        }
+                    }
+                }
+            });
+
             // Mobile
             document.querySelectorAll('.mobile-nav-link').forEach(link => {
-                if(link.getAttribute('href') === path) {
+                if (link.getAttribute('href') === path) {
                     link.classList.add('text-primary', 'font-bold');
                 }
             });
+
             document.querySelectorAll('.mobile-dropdown-link').forEach(link => {
-                if(link.getAttribute('href') === path) {
+                if (link.getAttribute('href') === path) {
                     link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
-                    // Also highlight parent dropdown button
+                    // Highlight parent dropdown button
                     let parent = link.closest('.mobile-dropdown');
-                    if(parent) {
+                    if (parent) {
                         let btn = parent.querySelector('button');
                         btn.classList.add('text-primary', 'font-bold');
                     }
@@ -475,4 +563,5 @@
     </script>
     <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
 </body>
-</html> 
+
+</html>
