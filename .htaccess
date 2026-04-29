@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /landing%20page/
+    
+    # Custom URL Mappings - What you see in address bar
+    RewriteRule ^home/?$ index.html [NC,L]
+    RewriteRule ^mission-vision/?$ mission-vision.html [NC,L]
+    RewriteRule ^service-hours/?$ service-hours.html [NC,L]
+    RewriteRule ^personnel/?$ library-personnel.html [NC,L]
+    RewriteRule ^policies/?$ policies-rules.html [NC,L]
+    RewriteRule ^charter/?$ citizens-charter.html [NC,L]
+    RewriteRule ^linkages/?$ linkages.html [NC,L]
+    RewriteRule ^main/?$ libraries.html#main-library [NC,L]
+    RewriteRule ^tabango/?$ tabango-campus-library.html [NC,L]
+    RewriteRule ^borrowing/?$ book-borrowing.html [NC,L]
+    RewriteRule ^digital/?$ digital-resources.html [NC,L]
+    RewriteRule ^database/?$ database.html [NC,L]
+    RewriteRule ^courses/?$ courses.html [NC,L]
+    
+    # Remove .html extension
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([a-zA-Z0-9_/-]+)/?$ $1.html [NC,L]
+</IfModule>
