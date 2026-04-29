@@ -40,6 +40,58 @@
             }
         }
     </script>
+     <style>
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes marquee-mobile {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+
+        .animate-marquee-mobile {
+            animation: marquee-mobile 15s linear infinite;
+        }
+
+        @media (max-width: 640px) {
+            #bookMarquee>div {
+                width: 9.5rem !important;
+                height: 13.5rem !important;
+                padding: 0.5rem !important;
+            }
+
+            #bookMarquee img {
+                width: 6.5rem !important;
+                height: 8.5rem !important;
+            }
+
+            #bookMarquee h3 {
+                font-size: 0.95rem !important;
+            }
+
+            #bookMarquee p,
+            #bookMarquee span,
+            #bookMarquee .fa-user {
+                font-size: 0.8rem !important;
+            }
+        }
+    </style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
 
@@ -155,186 +207,8 @@
 </head>
 
 <body class="font-body text-gray-800 bg-gray-50">
-    <!-- Header Section -->
-    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-5">
-                <!-- Logo -->
-                <a href="index.html" class="flex items-center">
-                    <img src="images/logo.png" alt="PIT LRC Logo" class="h-12 w-12 mr-3">
-                    <div class="hidden sm:block">
-                        <div class="text-xl font-bold text-[#084434]">Palompon Institute of Technology</div>
-                        <div class="text-xl font-bold text-[#084434]">Learning Resource Center</div>
-                    </div>
-                    <div class="sm:hidden">
-                        <div class="text-xl font-extrabold text-[#084434]">PIT-LRC</div>
-                    </div>
-                </a>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden lg:flex items-center space-x-8 lg:px-[4%]">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <!-- About Dropdown -->
-                    <div class="relative group">
-                        <button class="flex items-center nav-link">
-                            About
-                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
-                        </button>
-                        <div
-                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="py-2">
-                                <a href="mission-vision" class="dropdown-link">Mission & Vision</a>
-                                <a href="service-hours" class="dropdown-link">Service Hours</a>
-                                <a href="library-personnel" class="dropdown-link">Library Personel</a>
-                                <a href="policies-rules" class="dropdown-link">Policies & Rules</a>
-                                <a href="citizens-charter" class="dropdown-link">Citizen's Charter</a>
-                                <a href="linkages" class="dropdown-link">Linkages</a>
-                                <div class="nested-dropdown">
-                                    <span class="dropdown-link">Libraries</span>
-                                    <div class="nested-dropdown-content">
-                                        <div class="py-1">
-                                            <a href="main" class="nested-dropdown-link">Main Campus Library</a>
-                                            <a href="tabango" class="nested-dropdown-link">Tabango Campus Library</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Services Dropdown -->
-                    <div class="relative group">
-                        <button class="flex items-center nav-link">
-                            Services
-                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
-                        </button>
-                        <div
-                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="py-2">
-                                <a href="book-borrowing" class="dropdown-link" data-service="book-borrowing">Book
-                                    Borrowing & Returning</a>
-                                <a href="https://bit.ly/PIT-ORA" target="_blank" class="dropdown-link"
-                                    data-service="digital-resources">Online Knowledge Concierge</a>
-                                <a href="digital-resources" class="dropdown-link"
-                                    data-service="digital-resources">Printing & Photocopying</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Online Resources Dropdown -->
-                    <div class="relative group">
-                        <button class="flex items-center nav-link">
-                            Online Resources
-                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
-                        </button>
-                        <div
-                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="py-2">
-                                <a href="https://lms.pit.edu.ph/ " class="dropdown-link">OPAC</a>
-                                <a href="database.html" class="dropdown-link">Research Database</a>
-                                <a href="#" class="dropdown-link">E-book Repository</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Ask Librarian Dropdown -->
-                    <div class="relative group">
-                        <button class="flex items-center nav-link">
-                            Ask Librarian
-                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
-                        </button>
-                        <div
-                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="py-2">
-                                <a href="https://www.facebook.com/pitlrcregion8" target="_blank"
-                                    class="dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
-                                <a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website"
-                                    class="dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <!-- Mobile Menu Button -->
-                <button class="lg:hidden text-gray-700 hover:text-primary" id="mobileMenuBtn">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-            <!-- Mobile Navigation -->
-            <div class="lg:hidden hidden" id="mobileMenu">
-                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-                    <a href="index.html" class="mobile-nav-link">Home</a>
-                    <!-- Mobile About Dropdown -->
-                    <div class="mobile-dropdown">
-                        <button
-                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
-                            About
-                            <i class="fas fa-chevron-down text-sm"></i>
-                        </button>
-                        <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="mission-vision" class="mobile-dropdown-link">Mission & Vision</a>
-                            <a href="service-hours" class="mobile-dropdown-link">Service Hours</a>
-                            <a href="library-personnel" class="mobile-dropdown-link">Library Personel</a>
-                            <a href="policies-rules" class="mobile-dropdown-link">Policies & Rules</a>
-                            <a href="citizens-charter" class="mobile-dropdown-link">Citizen's Charter</a>
-                            <a href="linkages" class="mobile-dropdown-link">Linkages</a>
-                            <div class="mobile-dropdown">
-                                <button
-                                    class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
-                                    Libraries
-                                    <i class="fas fa-chevron-down text-sm"></i>
-                                </button>
-                                <div class="hidden pl-6 mobile-dropdown-content">
-                                    <a href="main" class="mobile-dropdown-link">Main Campus Library</a>
-                                    <a href="tabango" class="mobile-dropdown-link">Tabango Campus Library</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Mobile Services Dropdown -->
-                    <div class="mobile-dropdown">
-                        <button
-                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
-                            Services
-                            <i class="fas fa-chevron-down text-sm"></i>
-                        </button>
-                        <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="book-borrowing" class="mobile-dropdown-link" data-service="book-borrowing">Book
-                                Borrowing & Returning</a>
-                            <a href="https://bit.ly/PIT-ORA" target="_blank" class="mobile-dropdown-link"
-                                data-service="digital-resources">Online Knowledge Concierge</a>
-                            <a href="digital-resources" class="mobile-dropdown-link"
-                                data-service="digital-resources">Printing & Photocopying</a>
-                        </div>
-                    </div>
-                    <!-- Mobile Online Resources Dropdown -->
-                    <div class="mobile-dropdown">
-                        <button
-                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
-                            Online Resources
-                            <i class="fas fa-chevron-down text-sm"></i>
-                        </button>
-                        <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="https://lms.pit.edu.ph/" class="mobile-dropdown-link">OPAC</a>
-                            <a href="database" class="mobile-dropdown-link">Research Database</a>
-                            <a href="#" class="mobile-dropdown-link">E-book Repository</a>
-                        </div>
-                    </div>
-                    <!-- Mobile Ask Librarian Dropdown -->
-                    <div class="mobile-dropdown">
-                        <button
-                            class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
-                            Ask Librarian
-                            <i class="fas fa-chevron-down text-sm"></i>
-                        </button>
-                        <div class="hidden pl-6 mobile-dropdown-content">
-                            <a href="https://www.facebook.com/pitlrcregion8" target="_blank"
-                                class="mobile-dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
-                            <a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website"
-                                class="mobile-dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
+    <div id="header"></div>
+    <main>
     <!-- New Welcome Section -->
     <section class="relative bg-white fade-in py-20 pt-28 lg:pt-[14%]">
         <div class="container px-4 md:px-6 mx-auto">
@@ -510,7 +384,6 @@
             </div>
         </div>
     </section>
-
     <!-- Book Alerts Section -->
     <section class="py-16 lg:py-24 fade-in" id="book-alerts">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -549,399 +422,12 @@
             </div>
         </div>
     </section>
-
-    <script>
-        // Book data based on image filenames with specific roles
-        const books = [
-            {
-                image: "./images/Energy and Development.PNG",
-                title: "Energy and Development",
-                person: "Frauke Urban",
-                role: "Author",
-                description: "Comprehensive guide to sustainable energy solutions",
-                category: "Engineering"
-            },
-            {
-                image: "./images/Essentials of Biotechnology.PNG",
-                title: "Essentials of Biotechnology: World Edition",
-                person: "3GE-Learning",
-                role: "Author",
-                description: "Fundamental principles of biotech applications",
-                category: "Biology"
-            },
-            {
-                image: "./images/Gender & Society we are all equal.PNG",
-                title: "Gender and Society: We Are All Equal",
-                person: "Adlene Maghinay Florendo",
-                role: "Author",
-                description: "Exploring equality in modern society",
-                category: "Sociology"
-            },
-            {
-                image: "./images/Modular Approach to Art Appreciation.PNG",
-                title: "Modular Approach to Art Appreciation",
-                person: "Reynaldo B. Inocian",
-                role: "Author",
-                description: "Systematic methods for understanding art",
-                category: "Arts"
-            },
-            {
-                image: "./images/General Biology 2.PNG",
-                title: "General Biology 2",
-                person: "3G E-Learning",
-                role: "Author",
-                description: "Advanced concepts in biological sciences",
-                category: "Biology"
-            },
-            {
-                image: "./images/Philippine Electrical Code Part 2.PNG",
-                title: "Philippine Electrical Code: Part 2",
-                person: "Institute of Integrated Electrical Engineers of the Philippine",
-                role: "Author",
-                description: "Updated electrical standards and regulations",
-                category: "Engineering"
-            },
-            {
-                image: "./images/Safety Management.PNG",
-                title: "Safety Management",
-                person: "Matt Martin, PhD",
-                role: "Author",
-                description: "Comprehensive workplace safety protocols",
-                category: "Management"
-            },
-            {
-                image: "./images/the infographic guide to grammar.PNG",
-                title: "The Infographic Guide to Grammar: A Visual Reference for Everything You Need to Know",
-                person: "Jara Kern",
-                role: "Author",
-                description: "Visual approach to mastering grammar",
-                category: "Language"
-            },
-            {
-                image: "./images/The teacher and the school curriculum.PNG",
-                title: "The Teacher and the School Curriculum",
-                person: "Madeline T. Fernando",
-                role: "Author",
-                description: "Educational curriculum development strategies",
-                category: "Education"
-            },
-            {
-                image: "./images/Thermodynamics.PNG",
-                title: "Thermodynamics: Course Notes",
-                person: "Engr. Beteliano Villalas & Engr. Merwyn Lael D. Abear",
-                role: "Authors",
-                description: "Principles of heat and energy transfer",
-                category: "Physics"
-            }
-        ];
-
-        // Color schemes for alert badges
-        const alertColors = [
-            { border: 'border-green-600', text: 'text-green-700' },
-            { border: 'border-blue-600', text: 'text-blue-700' },
-            { border: 'border-pink-600', text: 'text-pink-700' },
-            { border: 'border-green-700', text: 'text-green-800' },
-            { border: 'border-red-700', text: 'text-red-700' },
-            { border: 'border-indigo-700', text: 'text-indigo-700' },
-            { border: 'border-teal-700', text: 'text-teal-700' },
-            { border: 'border-yellow-600', text: 'text-yellow-700' },
-            { border: 'border-rose-700', text: 'text-rose-700' },
-            { border: 'border-purple-700', text: 'text-purple-700' }
-        ];
-
-        // Function to generate book card HTML
-        function generateBookCard(book, index, isMobile = false) {
-            const color = alertColors[index % alertColors.length];
-            const cardClass = isMobile
-                ? "relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-40 h-60 flex flex-col group cursor-pointer"
-                : "relative bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0 w-48 h-72 flex flex-col group cursor-pointer";
-
-            const imageClass = isMobile ? "w-24 h-28" : "w-32 h-40";
-            const paddingClass = isMobile ? "pt-3" : "pt-4";
-            const contentPadding = isMobile ? "p-2" : "p-3";
-            const titleClass = isMobile ? "text-sm font-bold font-serif text-gray-900 mb-1 truncate" : "text-base font-bold font-serif text-gray-900 mb-1 truncate";
-            const descriptionClass = isMobile ? "text-xs text-gray-700 mb-2 line-clamp-2" : "text-xs text-gray-700 mb-2 line-clamp-2";
-            const personClass = isMobile ? "text-xs text-gray-500 mt-auto" : "text-xs text-gray-500 mt-auto";
-
-            return `
-                <a href="courses.html?book=${book.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}" class="${cardClass}">
-                    <div class="relative flex-shrink-0 flex justify-center items-center ${paddingClass}">
-                        <img src="${book.image}" alt="${book.title}" class="${imageClass} object-cover rounded-lg border-2 border-gray-100 shadow group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-2 left-2 bg-white border ${color.border} ${color.text} font-bold px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
-                            <i class="fas fa-bell mr-1"></i>Alert
-                        </span>
-                    </div>
-                    <div class="flex-1 flex flex-col justify-between ${contentPadding}">
-                        <h3 class="${titleClass}">${book.title}</h3>
-                        <p class="${descriptionClass}">${book.description}</p>
-                        <div class="flex items-center ${personClass}">
-                            <i class="fas fa-user mr-1"></i>
-                            <span class="truncate">${book.person} - ${book.role}</span>
-                        </div>
-                    </div>
-                </a>
-            `;
-        }
-
-        // Function to populate marquee
-        function populateMarquee() {
-            const desktopMarquee = document.getElementById('bookMarqueeDesktop');
-            const mobileMarquee = document.getElementById('bookMarqueeMobile');
-
-            if (desktopMarquee) {
-                desktopMarquee.innerHTML = books.map((book, index) => generateBookCard(book, index, false)).join('');
-            }
-
-            if (mobileMarquee) {
-                mobileMarquee.innerHTML = books.map((book, index) => generateBookCard(book, index, true)).join('');
-            }
-        }
-
-        // Initialize when DOM is loaded
-        document.addEventListener('DOMContentLoaded', populateMarquee);
-    </script>
-    <style>
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        @keyframes marquee-mobile {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .animate-marquee {
-            animation: marquee 20s linear infinite;
-        }
-
-        .animate-marquee-mobile {
-            animation: marquee-mobile 15s linear infinite;
-        }
-
-        @media (max-width: 640px) {
-            #bookMarquee>div {
-                width: 9.5rem !important;
-                height: 13.5rem !important;
-                padding: 0.5rem !important;
-            }
-
-            #bookMarquee img {
-                width: 6.5rem !important;
-                height: 8.5rem !important;
-            }
-
-            #bookMarquee h3 {
-                font-size: 0.95rem !important;
-            }
-
-            #bookMarquee p,
-            #bookMarquee span,
-            #bookMarquee .fa-user {
-                font-size: 0.8rem !important;
-            }
-        }
-    </style>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <h3 class="text-xl font-bold mb-6 font-serif">
-                        PIT LRC
-                    </h3>
-                    <p class="text-gray-300 mb-6 leading-relaxed">Serving the community with appropriate, updated, and
-                        timely information.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-6 font-serif">
-                        Hours & Location
-                    </h3>
-                    <p class="text-gray-300 mb-4"><i class="fas fa-map-marker-alt mr-2"></i>Main Campus : Evangelista
-                        Street, Brgy. Guiwan II, Palompon, Leyte.</p>
-                    <p class="text-gray-300 mb-4"><i class="fas fa-map-marker-alt mr-2"></i>Tabango Campus : Tabango,
-                        Leyte.</p>
-                    <div class="text-sm">
-                        <div class="flex justify-between">
-                            <p class="text-white"><i class="fas fa-clock mr-2 text-gray-300"></i> Monday to Friday
-                                (7:30-6:00 PM)</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-6 font-serif">
-                        Resources
-                    </h3>
-                    <ul class="space-y-3">
-                        <li><a href="https://lms.pit.edu.ph/"
-                                class="text-gray-300 hover:text-white transition-colors"><i
-                                    class="fas fa-book mr-2"></i>OPAC</a></li>
-                        <li><a href="database.html" class="text-gray-300 hover:text-white transition-colors"><i
-                                    class="fas fa-database mr-2"></i>Research Database</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors"><i
-                                    class="fas fa-file-alt mr-2"></i>E-book Repository</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-6 font-serif">
-                        Information
-                    </h3>
-                    <ul class="space-y-3">
-                        <li><a href="policies-rules.html" class="text-gray-300 hover:text-white transition-colors"><i
-                                    class="fas fa-book mr-2"></i>Library Policies</a></li>
-                        <li><a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website"
-                                class="text-gray-300 hover:text-white transition-colors"><i
-                                    class="fas fa-envelope mr-2"></i>Email</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 pt-8 text-center">
-                <p class="text-gray-400 text-sm">&copy; <span id="copyright-year"></span> PIT LRC. All rights reserved.
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobileMenuBtn').addEventListener('click', function () {
-            const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Mobile dropdown functionality
-        document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
-            btn.addEventListener('click', function () {
-                const content = this.parentElement.querySelector('.mobile-dropdown-content');
-                const icon = this.querySelector('i');
-
-                content.classList.toggle('hidden');
-                icon.classList.toggle('fa-chevron-down');
-                icon.classList.toggle('fa-chevron-up');
-            });
-        });
-
-        // Close mobile menu when clicking on links
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', function () {
-                document.getElementById('mobileMenu').classList.add('hidden');
-            });
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    e.preventDefault();
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Fade-in on scroll for sections
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('section.fade-in');
-            const options = {
-                threshold: 0.15
-            };
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in-visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, options);
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-
-        // Replace the "Highlight nav and dropdown based on current page" section
-
-        // Highlight nav and dropdown based on current page
-        (function () {
-            const path = window.location.pathname.split('/').pop();
-
-            // Desktop
-            document.querySelectorAll('.nav-link').forEach(link => {
-                if (link.getAttribute('href') === path) {
-                    link.classList.add('text-primary', 'font-bold');
-                }
-            });
-
-            document.querySelectorAll('.dropdown-link').forEach(link => {
-                if (link.getAttribute('href') === path) {
-                    link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
-                    // Highlight parent dropdown button
-                    let parent = link.closest('.group');
-                    if (parent) {
-                        let btn = parent.querySelector('button');
-                        btn.classList.add('text-primary', 'font-bold');
-                    }
-                }
-            });
-
-            // Desktop - Nested dropdown links
-            document.querySelectorAll('.nested-dropdown-link').forEach(link => {
-                if (link.getAttribute('href') === path) {
-                    link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
-                    // Highlight parent About button
-                    let nestedParent = link.closest('.nested-dropdown');
-                    if (nestedParent) {
-                        let dropdownParent = nestedParent.closest('.group');
-                        if (dropdownParent) {
-                            let btn = dropdownParent.querySelector('button');
-                            btn.classList.add('text-primary', 'font-bold');
-                        }
-                    }
-                }
-            });
-
-            // Mobile
-            document.querySelectorAll('.mobile-nav-link').forEach(link => {
-                if (link.getAttribute('href') === path) {
-                    link.classList.add('text-primary', 'font-bold');
-                }
-            });
-
-            document.querySelectorAll('.mobile-dropdown-link').forEach(link => {
-                if (link.getAttribute('href') === path) {
-                    link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
-                    // Highlight parent dropdown button
-                    let parent = link.closest('.mobile-dropdown');
-                    if (parent) {
-                        let btn = parent.querySelector('button');
-                        btn.classList.add('text-primary', 'font-bold');
-                    }
-                }
-            });
-        })();
-
-        // Book Carousel Functionality
-        // (function() {
-        //     ... (lines 720-831 removed) ...
-        // })();
-    </script>
-    <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
+</main>
+    <div id="footer"></div>
+    <script src="js/books-mrquee.js"></script>
+    <script src="js/mobile-smth.js"></script> 
+    <script src="js/mobile-toggle.js"></script> 
+    <script src="js/nav-high.js"></script>
+    <script src="js/header.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,162 @@
+<script src="https://cdn.tailwindcss.com"></script>
+   
+   <!-- Header Section -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-5">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="images/logo.png" alt="PIT LRC Logo" class="h-12 w-12 mr-3">
+                    <div class="hidden sm:block">
+                        <div class="text-xl font-bold text-[#084434]">Palompon Institute of Technology</div>
+                        <div class="text-xl font-bold text-[#084434]">Learning Resource Center</div>
+                    </div>
+                    <div class="sm:hidden">
+                        <div class="text-xl font-extrabold text-[#084434]">PIT-LRC</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8 lg:px-[4%]">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center nav-link">
+                            About
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="mission-vision" class="dropdown-link">Mission & Vision</a>
+                                <a href="service-hours" class="dropdown-link">Service Hours</a>
+                                <a href="personnel" class="dropdown-link">Library Personel</a>
+                                <a href="policies" class="dropdown-link">Policies & Rules</a>
+                                <a href="charter" class="dropdown-link">Citizen's Charter</a>
+                                <a href="linkages" class="dropdown-link">Linkages</a>
+                                <div class="nested-dropdown">
+                                    <span class="dropdown-link">Libraries</span>
+                                    <div class="nested-dropdown-content">
+                                        <div class="py-1">
+                                            <a href="main" class="nested-dropdown-link">Main Campus Library</a>
+                                            <a href="tabango" class="nested-dropdown-link">Tabango Campus Library</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center nav-link">
+                            Services
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="borrowing" class="dropdown-link" data-service="book-borrowing">Book Borrowing & Returning</a>
+                                <a href="https://bit.ly/PIT-ORA" target="_blank" class="dropdown-link" data-service="digital-resources">Online Knowledge Concierge</a>
+                                <a href="digital" class="dropdown-link" data-service="digital-resources">Printing & Photocopying</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Online Resources Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center nav-link">
+                            Online Resources
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="https://lms.pit.edu.ph/" class="dropdown-link">OPAC</a>
+                                <a href="database" class="dropdown-link">Research Database</a>
+                                <a href="#" class="dropdown-link">E-book Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ask Librarian Dropdown -->
+                    <div class="relative group">
+                        <button class="flex items-center nav-link">
+                            Ask Librarian
+                            <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="https://www.facebook.com/pitlrcregion8" target="_blank" class="dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
+                                <a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website" class="dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-gray-700 hover:text-primary" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Navigation -->
+            <div class="lg:hidden hidden" id="mobileMenu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                    <a href="home" class="mobile-nav-link">Home</a>
+                    <!-- Mobile About Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                            About
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div class="hidden pl-6 mobile-dropdown-content">
+                            <a href="mission-vision" class="mobile-dropdown-link">Mission & Vision</a>
+                            <a href="service-hours" class="mobile-dropdown-link">Service Hours</a>
+                            <a href="personnel" class="mobile-dropdown-link">Library Personel</a>
+                            <a href="policies" class="mobile-dropdown-link">Policies & Rules</a>
+                            <a href="charter" class="mobile-dropdown-link">Citizen's Charter</a>
+                            <a href="linkages" class="mobile-dropdown-link">Linkages</a>
+                            <div class="mobile-dropdown">
+                                <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                                    Libraries
+                                    <i class="fas fa-chevron-down text-sm"></i>
+                                </button>
+                                <div class="hidden pl-6 mobile-dropdown-content">
+                                    <a href="main" class="mobile-dropdown-link">Main Campus Library</a>
+                                    <a href="tabango" class="mobile-dropdown-link">Tabango Campus Library</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile Services Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                            Services
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div class="hidden pl-6 mobile-dropdown-content">
+                            <a href="borrowing" class="mobile-dropdown-link" data-service="book-borrowing">Book Borrowing & Returning</a>
+                            <a href="https://bit.ly/PIT-ORA" target="_blank" class="mobile-dropdown-link" data-service="digital-resources">Online Knowledge Concierge</a>
+                            <a href="digital" class="mobile-dropdown-link" data-service="digital-resources">Printing & Photocopying</a>
+                        </div>
+                    </div>
+                    <!-- Mobile Online Resources Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                            Online Resources
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div class="hidden pl-6 mobile-dropdown-content">
+                            <a href="https://lms.pit.edu.ph/" class="mobile-dropdown-link">OPAC</a>
+                            <a href="database" class="mobile-dropdown-link">Research Database</a>
+                            <a href="#" class="mobile-dropdown-link">E-book Repository</a>
+                        </div>
+                    </div>
+                    <!-- Mobile Ask Librarian Dropdown -->
+                    <div class="mobile-dropdown">
+                        <button class="flex items-center justify-between w-full px-3 py-2 mobile-nav-link mobile-dropdown-btn">
+                            Ask Librarian
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div class="hidden pl-6 mobile-dropdown-content">
+                            <a href="https://www.facebook.com/pitlrcregion8" target="_blank" class="mobile-dropdown-link"><i class="fab fa-facebook-messenger mr-2"></i>Messenger</a>
+                            <a href="mailto:lrc@pit.edu.ph?subject=Inquiry from PIT LRC Website" class="mobile-dropdown-link"><i class="fas fa-envelope mr-2"></i>Email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
