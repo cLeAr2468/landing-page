@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <title>PIT Learning Resources Center</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'primary-hover': '#1d4ed8',
+                        'secondary': '#7c3aed',
+                        'accent': '#06b6d4',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+     <style>
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes marquee-mobile {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+
+        .animate-marquee-mobile {
+            animation: marquee-mobile 15s linear infinite;
+        }
+
+        @media (max-width: 640px) {
+            #bookMarquee>div {
+                width: 9.5rem !important;
+                height: 13.5rem !important;
+                padding: 0.5rem !important;
+            }
+
+            #bookMarquee img {
+                width: 6.5rem !important;
+                height: 8.5rem !important;
+            }
+
+            #bookMarquee h3 {
+                font-size: 0.95rem !important;
+            }
+
+            #bookMarquee p,
+            #bookMarquee span,
+            #bookMarquee .fa-user {
+                font-size: 0.8rem !important;
+            }
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .modern-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .hover\:scale-102:hover {
+            transform: scale(1.02);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+
+        .fade-in.fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+
+        .dropdown-link,
+        .mobile-dropdown-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            margin-bottom: 0.25rem;
+            border-radius: 0.375rem;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .dropdown-link:last-child,
+        .mobile-dropdown-link:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Nested dropdown styles */
+        .nested-dropdown {
+            position: relative;
+        }
+
+        .nested-dropdown-content {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            min-width: 140px;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+            z-index: 60;
+        }
+
+        .nested-dropdown:hover .nested-dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .nested-dropdown-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #374151;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            border-radius: 0.375rem;
+            margin: 0.125rem;
+        }
+
+        .nested-dropdown-link:hover {
+            background: #f3f4f6;
+            color: #2563eb;
+        }
+
+        .nested-dropdown>.dropdown-link {
+            position: relative;
+        }
+
+        .nested-dropdown>.dropdown-link::after {
+            content: '▶';
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+<!-- HEADER -->
+    <div id="header"></div>
+<!-- HERO -->
+ <section class="relative bg-cover fade-in bg-center bg-no-repeat pt-32 pb-20 lg:pt-40 lg:pb-24 fade-in"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/bg.jpg');">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-serif">Research Repository</h1>
+                <p class="text-lg sm:text-xl lg:text-2xl text-white mb-10 opacity-90 leading-relaxed">Access theses, dissertations, and research outputs.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- MAIN -->
+ <main>
+<div class="max-w-7xl mx-auto px-4 py-12">
+
+  <!-- PHD -->
+  <section id="phd" class="mb-16 fade-in">
+    <h3 class="text-2xl sm:text-3xl font-bold mb-4 flex items-center justify-center text-center gap-3">
+      <i class="fas fa-user-graduate text-purple-600"></i> Doctoral Programs
+    </h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center lg:grid-cols-3 gap-5 mt-10">
+
+      <!-- CARD -->
+      <a href="https://drive.google.com/drive/folders/1kG4NvCwzF4IKtuZcHWRs-BzDxEjex6j8" target="_blank" class="group">
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-purple-600 h-full">
+          <h4 class="font-semibold text-lg group-hover:text-purple-600 flex items-center gap-2">
+            <i class="fas fa-graduation-cap text-sm"></i> PhD-TM
+          </h4>
+          <p class="text-sm text-gray-500 mb-4">Technology Management</p>
+
+          <span class="text-sm text-purple-600 font-medium group-hover:translate-x-1 inline-block transition">
+            <i class="fas fa-folder-open mr-1"></i>Access
+          </span>
+        </div>
+      </a>
+
+      <a href="https://drive.google.com/drive/folders/1tfQE7rTdPq7VTbQ02AVPPAgvz67YtRPd" target="_blank" class="group">
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-purple-600">
+          <h4 class="font-semibold text-lg group-hover:text-purple-600 flex items-center gap-2">
+            <i class="fas fa-chalkboard-teacher text-sm"></i> PhD-EM
+          </h4>
+          <p class="text-sm text-gray-500 mb-4">Educational Management</p>
+          <span class="text-sm text-purple-600 font-medium">Access</span>
+        </div>
+      </a>
+
+      <a href="https://drive.google.com/drive/folders/18VfR4hq0oMG39nKYmUWwLNl7OWmX4SI3" target="_blank" class="group">
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-indigo-600">
+          <h4 class="font-semibold text-lg group-hover:text-indigo-600 flex items-center gap-2">
+            <i class="fas fa-briefcase text-sm"></i> DM
+          </h4>
+          <p class="text-sm text-gray-500 mb-4">Doctor of Management</p>
+          <span class="text-sm text-indigo-600 font-medium">Access</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section id="masters" class="fade-in">
+  <h3 class="text-2xl sm:text-3xl font-bold mb-4 flex items-center justify-center text-center gap-3">
+    <i class="fas fa-graduation-cap text-blue-600"></i> Master's Programs
+  </h3>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10">
+
+    <!-- MAED-MENS -->
+    <a href="https://drive.google.com/drive/folders/1jrH-NXK3RCnT2ejRNwn--C-ypv5LbXtE" target="_blank" class="group">
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-blue-500">
+        <h4 class="card-title group-hover:text-blue-600 flex items-center gap-2">
+          <i class="fas fa-ship text-sm"></i> MAED-MENS
+        </h4>
+        <p class="card-desc text-sm text-gray-500">Marine Engineering & Nautical Science</p>
+        <span class="card-link text-blue-600">Access</span>
+      </div>
+    </a>
+
+    <!-- MAED-GUIDANCE -->
+    <a href="https://drive.google.com/drive/folders/1MAM9oUf9qz-PZymwLtXvXbhNYzGaTUHA" target="_blank" class="group">
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-pink-500">
+        <h4 class="card-title group-hover:text-pink-600 flex items-center gap-2">
+          <i class="fas fa-user-friends text-sm"></i> MAED-GUIDANCE & COUNSELING
+        </h4>
+        <span class="card-link text-pink-600">Access</span>
+      </div>
+    </a>
+
+    <!-- MAED-EED -->
+    <a href="https://drive.google.com/drive/folders/12veWpq4y9mmsNBUiRIRZk4XY0QYUlWjm" target="_blank" class="group">
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-green-500">
+        <h4 class="card-title group-hover:text-green-600 flex items-center gap-2">
+          <i class="fas fa-school text-sm"></i> MAED-EED
+        </h4>
+        <p class="card-desc">Elementary Education</p>
+        <span class="card-link text-green-600">Access</span>
+      </div>
+    </a>
+
+    <!-- MAED-EM -->
+    <a href="https://drive.google.com/drive/folders/157H5XNxssrP7LWI6hqGSCyryTRumU-4T" target="_blank" class="group">
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-orange-500">
+        <h4 class="card-title group-hover:text-orange-600 flex items-center gap-2">
+          <i class="fas fa-user-tie text-sm"></i> MAED-EM
+        </h4>
+        <p class="card-desc">Educational Management</p>
+        <span class="card-link text-orange-600">Access</span>
+      </div>
+    </a>
+
+    <!-- MAED-ENG -->
+    <a href="https://drive.google.com/drive/folders/1Y9uNdGpYjequpy84650yE8eWeX-7b07Y" target="_blank" class="group">
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-red-500">
+        <h4 class="card-title group-hover:text-red-600 flex items-center gap-2">
+          <i class="fas fa-book text-sm"></i> MAED-ENG
+        </h4>
+        <p class="card-desc">English Education</p>
+        <span class="card-link text-red-600">Access</span>
+      </div>
+    </a>
+
+    <!-- MAED-FIL -->
+    <a href="https://drive.google.com/drive/folders/1j9AZYWJWeCuy0v_6o6O3ZmI3HkdVcHXH" target="_blank" class="group">
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-yellow-500">
+        <h4 class="card-title group-hover:text-yellow-600 flex items-center gap-2">
+          <i class="fas fa-language text-sm"></i> MAED-FIL
+        </h4>
+        <p class="card-desc">Filipino Education</p>
+        <span class="card-link text-yellow-600">Access</span>
+      </div>
+    </a>
+
+    <!-- MAED-HE -->
+    <a href="https://drive.google.com/drive/folders/16zDc5Ol9F5m6pU6hb5hVs9w0Uk2aMEZj" target="_blank" class="group">
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-rose-500">
+        <h4 class="card-title group-hover:text-rose-600 flex items-center gap-2">
+          <i class="fas fa-utensils text-sm"></i> MAED-HE
+        </h4>
+        <p class="card-desc">Home Economics</p>
+        <span class="card-link text-rose-600">Access</span>
+      </div>
+    </a>
+
+    <!-- MAED-MATH -->
+    <a href="https://drive.google.com/drive/folders/1anvoEGtyGeHFdZUrmWW1PZW1tLKDxqPF" target="_blank" class="group">
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-indigo-500">
+        <h4 class="card-title group-hover:text-indigo-600 flex items-center gap-2">
+          <i class="fas fa-square-root-alt text-sm"></i> MAED-MATH
+        </h4>
+        <p class="card-desc">Mathematics Education</p>
+        <span class="card-link text-indigo-600">Access</span>
+      </div>
+    </a>
+
+    <!-- MAED-PE -->
+    <a href="https://drive.google.com/drive/folders/1HL2TCo6CdxtlYzRVROQ02lZzvZxMo_hs" target="_blank" class="group">
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-cyan-500">
+        <h4 class="card-title group-hover:text-cyan-600 flex items-center gap-2">
+          <i class="fas fa-running text-sm"></i> MAED-PE
+        </h4>
+        <p class="card-desc">Physical Education</p>
+        <span class="card-link text-cyan-600">Access</span>
+      </div>
+    </a>
+
+    <!-- MAED-SCIENCE -->
+    <a href="https://drive.google.com/drive/folders/1Z4uC_v48icVAohMp2pIVWqnV5g_86YqE" target="_blank" class="group">
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-emerald-500">
+        <h4 class="card-title group-hover:text-emerald-600 flex items-center gap-2">
+          <i class="fas fa-flask text-sm"></i> MAED-SCIENCE
+        </h4>
+        <p class="card-desc">Science Education</p>
+        <span class="card-link text-emerald-600">Access</span>
+      </div>
+    </a>
+
+    <!-- MAED-TE -->
+    <a href="https://drive.google.com/drive/folders/15EPIgLIScFc3uAQY21DYZBRZrM0W3NAL" target="_blank" class="group">
+      <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition p-5 border-l-4 border-slate-500">
+        <h4 class="card-title group-hover:text-slate-600 flex items-center gap-2">
+          <i class="fas fa-laptop-code text-sm"></i> MAED-TE
+        </h4>
+        <p class="card-desc">Technology Education</p>
+        <span class="card-link text-slate-600">Access</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+</main>
+    <div id="footer"></div>
+    <script src="js/books-mrquee.js"></script>
+    <script src="js/mobile-smth.js"></script> 
+    <script src="js/mobile-toggle.js"></script> 
+    <script src="js/nav-high.js"></script>
+    <script src="js/header.js"></script>
+</body>
+</html>
