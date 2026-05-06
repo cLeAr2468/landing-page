@@ -1,5 +1,14 @@
+// Helper function to get base path
+function getBasePath() {
+    // Get the current directory path
+    const path = window.location.pathname;
+    const pathArray = path.split('/');
+    pathArray.pop(); // Remove the current file
+    return pathArray.join('/') + (pathArray.length > 1 ? '/' : '');
+}
+
 // Load footer with proper error handling
-fetch(getBasePath() + 'footer.html')
+fetch('footer.html')
 .then(response => {
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -16,8 +25,8 @@ fetch(getBasePath() + 'footer.html')
 })
 .catch(error => {
     console.error('Error loading footer:', error);
-    // Fallback: try without base path
-    fetch('footer.html')
+    // Fallback: try with relative path
+    fetch('./footer.html')
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
