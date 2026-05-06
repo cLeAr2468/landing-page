@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /
+    RewriteBase /landing%20page/
 
     # Custom URL Mappings - What you see in address bar
     RewriteRule ^home/?$ index.html [L]
@@ -10,8 +10,7 @@
     RewriteRule ^policies/?$ policies-rules.html [NC,L]
     RewriteRule ^charter/?$ citizens-charter.html [NC,L]
     RewriteRule ^linkages/?$ linkages.html [NC,L]
-    RewriteRule ^main/?$ libraries.html [NC,L]
-    RewriteRule ^main-library/?$ libraries.html [NC,L]
+    RewriteRule ^main/?$ libraries.html#main-library [NC,L]
     RewriteRule ^tabango/?$ tabango-campus-library.html [NC,L]
     RewriteRule ^borrowing/?$ book-borrowing.html [NC,L]
     RewriteRule ^digital/?$ digital-resources.html [NC,L]
