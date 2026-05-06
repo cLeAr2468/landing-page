@@ -9,13 +9,16 @@
     RewriteRule ^policies/?$ policies-rules.html [NC,L]
     RewriteRule ^charter/?$ citizens-charter.html [NC,L]
     RewriteRule ^linkages/?$ linkages.html [NC,L]
-    RewriteRule ^main-library/?$ libraries.html [NC,L]
+    RewriteRule ^main-library/?$ libraries.html#main-library [NC,L]
     RewriteRule ^tabango/?$ tabango-campus-library.html [NC,L]
     RewriteRule ^borrowing/?$ book-borrowing.html [NC,L]
     RewriteRule ^digital/?$ digital-resources.html [NC,L]
     RewriteRule ^database/?$ database.html [NC,L]
     RewriteRule ^courses/?$ courses.html [NC,L]
     RewriteRule ^repository/?$ repository.html [NC,L]
+    
+    # Prevent direct access to Header.html and footer.html from browser
+    RewriteRule ^(Header|footer)\.html$ - [F]
     
     # Remove .html extension
     RewriteCond %{REQUEST_FILENAME} !-f
