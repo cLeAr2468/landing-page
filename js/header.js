@@ -1,4 +1,4 @@
-fetch('./Header.html')
+fetch('Header.html')
 .then(response => {
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -11,18 +11,6 @@ fetch('./Header.html')
 })
 .catch(error => {
     console.error('Error loading header:', error);
-    // Fallback: try without the dot-slash
-    return fetch('header.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById('header').innerHTML = data;
-            initHeaderScripts();
-        });
 });
 
 function initHeaderScripts() {
@@ -109,7 +97,7 @@ function initHeaderScripts() {
     });
 }
 
-fetch('./footer.html')
+fetch('footer.html')
 .then(response => {
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -123,16 +111,4 @@ fetch('./footer.html')
 })
 .catch(error => {
     console.error('Error loading footer:', error);
-    // Fallback: try without the dot-slash
-    return fetch('footer.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-            document.getElementById('copyright-year').textContent = new Date().getFullYear();
-        });
 });
