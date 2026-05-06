@@ -1,9 +1,28 @@
-fetch('Header.html')
-.then(response => response.text())
+fetch('./Header.html')
+.then(response => {
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.text();
+})
 .then(data => {
     document.getElementById('header').innerHTML = data;
-
     initHeaderScripts(); // includes everything
+})
+.catch(error => {
+    console.error('Error loading header:', error);
+    // Fallback: try without the dot-slash
+    return fetch('header.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+            initHeaderScripts();
+        });
 });
 
 function initHeaderScripts() {
@@ -27,17 +46,20 @@ function initHeaderScripts() {
     });
 
     // ✅ NAV HIGHLIGHT (ADD THIS PART)
-    const path = window.location.pathname.split('/').pop().replace('.html','');
+    const path = window.location.pathname.split('/').pop().replace('.html','') || 'home';
+    const currentPage = path === 'index' ? 'home' : path;
 
     // Desktop
     document.querySelectorAll('.nav-link').forEach(link => {
-        if (link.getAttribute('href') === path) {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPage || (currentPage === 'home' && linkHref === 'home')) {
             link.classList.add('text-primary', 'font-bold');
         }
     });
 
     document.querySelectorAll('.dropdown-link').forEach(link => {
-        if (link.getAttribute('href') === path) {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPage) {
             link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
 
             let parent = link.closest('.group');
@@ -50,7 +72,8 @@ function initHeaderScripts() {
 
     // Nested
     document.querySelectorAll('.nested-dropdown-link').forEach(link => {
-        if (link.getAttribute('href') === path) {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPage) {
             link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
 
             let nestedParent = link.closest('.nested-dropdown');
@@ -66,13 +89,15 @@ function initHeaderScripts() {
 
     // Mobile
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        if (link.getAttribute('href') === path) {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPage || (currentPage === 'home' && linkHref === 'home')) {
             link.classList.add('text-primary', 'font-bold');
         }
     });
 
     document.querySelectorAll('.mobile-dropdown-link').forEach(link => {
-        if (link.getAttribute('href') === path) {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPage) {
             link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
 
             let parent = link.closest('.mobile-dropdown');
@@ -84,11 +109,30 @@ function initHeaderScripts() {
     });
 }
 
-fetch('footer.html')
-.then(response => response.text())
+fetch('./footer.html')
+.then(response => {
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.text();
+})
 .then(data => {
     document.getElementById('footer').innerHTML = data;
-
     // ✅ Run script AFTER footer is loaded
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
+})
+.catch(error => {
+    console.error('Error loading footer:', error);
+    // Fallback: try without the dot-slash
+    return fetch('footer.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        });
 });
