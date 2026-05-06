@@ -16,10 +16,29 @@
 }
 
 /* Mobile links */
+.mobile-nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #374151;
+    text-decoration: none;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+}
+
 .mobile-nav-link:hover {
     background-color: #f9fafb;
     color: #084434;
     transition: all 0.2s ease;
+}
+
+.mobile-dropdown-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.25rem;
+    border-radius: 0.375rem;
+    transition: background 0.2s, color 0.2s;
+    color: #374151;
+    text-decoration: none;
 }
 
 .mobile-dropdown-link:hover {
@@ -157,7 +176,7 @@ a:hover i {
                                 <i class="fas fa-chevron-down text-sm"></i>
                             </button>
                             <div class="hidden pl-6 mobile-dropdown-content">
-                                <a href="main-library" class="mobile-dropdown-link"><i class="fas fa-university mr-2"></i>Main Campus Library</a>
+                                <a href="main" class="mobile-dropdown-link"><i class="fas fa-university mr-2"></i>Main Campus Library</a>
                                 <a href="tabango" class="mobile-dropdown-link"><i class="fas fa-school mr-2"></i>Tabango Campus Library</a>
                             </div>
                         </div>
