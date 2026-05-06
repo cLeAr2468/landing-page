@@ -1,4 +1,17 @@
-fetch('Header.html')
+// Function to get the correct base path
+function getBasePath() {
+    const path = window.location.pathname;
+    const segments = path.split('/').filter(segment => segment !== '');
+    
+    // If we're in a subdirectory, we need to account for it
+    if (segments.length > 1 || (segments.length === 1 && !segments[0].includes('.html') && segments[0] !== '')) {
+        return './';
+    }
+    return './';
+}
+
+// Load header with proper error handling
+fetch(getBasePath() + 'Header.html')
 .then(response => {
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -11,6 +24,22 @@ fetch('Header.html')
 })
 .catch(error => {
     console.error('Error loading header:', error);
+    // Fallback: try without base path
+    fetch('Header.html')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+    })
+    .then(data => {
+        document.getElementById('header').innerHTML = data;
+        initHeaderScripts();
+    })
+    .catch(fallbackError => {
+        console.error('Fallback header loading failed:', fallbackError);
+        document.getElementById('header').innerHTML = '<div class="bg-red-100 text-red-800 p-4">Header could not be loaded</div>';
+    });
 });
 
 function initHeaderScripts() {
@@ -34,20 +63,17 @@ function initHeaderScripts() {
     });
 
     // ✅ NAV HIGHLIGHT (ADD THIS PART)
-    const path = window.location.pathname.split('/').pop().replace('.html','') || 'home';
-    const currentPage = path === 'index' ? 'home' : path;
+    const path = window.location.pathname.split('/').pop().replace('.html','');
 
     // Desktop
     document.querySelectorAll('.nav-link').forEach(link => {
-        const linkHref = link.getAttribute('href');
-        if (linkHref === currentPage || (currentPage === 'home' && linkHref === 'home')) {
+        if (link.getAttribute('href') === path) {
             link.classList.add('text-primary', 'font-bold');
         }
     });
 
     document.querySelectorAll('.dropdown-link').forEach(link => {
-        const linkHref = link.getAttribute('href');
-        if (linkHref === currentPage) {
+        if (link.getAttribute('href') === path) {
             link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
 
             let parent = link.closest('.group');
@@ -60,8 +86,7 @@ function initHeaderScripts() {
 
     // Nested
     document.querySelectorAll('.nested-dropdown-link').forEach(link => {
-        const linkHref = link.getAttribute('href');
-        if (linkHref === currentPage) {
+        if (link.getAttribute('href') === path) {
             link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
 
             let nestedParent = link.closest('.nested-dropdown');
@@ -77,15 +102,13 @@ function initHeaderScripts() {
 
     // Mobile
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        const linkHref = link.getAttribute('href');
-        if (linkHref === currentPage || (currentPage === 'home' && linkHref === 'home')) {
+        if (link.getAttribute('href') === path) {
             link.classList.add('text-primary', 'font-bold');
         }
     });
 
     document.querySelectorAll('.mobile-dropdown-link').forEach(link => {
-        const linkHref = link.getAttribute('href');
-        if (linkHref === currentPage) {
+        if (link.getAttribute('href') === path) {
             link.classList.add('text-primary', 'bg-blue-50', 'font-bold');
 
             let parent = link.closest('.mobile-dropdown');
@@ -97,7 +120,8 @@ function initHeaderScripts() {
     });
 }
 
-fetch('footer.html')
+// Load footer with proper error handling
+fetch(getBasePath() + 'footer.html')
 .then(response => {
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -111,4 +135,20 @@ fetch('footer.html')
 })
 .catch(error => {
     console.error('Error loading footer:', error);
+    // Fallback: try without base path
+    fetch('footer.html')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+    })
+    .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    })
+    .catch(fallbackError => {
+        console.error('Fallback footer loading failed:', fallbackError);
+        document.getElementById('footer').innerHTML = '<div class="bg-red-100 text-red-800 p-4">Footer could not be loaded</div>';
+    });
 });
