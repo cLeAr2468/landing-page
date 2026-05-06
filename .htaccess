@@ -16,7 +16,7 @@
     RewriteRule ^digital/?$ digital-resources.html [NC,L]
     RewriteRule ^database/?$ database.html [NC,L]
     RewriteRule ^courses/?$ courses.html [NC,L]
-    RewriteRule ^Repository/?$ repository.html [NC,L]
+    RewriteRule ^repository/?$ repository.html [NC,L]
     
     # Remove .html extension
     RewriteCond %{REQUEST_FILENAME} !-f
